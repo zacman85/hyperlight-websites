@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="/favicon.ico" rel="icon" type="image/x-icon">
+		<style type="text/css">
+		/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+		html {
+	background-color: #222;
+	font-size: 16px; /* Set for ems */
+	font-family: Tahoma, Arial, sans-serif;
+	font-weight: 300;
+}
+.clear {
+	clear: both;
+}
+.icon-tiny {
+	width: 20px;
+	height: 20px;
+}
+.icon-small {
+	width: 30px;
+	height: 30px;
+}
+.icon-large {
+	width: 40px;
+	height: 30px;
+}
+a {
+	color: #3a82af;
+	text-decoration: none;
+}
+a:hover {
+	color: #444;
+}
+a.inverted {
+	color: black;
+}
+a.inverted:hover {
+	color: #3a82af;
+}
+#header-content {
+	background-color: black;
+	color: white;
+	height: 3rem;
+}
+#header-grid {
+	display: grid;
+	grid-template-columns: 14rem 61rem;
+	grid-template-areas: "logo nav";
+	grid-gap: 0;
+	max-width: 75rem;
+	margin: 0 auto;
+}
+#header-logo {
+	grid-area: logo;
+	align-self: center;
+}
+#header-logo > svg {
+	height: 30px;
+	width: 180px;
+}
+#header-nav {
+	grid-area: nav;
+	clear: both;
+	height: 48px;
+	margin: 0;
+}
+#header-menu {
+	float: left;
+}
+#header-menu li {
+	background-color: black;
+	display: inline-block;
+}
+#header-menu li.highlighted {
+	background-color: #224f6b;
+}
+#header-menu li > a {
+	color: white;
+	display: block;
+	font-size: 0.8125rem;
+	height: 48px;
+	line-height: 48px;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 0 16px 0 16px;
+	vertical-align: middle;
+	width: auto;
+}
+#header-menu li:hover > a {
+	color: black;
+	background-color: white;
+}
+#header-menu .sub-menu-hitbox {
+	display: none;
+	position: absolute;
+	z-index: 10;
+}
+#header-menu li:hover .sub-menu-hitbox {
+	display: block;
+	padding: 0 40px 40px 40px;
+	margin-left: -40px;
+}
+#header-menu .sub-menu-1 {
+	grid-template-columns: repeat(1, 12em);
+}
+#header-menu .sub-menu-4 {
+	grid-template-columns: repeat(4, 12em);
+}
+#header-menu .sub-menu {
+	background-color: #dadada;
+	display: grid;
+	grid-gap: 1px;
+	padding: 1px;
+}
+#header-menu .sub-menu span,
+#header-menu .sub-menu a {
+	background-color: white;
+	color: #222222;
+	display: block;
+	font-size: 0.8125rem;
+	line-height: 1;
+	padding: 12px;
+	text-decoration: none;
+}
+#header-menu .sub-menu a:hover {
+	background-color: #dadada;
+}
+#header-menu .sub-menu a.menu-footer {
+	grid-column: span 4;
+}
+#header-menu .sub-menu a > em {
+	font-weight: bold;
+}
+
+#header-icons {
+	float: right;
+	height: 48px;
+	line-height: 48px;
+	width: 215px;
+}
+#header-icons.show-search #search-form {
+	display: block;
+}
+#search-form {
+	display: none;
+	height: 3rem;
+	width: auto;
+	padding: 0;
+	border: 0;
+	margin: 0;
+	position: absolute;
+	text-align: right;
+	vertical-align: top;
+}
+#search-form:target {
+	display: block;
+}
+#search-box {
+	display: inline-block;
+	box-sizing: border-box;
+	height: 32px;
+	color: #222222;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	width: 100%;
+	margin: 8px 0 0 0;
+	padding: 0 40px 0 8px;
+	border: none;
+	vertical-align: middle;
+	border-radius: 4px;
+}
+#search-close {
+	position: absolute;
+	float: right;
+}
+
+#splash-content {
+	background-color: white;
+	color: #222;
+}
+#splash-content article {
+	display: none;
+}
+#splash-content article.show {
+	display: block;
+}
+#splash-content .splash-article-image {
+	display: block;
+	height: 40rem;
+	background-size: cover;
+	background-position: center;
+}
+#splash-content .splash-article-content {
+	background-color: white;
+	max-width: 75rem;
+	border-radius: 4px;
+	padding: 0;
+	margin: -2.5rem auto 0 auto;
+	z-index: 10;
+}
+#splash-content nav {
+	display: grid;
+	grid-template-columns: 1fr max-content;
+	height: 2.5rem;
+}
+#splash-content nav > p {
+	color: #999;
+	padding: 0.25rem 0 0 1.5rem;
+	font-weight: bold;
+	font-size: 0.8125rem;
+	align-self: center;
+}
+#splash-content .pager {
+	background-color: white;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	border-left: 1px solid #dedede;
+	border-bottom: 1px solid #dedede;
+	height: 100%;
+}
+#splash-content .pager a {
+	background-color: #3a82af;
+	border-radius: 50%;
+	font-size: 1.25rem;
+	font-family: "Courier New", Courier;
+	font-weight: bold;
+	color: white;
+	height: 1.25rem;
+	width: 1.25rem;
+	line-height: 1;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+	align-self: center;
+	margin: 0 0.5rem;
+}
+#splash-content .pager span {
+	background-color: #f2f2f2;
+	align-self: center;
+	display: block;
+	line-height: 2.4rem;
+	height: 100%;
+	border-left: 1px solid #dedede;
+	border-right: 1px solid #dedede;
+	padding: 0 0.5rem;
+	vertical-align: middle;
+}
+#splash-content .pager em {
+	font-weight: bold;
+}
+#splash-content .summary {
+	padding: 0 1.25rem 1.25rem 1.25rem;
+}
+#splash-content .summary h1 {
+	font-size: 2.75rem;
+	line-height: 1;
+	font-weight: bold;
+	letter-spacing: -0.125rem;
+	margin: 1rem 0;
+}
+#splash-content .summary h2 {
+	font-size: 1.5rem;
+	font-family: Georgia, serif;
+	font-weight: 200;
+	margin: 2rem 0;
+}
+#splash-content .summary h3 {
+	text-transform: uppercase;
+	margin: 2rem 0;
+	font-size: 0.75rem;
+	font-weight: bold;
+}
+
+#main-content {
+	background-color: white;
+	border-top: 3px solid #efefef;
+	color: #222;
+}
+
+#main-content section {
+	border-top: 3px solid #efefef;
+}
+
+#main-content section:first-child {
+	border-top: none;
+}
+
+#main-content section > h1 {
+	font-weight: bold;
+	font-size: 1.625rem;
+	margin: 2rem 0;
+}
+
+#main-grid {
+	display: grid;
+	grid-template-columns: auto 18.75rem;
+	grid-template-areas: "articles sidebar";
+	grid-column-gap: 3.75rem;
+	max-width: 75rem;
+	margin: 0 auto;
+	padding: 0 1.25rem;
+}
+#main-sidebar {
+	grid-area: sidebar;
+}
+
+#main-articles {
+	grid-area: articles;
+}
+
+#recent-news > article {
+	border-bottom: 1px solid #efefef;
+	padding-bottom: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+#recent-news > article > h2 {
+	font-size: 1rem;
+	line-height: 1.375rem;
+	margin-bottom: 1.25rem;
+}
+#recent-news .metadata {
+	font-size: 0.6875rem;
+	color: #999;
+	vertical-align: middle;
+}
+#recent-news .metadata span {
+	display: inline-block;
+	margin-right: 0.75rem;
+}
+#recent-news .metadata > span,
+#recent-news .metadata > svg,
+#recent-news .metadata > a,
+#recent-news .metadata > a > svg,
+#recent-news .metadata > a > span {
+	vertical-align: middle;
+}
+
+#social-content {
+	background-color: black;
+	font-size: 1.25rem;
+}
+#social-content > div {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 2.5rem;
+	height: 6rem;
+	max-width: 38rem;
+	margin: 0 auto;
+}
+#social-content a {
+	color: #dadada;
+	align-self: center;
+	text-decoration: none;
+	white-space: nowrap;
+}
+#social-content svg {
+	border: none;
+	display: inline-block;
+	margin: 0 0.5rem;
+	vertical-align: middle;
+}
+#social-content span {
+	display: inline-block;
+	vertical-align: middle;
+}
+#social-content a:hover span {
+	color: #aaa;
+}
+#social-content a:hover.icon-facebook .fill-color { fill: #3B5998; }
+#social-content a:hover.icon-twitter .fill-color { fill: #55ACEE; }
+#social-content a:hover.icon-instagram .fill-color { fill: #E1306C; }
+#social-content a:hover.icon-youtube .fill-color { fill: #BB0000; }
+#social-content a:hover.icon-youtube .fill-inverted { fill: #FFFFFF; }
+
+#footer-content {
+	background-color: #222;
+	color: #666;
+}
+#footer-grid {
+	display: grid;
+	font-size: 0.75em;
+	grid-gap: 20px;
+	grid-template-columns: repeat(6,1fr);
+	line-height: 1em;
+	margin: 0 auto;
+	max-width: 60rem;
+	padding: 20px;
+}
+#footer-content .link-column h1 {
+	color: #dadada;
+	font-weight: bold;
+	margin: 0 0 12px 0;
+	text-transform: uppercase;
+	font-size: 0.75rem;
+	line-height: 1rem;
+}
+#footer-content a {
+	color: #666;
+	font-size: 0.75rem;
+	line-height: 1.25rem;
+	text-decoration: none;
+}
+#footer-content a:hover {
+	color: #f1f1f1;
+}
+#copyright {
+	color: #909090;
+	text-align: center;
+	grid-column: span 6;
+}
+
+		</style>
+		<script>
+		function changeSplashPage(button) {
+var href = button.href;
+var pos = href.indexOf("#");
+if (pos < 0 || pos == (href.length + 1)) return false;
+var target = document.getElementById(href.substring(pos + 1));
+if (target === null) return false;
+var current = document.querySelectorAll("#splash-content article.show");
+for (var i = 0; i < current.length; i++) current[i].className = null;
+target.className = "show";
+return false;
+}
+window.onLoad = function() {
+}
+
+		</script>
+	</head>
+	<body>
+		<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+  <symbol id="icon-comments" viewBox="380 0 20 20">
+    <title>Comments</title>
+    <path d="M394.57,4.19H385a1.2,1.2,0,0,0-1.2,1.2v11.3l2.4-2.5h8.4a1.2,1.2,0,0,0,1.2-1.2V5.44a1.23,1.23,0,0,0-1.2-1.25Z" style="fill: #1383b3"/>
+  </symbol>
+  <symbol id="icon-clock" viewBox="360 0 20 20">
+    <title>Clock</title>
+    <path d="M367.46,6.11a5,5,0,0,1,5,0,5.07,5.07,0,0,1,1.82,1.83,5,5,0,0,1-1.82,6.83A5,5,0,0,1,365.64,13a5,5,0,0,1,0-5,5,5,0,0,1,1.82-1.83Zm5,1.88a3.47,3.47,0,0,0-5.92,2.45A3.47,3.47,0,0,0,370,13.92a3.48,3.48,0,0,0,3.47-3.48,3.35,3.35,0,0,0-1-2.45ZM370,10.47h2v1h-3v-4h1v3Z" style="fill: #bababa"/>
+  </symbol>
+  <symbol id="icon-gallery" viewBox="440 0 20 20">
+    <title>Gallery</title>
+    <path d="M447.56,16.1v-9h8v9Zm1-3h6v-5h-6Z" transform="translate(-5.33 -2.17)" style="fill: #1383b3"/>
+    <polygon points="447.23 1.93 439.23 1.93 439.23 10.93 440.23 10.93 440.23 3.93 447.23 3.93 447.23 1.93" style="fill: #1383b3"/>
+  </symbol>
+  <symbol id="icon-story" viewBox="400 0 20 20">
+    <title>Story</title>
+    <path d="M410.5,5.1V7.29s0,.36.1.49a4.21,4.21,0,0,0,.47.32h2.43v7h1V7.87A1.64,1.64,0,0,0,414,6.72L412.1,4.63a1.68,1.68,0,0,0-1.23-.53h-4.46a.91.91,0,0,0-.91.91V15.18a.92.92,0,0,0,.92.92h7.2a.88.88,0,0,0,.88-.86V15.1h-8V5.1Zm1,1.11.91.89h0l-.91,0V6.21Z" transform="translate(-5.33 -2.17)" style="fill: #1383b3"/>
+    <path d="M407.27,7.1h1.38a.5.5,0,0,0,0-1h-1.38a.5.5,0,0,0,0,1Z" transform="translate(-5.33 -2.17)" style="fill: #1383b3"/>
+    <path d="M411.74,8.1h-4.41a.5.5,0,0,0,0,1h4.41a.5.5,0,0,0,0-1Z" transform="translate(-5.33 -2.17)" style="fill: #1383b3"/>
+    <path d="M411.79,10.1h-4.6a1.24,1.24,0,0,0-.52.82c0,.29.23.57.52.18h4.6c.28.39.52.11.52-.18a.56.56,0,0,0-.52-.56Z" transform="translate(-5.33 -2.17)" style="fill: #1383b3"/>
+    <path d="M411.79,12.1h-4.6a1,1,0,0,0-.52.77c0,.29.23.56.52.23h4.6c.28.33.52.06.52-.23a.57.57,0,0,0-.52-.57Z" transform="translate(-5.33 -2.17)" style="fill: #1383b3"/>
+  </symbol>
+  <symbol id="icon-shopping" viewBox="420 0 20 20">
+    <title>Shopping</title>
+    <path d="M433.68,8a1.1,1.1,0,1,0-1.1-1.11A1.09,1.09,0,0,0,433.68,8M430.56,3.6h5.11a1.22,1.22,0,0,1,.83,1.64,7.32,7.32,0,0,0,0,3.45,1.55,1.55,0,0,1-.42,1.48l-5.89,5.89a1.65,1.65,0,0,1-.82.53h-.33a1.45,1.45,0,0,1-.67-.38l-4.29-4.3a1.71,1.71,0,0,1-.55-.83v-.33a1.63,1.63,0,0,1,.53-.83L430,4a2.8,2.8,0,0,1,.49-.33,1.93,1.93,0,0,1,.34-.11" transform="translate(-5.33 -2.17)" style="fill: #1383b3"/>
+  </symbol>
+  <symbol id="icon-youtube" viewBox="330 0 30 30">
+    <title>YouTube</title>
+    <rect class="fill-color" x="330" y="5" width="30" height="20" rx="4" ry="4" style="fill: #aaa"/>
+    <polygon class="fill-inverted" points="339.75 8.92 344.3 12.46 339.75 16.01 339.75 8.92" transform="translate(4, 2.5)"/>
+  </symbol>
+  <symbol id="icon-instagram" viewBox="300 0 30 30">
+    <title>Instagram</title>
+    <path class="fill-color" d="M324.14,26l-.34.06H306.2l-.14,0a2.4,2.4,0,0,1-2-1.82l-.06-.34V6.22a.5.5,0,0,0,0-.12,2.36,2.36,0,0,1,1.84-2c.1,0,.21,0,.31-.06h17.66l.12,0A2.37,2.37,0,0,1,326,6c0,.09,0,.19.05.29v17.6c0,.1,0,.2-.05.29A2.37,2.37,0,0,1,324.14,26ZM306,13.11V23.17a.87.87,0,0,0,.87.88h15.25a.88.88,0,0,0,.88-.88V12.05h-1.6a14.78,14.78,0,0,1,.27,3.89,6.79,6.79,0,0,1-.95,2.74,6.84,6.84,0,0,1-9.18,2.42,6.72,6.72,0,0,1-2.66-2.68,6.85,6.85,0,0,1-.53-5.37H306Zm4.42,2a4.46,4.46,0,1,0,4.46-4.39A4.46,4.46,0,0,0,310.42,15.06Zm11.7-5a.91.91,0,0,0,.88-.91V7a.92.92,0,0,0-.92-.93h-2.16A.92.92,0,0,0,319,7V9.12a.85.85,0,0,0,.06.31.91.91,0,0,0,.9.62h2.16Z" style="fill: #aaa"/>
+  </symbol>
+  <symbol id="icon-twitter" viewBox="270 0 30 30">
+    <title>Twitter</title>
+    <path class="fill-color" d="M284.67,10l.06.93-.94-.11a15.3,15.3,0,0,1-8.94-4.4L273.61,5.2l-.32.91a5.47,5.47,0,0,0,1.16,5.62c.75.79.59.91-.71.43-.45-.15-.85-.26-.88-.2a7,7,0,0,0,.67,2.54,6.06,6.06,0,0,0,2.58,2.42l.92.44-1.09,0c-1.05,0-1.09,0-1,.42a5.7,5.7,0,0,0,3.51,3.11l1.17.4-1,.6a10.48,10.48,0,0,1-5,1.41,5.47,5.47,0,0,0-1.54.15,14.37,14.37,0,0,0,3.62,1.67A15.87,15.87,0,0,0,288,23.73a16.42,16.42,0,0,0,6.25-7.36,19.46,19.46,0,0,0,1.28-5.69c0-.87.06-1,1.11-2A14.7,14.7,0,0,0,298,7.2c.18-.37.16-.37-.79,0-1.6.57-1.83.49-1-.36a5.47,5.47,0,0,0,1.28-2c0-.06-.28,0-.6.21a10.58,10.58,0,0,1-1.65.64l-1,.32-.92-.62a8.06,8.06,0,0,0-1.6-.84,6.49,6.49,0,0,0-3.28.08A5.43,5.43,0,0,0,284.67,10Z" style="fill: #aaa"/>
+  </symbol>
+  <symbol id="icon-facebook" viewBox="240 0 30 30">
+    <title>Facebook</title>
+    <path class="fill-color" d="M256.33,25V14h3l.36-3h-3.33V9.34c0-.86.08-1.33,1.33-1.33h1.66V5h-2.45c-3.31-.37-4.55,4.12-4.55,4.12V11h-2v3h2V25Z" style="fill: #aaa"/>
+  </symbol>
+  <symbol id="icon-search" viewBox="210 0 30 30">
+    <title>Search</title>
+    <path d="M219.62,17.22l-5,5a.46.46,0,0,0,0,.6l1.83,1.82a.43.43,0,0,0,.6,0l5-5a8,8,0,0,0,10.08-1.07,7.78,7.78,0,0,0,2.37-5.71,7.82,7.82,0,0,0-2.37-5.72,8.08,8.08,0,0,0-11.43,0,7.83,7.83,0,0,0-2.38,5.72,7.8,7.8,0,0,0,1.31,4.36ZM230.31,9a5.29,5.29,0,0,1,1.62,3.89,5.53,5.53,0,0,1-5.53,5.51,5.29,5.29,0,0,1-3.9-1.61,5.35,5.35,0,0,1-1.61-3.9A5.31,5.31,0,0,1,222.5,9a5.5,5.5,0,0,1,7.81,0Z" transform="translate(-5.33 -2.17)" style="fill: #aaa"/>
+  </symbol>
+  <symbol id="icon-backfires" viewBox="180 0 30 30">
+    <title>Backfires</title>
+    <path d="M189.34,25h6.13c2.15,0,3.06-1.4,3.55-4.49l.51-3.33c.32-2.07-.7-2.88-1.48-3.15,1-.29,1.85-1,2.12-2.9l.4-2.55C201,6,199.82,5,197.48,5h-5Zm5.7-8.95c.83,0,1,.46.86,1.32l-.51,3.22c-.19,1.16-.54,1.24-1.11,1.24h-1l.94-5.78Zm1.23-8c.62,0,.89.35.78,1l-.43,2.66c-.16.86-.48,1.05-1,1.05h-.86l.75-4.76Z" transform="translate(-5.33 -2.17)" style="fill: #aaa"/>
+  </symbol>
+  <symbol id="logo-hearstautos" viewBox="460 0 140 40">
+    <title>Hearst Autos</title>
+    <polygon points="466.45 0.19 466.45 6.19 463.45 6.19 463.45 0.19 457.45 0.19 457.45 16.19 463.45 16.19 463.45 10.19 466.45 10.19 466.45 16.19 472.45 16.19 472.45 0.19 466.45 0.19" style="fill: #fff"/>
+    <polygon points="483.45 0.19 483.45 16.19 495.45 16.19 495.45 12.19 489.45 12.19 489.45 10.19 495.45 10.19 495.45 6.19 489.45 6.19 489.45 4.19 495.45 4.19 495.45 0.19 483.45 0.19" style="fill: #fff"/>
+    <path d="M515,2.36l-5.21,16h5.91l.6-2H521l.56,2H528l-5-16Zm3.72,3.55,1.38,6.45h-2.86Z" transform="translate(-5.33 -2.17)" style="fill: #fff"/>
+    <path d="M536.78,18.36h6v-5.8h.55c1.44,0,1.64.68,1.88,2.4l.16,1.19a17.57,17.57,0,0,0,.46,2.22h6.08c-.26-1.18-.46-2.13-.55-2.85l-.2-1.71c-.28-2.3-.8-3.28-2.94-3.64,2.08-.56,3.14-1.8,3.14-3.73,0-3.2-2.06-4.07-6.44-4.07h-8.14Zm6-9V6.27a5.79,5.79,0,0,1,.69,0c1.37,0,2,.44,2,1.45s-.76,1.68-2.21,1.68a3.46,3.46,0,0,1-.45,0Z" transform="translate(-5.33 -2.17)" style="fill: #fff"/>
+    <path d="M566.78,14.36v.14c0,1.2.48,1.75,1.5,1.75s1.47-.5,1.47-1.26a1.3,1.3,0,0,0-.62-1.21c-.8-.44-2.22-.69-4.07-1.35-2.54-.9-3.72-2.29-3.72-4.75,0-3.44,2.5-5.51,7.08-5.51,4.16,0,6.36,1.73,6.36,4.82v.37h-5.21c-.07-1.05-.5-1.56-1.37-1.56A1.19,1.19,0,0,0,566.89,7c0,1.23,1.09,1.18,3.08,1.79,3.64,1.08,5.38,2.21,5.38,5.4,0,3.71-2.66,6.13-7.2,6.13s-7-1.95-7-5.3a4.72,4.72,0,0,1,0-.63Z" transform="translate(-5.33 -2.17)" style="fill: #fff"/>
+    <polygon points="592.45 4.19 588.45 4.19 588.45 17.19 582.45 17.19 582.45 4.19 578.45 4.19 578.45 0.19 592.45 0.19 592.45 4.19" style="fill: #fff"/>
+    <path d="M513.61,33.68c-1.95,0-2.95.43-2.95,1.5,0,.8.57,1.25,1.47,1.25,1.39,0,2.28-.87,2.28-2.72-.2,0-.47,0-.8,0Zm-4-4a6.36,6.36,0,0,1,3-.69c2.6,0,3.59,1.41,3.59,3.44a4.62,4.62,0,0,1-.41,2.29v.91a7.76,7.76,0,0,1,.49,1.76h-1.69c0,.22,0-.08,0-.33s0-.5,0-.67h0a3.26,3.26,0,0,1-2.92,1.49c-1.74,0-2.94-1-2.94-2.6,0-1.79,1.62-2.79,4.48-2.79.35,0,.82,0,1.21,0a1.84,1.84,0,0,0-2.1-2.07,4.88,4.88,0,0,0-2.56.78Z" transform="translate(-5.33 -2.17)" style="fill: #fff"/>
+    <path d="M524.64,36.36a3.34,3.34,0,0,1-3,1.56c-1.86,0-2.89-3.38-2.89-3.38V29.36h2v4.33c0,1.63.25,2.85,1.78,2.85s2.22-1.28,2.22-2.84V29.36h2v5.8a12.69,12.69,0,0,0-.23,2.2h-1.81a3.58,3.58,0,0,1-.07-1Z" transform="translate(-5.33 -2.17)" style="fill: #fff"/>
+    <path d="M531.78,29.36h2v1h-2v3.56c0,1.32.24,2.09,1.51,2.09a2.9,2.9,0,0,0,.94-.17l.06,1.49a5.7,5.7,0,0,1-1.55.21c-2.24,0-3-1.13-3-3.19v-4h-2v-1h2v-1.9l2-.62Z" transform="translate(-5.33 -2.17)" style="fill: #fff"/>
+    <path d="M537,33.47c0,1.79,1,3,2.44,3s2.44-1.17,2.44-3-1-3-2.46-3-2.42,1.17-2.42,3m6.89,0a4.47,4.47,0,0,1-8.93,0,4.47,4.47,0,1,1,8.93,0" transform="translate(-5.33 -2.17)" style="fill: #fff"/>
+    <path d="M545.52,35.9a4.92,4.92,0,0,0,2.24.56c.84,0,1.51-.36,1.51-1.05s-.38-.92-1.72-1.47c-1.55-.63-2.13-1.25-2.13-2.42,0-1.59,1.29-2.56,3.2-2.56a6.05,6.05,0,0,1,2.16.37l-.17,1.51a4.37,4.37,0,0,0-1.94-.46c-.77,0-1.36.35-1.36,1s.42.88,1.58,1.32c1.55.6,2.31,1.27,2.31,2.57,0,1.74-1.38,2.66-3.32,2.66a6.77,6.77,0,0,1-2.48-.43Z" transform="translate(-5.33 -2.17)" style="fill: #fff"/>
+  </symbol>
+  <symbol id="logo-caranddriver" viewBox="0 4 180 30">
+    <title>Car and Driver</title>
+    <polygon points="54.14 32 72.53 32 72.53 24.07 54.14 24.07 54.14 32" style="fill: #24408e"/>
+    <path d="M105.64,15.37c0,1.2-.22,1.75-.77,1.75h-1V10.45h.76a1,1,0,0,1,1,1.09ZM113,30.13v-5.8c0-3.17-.66-4.37-3.61-5.35,2.73-1,3.5-2,3.5-4.27V11.65c0-3.39-2.29-5.14-6.78-5.14H96.35V34.18h7.54V20.94h.65c.77,0,1.1.44,1.1,1.54v7.87a9.18,9.18,0,0,0,.65,3.83h7.54a7.86,7.86,0,0,1-.87-4.05Z" transform="translate(-4.25 -2.17)" style="fill: #fefefe"/>
+    <polygon points="152.35 4.34 152.35 8.28 146.44 8.28 146.44 14.95 151.8 14.95 151.8 18.78 146.44 18.78 146.44 27.96 152.78 27.96 152.78 32.01 138.25 32.01 138.25 4.34 152.35 4.34" style="fill: #fefefe"/>
+    <polygon points="134.31 32.01 123.71 32.01 118.68 4.34 126.22 4.34 129.39 21.29 131.36 4.34 137.48 4.34 134.31 32.01" style="fill: #fefefe"/>
+    <polygon points="110.31 32.01 117.84 32.01 117.84 4.34 110.31 4.34 110.31 32.01" style="fill: #fefefe"/>
+    <path d="M28.46,22.58h1.75L29.34,16ZM35.57,6.51,39.5,34.17H31.85l-1.07-7.75H28l-1,7.75H20.48l4.6-27.66Z" transform="translate(-4.25 -2.17)" style="fill: #fefefe"/>
+    <path d="M74.13,23c0,.39-.11.56-.29.56h-.38V17.14h.35a.32.32,0,0,1,.32.35Zm.25-7.14H71v8.94h3.71c1.35,0,1.8-.67,1.8-1.87V18a1.88,1.88,0,0,0-2.15-2.08Z" transform="translate(-4.25 -2.17)" style="fill: #fefefe"/>
+    <polygon points="63.9 16.99 63.9 13.7 65.87 13.7 65.87 22.65 64 22.65 62.68 19.25 62.68 22.65 60.86 22.65 60.86 13.7 62.77 13.7 63.9 16.99" style="fill: #fefefe"/>
+    <path d="M61,21.06,61.43,18l.41,3.07Zm2.32-5.2H60.15l-1.48,9h1.84l.34-2.51H62l.35,2.51h2.26Z" transform="translate(-4.25 -2.17)" style="fill: #fefefe"/>
+    <path d="M167.05,15.37c0,1.2-.22,1.75-.77,1.75h-1V10.45h.76a1,1,0,0,1,1,1.09Zm7.5,14.76v-5.8c0-3.17-.66-4.37-3.61-5.35,2.73-1,3.5-2,3.5-4.27V11.65c0-3.39-2.29-5.14-6.77-5.14h-9.73V34.18h7.54V20.94h.65c.77,0,1.1.44,1.1,1.54v7.87a9.18,9.18,0,0,0,.65,3.83h7.54a7.86,7.86,0,0,1-.87-4.05Z" transform="translate(-4.25 -2.17)" style="fill: #fefefe"/>
+    <polygon points="54.14 12.27 72.53 12.27 72.53 4.34 54.14 4.34 54.14 12.27" style="fill: #c4122e"/>
+    <path d="M87.42,28.6c0,1.2-.33,1.75-.87,1.75h-.88V10.45h.77a1,1,0,0,1,1,1.09ZM88.51,6.51H78.13V34.17H89.6c4.16,0,5.58-2.07,5.58-5.79V13c-.11-4.37-2.3-6.45-6.67-6.45Z" transform="translate(-4.25 -2.17)" style="fill: #fefefe"/>
+    <path d="M49.55,15.37c0,1.2-.22,1.75-.77,1.75h-1V10.45h.76a1,1,0,0,1,1,1.09Zm7.32,14.76v-5.8c0-3.17-.66-4.37-3.61-5.35,2.73-1,3.5-2,3.5-4.27V11.65c0-3.39-2.29-5.14-6.78-5.14H40.25V34.18H47.8V20.94h.65c.77,0,1.09.44,1.09,1.54v7.87a9,9,0,0,0,.66,3.83h7.54a7.86,7.86,0,0,1-.87-4.05Z" transform="translate(-4.25 -2.17)" style="fill: #fefefe"/>
+    <path d="M20.43,28.71c-.11,4.37-2.19,6-7.87,6-6.13,0-8.31-1.86-8.31-7V12c0-4.16,2.51-6,8.52-6,4.6,0,7.55,2.3,7.55,5.8v4.81H13.65V11.72c0-1.32-.52-1.49-.88-1.49s-.87.17-.87,1.31V29.12c0,.86.52,1.23,1,1.23s1-.37,1-1.41V22.58h6.56Z" transform="translate(-4.25 -2.17)" style="fill: #fefefe"/>
+    <path d="M172.72,32.92a.91.91,0,0,1,.9-.9.89.89,0,0,1,.9.9.9.9,0,1,1-1.8,0m-.19,0a1.1,1.1,0,1,0,1.09-1.1,1.09,1.09,0,0,0-1.09,1.1" transform="translate(-4.25 -2.17)" style="fill: #fefefe"/>
+    <path d="M173.53,32.91h-.13l0,0,0-.1v-.14l0-.09,0,0h.18c.21,0,.27,0,.27.15s-.12.17-.32.2Zm.48.26a.57.57,0,0,0-.3-.17v0c.22,0,.38-.12.38-.3s-.16-.28-.47-.28h-.44v1h.24v-.24l0-.1,0,0h.1a.33.33,0,0,1,.24.13l.19.22h.28v0Z" transform="translate(-4.25 -2.17)" style="fill: #fefefe"/>
+  </symbol>
+</svg>
+
+		<header id="header-content">
+			<div id="header-grid">
+				<a href="/" id="header-logo"><svg><use xlink:href="#logo-caranddriver" /></svg></a>
+				<nav id="header-nav">
+					<!-- TODO: Internalize this logo or capture locally. -->
+					<ul id="header-menu"><li>
+							<a href="/newcars">New Cars</a>
+							<div class="sub-menu-hitbox">
+								<div class="sub-menu sub-menu-4">
+									<a href="/acura">Acura</a>
+									<a href="/fiat">Fiat</a>
+									<a href="/lexus">Lexus</a>
+									<a href="/polestar">Polestar</a>
+									<a href="/alfa-romeo">Alfa Romeo</a>
+									<a href="/ford">Ford</a>
+									<a href="/lincoln">Lincoln</a>
+									<a href="/porsche">Porsche</a>
+									<a href="/aston-martin">Aston Martin</a>
+									<a href="/gmc">GMC</a>
+									<a href="/lotus">Lotus</a>
+									<a href="/ram">Ram</a>
+									<a href="/audi">Audi</a>
+									<a href="/genesis">Genesis</a>
+									<a href="/maserati">Maserati</a>
+									<a href="/rolls-royce">Rolls-Royce</a>
+									<a href="/bmw">BMW</a>
+									<a href="/honda">Honda</a>
+									<a href="/mazda">Mazda</a>
+									<a href="/scion">Scion</a>
+									<a href="/bentley">Bentley</a>
+									<a href="/hyundai">Hyundai</a>
+									<a href="/mclaren">McLaren</a>
+									<a href="/smart">Smart</a>
+									<a href="/bugatti">Bugatti</a>
+									<a href="/infiniti">Infiniti</a>
+									<a href="/mercedes-amg">Mercedes-AMG</a>
+									<a href="/spyker">Spyker</a>
+									<a href="/buick">Buick</a>
+									<a href="/jaguar">Jaguar</a>
+									<a href="/mercedes-benz">Mercedes-Benz</a>
+									<a href="/subaru">Subaru</a>
+									<a href="/cadillac">Cadillac</a>
+									<a href="/jeep">Jeep</a>
+									<a href="/mercedes-maybach">Mercedes-Maybach</a>
+									<a href="/tesla">Tesla</a>
+									<a href="/chevrolet">Chevrolet</a>
+									<a href="/kia">Kia</a>
+									<a href="/mini">Mini</a>
+									<a href="/toyota">Toyota</a>
+									<a href="/chrysler">Chrysler</a>
+									<a href="/koenigsegg">Koenigsegg</a>
+									<a href="/mitsubishi">Mitsubishi</a>
+									<a href="/volkswagen">Volkswagen</a>
+									<a href="/dodge">Dodge</a>
+									<a href="/lamborghini">Lamborghini</a>
+									<a href="/nissan">Nissan</a>
+									<a href="/volvo">Volvo</a>
+									<a href="/ferrari">Ferrari</a>
+									<a href="/land-rover">Land Rover</a>
+									<a href="/pagani">Pagani</a>
+									<span>&nbsp;</span>
+									<a href="/list-reviews" class="menu-footer"><em>View All Reviews</em></a>
+								</div>
+							</div>
+						</li><li>
+							<a href="/reviews">Reviews</a>
+							<div class="sub-menu-hitbox">
+								<div class="sub-menu sub-menu-1">
+									<a href="/list-reviews-in-depth">In-Depth Reviews</a></td></tr>
+									<a href="/list-reviews-first-drives">First Drives</a></td></tr>
+									<a href="/list-reviews-instrumented-tests">Instrumented Tests</a></td></tr>
+									<a href="/list-reviews-comparison-tests">Comparison Tests</a></td></tr>
+									<a href="/list-reviews-long-term-tests">Long-Term Tests</a></td></tr>
+									<a href="/list-reviews-archives">Archived Reviews</a></td></tr>
+									<a href="/list-reviews">View All Reviews</a></td></tr>
+								</div>
+							</div>
+						</li><li>
+							<a href="https://blog.caranddriver.com">News</a>
+							<div class="sub-menu-hitbox">
+								<div class="sub-menu sub-menu-1">
+									<a href="/auto-shows/2018-new-york-auto-show">New York Auto Show</a>
+									<a href="https://blog.caranddriver.com">Blog</a>
+									<a href="/auto-shows">Auto Shows</a>
+									<a href="https://blog.caranddriver.com">View All News</a>
+								</div>
+							</div>
+						</li><li>
+							<a href="/list-features">Features</a>
+							<div class="sub-menu-hitbox">
+								<div class="sub-menu sub-menu-1">
+									<a href="/compare">Compare</a>
+									<a href="/features/2018-10best-trucks-and-suvs-our-top-picks-in-every-segment-feature">10Best Trucks/SUVs</a>
+									<a href="/features/2018-10best-cars-the-best-cars-for-sale-in-america-today-feature">2018 10Best Cars</a>
+									<a href="/comparisons/the-battle-of-the-off-road-beaters-ford-vs-geo-jeep-and-land-rover-feature">Battle of the Beaters</a>
+									<a href="/features/lightning-lap-2017-19-hot-performance-cars-attack-vir-feature">Lightning Lap 2017</a>
+									<a href="/features/2018-editors-choice-for-best-cars-trucks-crossovers-and-suvs">2018 Editors' Choice</a>
+									<a href="/features/new-cars-for-2018-model-change-info-full-tests-and-more-feature">New Cars for 2018</a>
+									<a href="/features/zero-to-sixty-car-and-drivers-60th-anniversary-feature">60th Anniversary</a>
+									<a href="/list-flipbooks">Flipbooks</a>
+									<a href="/list-photo-galleries">Galleries</a>
+									<a href="/list-features">View All Features</a>
+								</div>
+							</div>
+						</li><li>
+							<a href="/features/2018-editors-choice-for-best-cars-trucks-crossovers-and-suvs">Buyer's Guide</a>
+							<div class="sub-menu-hitbox">
+								<div class="sub-menu sub-menu-1">
+									<a href="/list-features-shopping-advice">Shopping Advice</a>
+									<a href="/features/2018-editors-choice-for-best-cars-trucks-crossovers-and-suvs">2018 Editors' Choice</a>
+									<a href="/features/2017-editors-choice-for-best-cars-trucks-crossovers-and-suvs">2017 Editors' Choice</a>
+									<a href="/features/what-you-need-to-know-about-certified-pre-owned-cpo-car-programs-feature">CPO Buyer's Guide</a>
+									<a href="/car-comparison-tool">Compare Vehicles</a>
+									<a href="/get-your-car-value?BID=GlobalBuyersGuide">What's My Trade Worth?</a>
+								</div>
+							</div>
+						</li><li class="highlighted">
+							<a href="/cars-for-sale">Shop For Cars</a>
+							<div class="sub-menu-hitbox">
+								<div class="sub-menu sub-menu-1">
+									<a href="/vehicles/New">New Cars for Sale</a>
+									<a href="/vehicles/Used">Used Cars for Sale</a>
+									<a href="/vehicles/CPO">Certified Cars for Sale</a>
+									<a href="https://quotes.caranddriver.com">Get a Free Quote</a>
+									<a href="https://carbuying.caranddriver.com/main.html?referrer_id=ZCAR000023534">Build and Price</a>
+								</div>
+							</div>
+						</li><li>
+							<a href="https://subscribe.hearstmags.com/subscribe/splits/caranddriver/cdb_top_nav_subscribe">Connect</a>
+							<div class="sub-menu-hitbox">
+								<div class="sub-menu sub-menu-1">
+									<a href="https://subscribe.hearstmags.com/subscribe/splits/caranddriver/cdb_top_nav_subscribe">Magazine</a>
+									<a href="https://subscribe.hearstmags.com/subscribe/splits/caranddriver/cdb_digital_nav">Digital Edition</a>
+									<a href="https://subscribe.hearstmags.com/subscribe/splits/caranddriver/cdb_gift_nav_link">Give a Gift</a>
+									<a href="https://www.caranddriver.com/reviews/sign-up-for-our-newsletter-today-subscriptions">Newsletter</a>
+								</div>
+							</div>
+						</li></ul>
+					<div id="header-icons">
+						<form id="search-form" action="/search"><a id="search-close" href="#">X</a><input type="text" id="search-box" placeholder="What are you looking for?" /></form>
+						<a href="#search-form">Search</a>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<div id="splash-content">
+			
+			<article id="splash-article-1" class="show">
+				<a class="splash-article-image" href="/reviews/2019-gmc-sierra-1500-denali-at4-driven" style="background-image:url(https://cnd.imgix.net/hmg-prod/images/2019-gmc-sierra-denali-placement-1535045383.jpg)"></a>
+				<div class="splash-article-content">
+					<nav>
+						<p><a href="/reviews/2019-gmc-sierra-1500-denali-at4-driven">First Drive Review</a><span> &bullet; Aug 2018</span></p>
+						<div class="pager">
+							<a href="#splash-article-5" onClick="return changeSplashPage(this);">&lsaquo;</a>
+							<span><em>1</em> of <em>5</em></span>
+							<a href="#splash-article-2" onClick="return changeSplashPage(this);">&rsaquo;</a>
+						</div>
+					</nav>
+					<div class="summary">
+						<h1><a class="inverted" href="/reviews/2019-gmc-sierra-1500-denali-at4-driven">The 2019 GMC Sierra 1500 Is No Longer Just a Pricier Chevy Silverado</a></h1>
+						<h2>Exclusive content separates this all-new pickup from its corporate sibling.</h2>
+						<h3 class="byline"><span>By </span><a href="/search/Eric%20Stafford">Eric Stafford</a></h3>
+					</div>
+				</div>
+			</article>
+			
+			<article id="splash-article-2">
+				<a class="splash-article-image" href="/flipbook/2018-monterey-car-week-pebble-beach-auction-preview" style="background-image:url(https://cnd.imgix.net/hmg-prod/images/1998-mercedes-benz-amg-clk-gtr-15-1535410446.jpg)"></a>
+				<div class="splash-article-content">
+					<nav>
+						<p><a href="/flipbook/2018-monterey-car-week-pebble-beach-auction-preview">Flipbook</a><span> &bullet; Aug 2018</span></p>
+						<div class="pager">
+							<a href="#splash-article-1" onClick="return changeSplashPage(this);">&lsaquo;</a>
+							<span><em>2</em> of <em>5</em></span>
+							<a href="#splash-article-3" onClick="return changeSplashPage(this);">&rsaquo;</a>
+						</div>
+					</nav>
+					<div class="summary">
+						<h1><a class="inverted" href="/flipbook/2018-monterey-car-week-pebble-beach-auction-preview">$367 Million Changed Hands at the 2018 Monterey Auctions</a></h1>
+						<h2>Records fell, cash abounded, and these 10 cars brought the most money.</h2>
+						<h3 class="byline"><span>By </span><a href="/search/Car%20and%20Driver">Car and Driver</a></h3>
+					</div>
+				</div>
+			</article>
+			
+			<article id="splash-article-3">
+				<a class="splash-article-image" href="/reviews/2019-chevrolet-malibu-rs-cvt-driven" style="background-image:url(https://cnd.imgix.net/hmg-prod/images/2018-chevrolet-malibu-rs-first-drive-placement-1535341871.jpg)"></a>
+				<div class="splash-article-content">
+					<nav>
+						<p><a href="/reviews/2019-chevrolet-malibu-rs-cvt-driven">First Drive Review</a><span> &bullet; Aug 2018</span></p>
+						<div class="pager">
+							<a href="#splash-article-2" onClick="return changeSplashPage(this);">&lsaquo;</a>
+							<span><em>3</em> of <em>5</em></span>
+							<a href="#splash-article-4" onClick="return changeSplashPage(this);">&rsaquo;</a>
+						</div>
+					</nav>
+					<div class="summary">
+						<h1><a class="inverted" href="/reviews/2019-chevrolet-malibu-rs-cvt-driven">Chevrolet Malibu Makes a Virtue of Being Unobtrusive</a></h1>
+						<h2>Behind a facelift and a new RS badge hides GM&#39;s new continuously variable automatic transmission.</h2>
+						<h3 class="byline"><span>By </span><a href="/search/Jeff%20Sabatini">Jeff Sabatini</a></h3>
+					</div>
+				</div>
+			</article>
+			
+			<article id="splash-article-4">
+				<a class="splash-article-image" href="/reviews/2019-hyundai-santa-fe-drive" style="background-image:url(https://cnd.imgix.net/hmg-prod/images/2019-hyundai-santa-fe-first-drive-placement-1535062627.jpg)"></a>
+				<div class="splash-article-content">
+					<nav>
+						<p><a href="/reviews/2019-hyundai-santa-fe-drive">First Drive Review</a><span> &bullet; Aug 2018</span></p>
+						<div class="pager">
+							<a href="#splash-article-3" onClick="return changeSplashPage(this);">&lsaquo;</a>
+							<span><em>4</em> of <em>5</em></span>
+							<a href="#splash-article-5" onClick="return changeSplashPage(this);">&rsaquo;</a>
+						</div>
+					</nav>
+					<div class="summary">
+						<h1><a class="inverted" href="/reviews/2019-hyundai-santa-fe-drive">2019 Hyundai Santa Fe Loses the Sport, Keeps the Practicality</a></h1>
+						<h2>The former Santa Fe Sport is redesigned.</h2>
+						<h3 class="byline"><span>By </span><a href="/search/Joe%20Lorio">Joe Lorio</a></h3>
+					</div>
+				</div>
+			</article>
+			
+			<article id="splash-article-5">
+				<a class="splash-article-image" href="/news/2019-bmw-z4-roadster-30i-m40i" style="background-image:url(https://cnd.imgix.net/hmg-prod/images/2019-bmw-z4-placement-1534445413.jpg)"></a>
+				<div class="splash-article-content">
+					<nav>
+						<p><a href="/news/2019-bmw-z4-roadster-30i-m40i">Official Photos and Info</a><span> &bullet; Aug 2018</span></p>
+						<div class="pager">
+							<a href="#splash-article-4" onClick="return changeSplashPage(this);">&lsaquo;</a>
+							<span><em>5</em> of <em>5</em></span>
+							<a href="#splash-article-1" onClick="return changeSplashPage(this);">&rsaquo;</a>
+						</div>
+					</nav>
+					<div class="summary">
+						<h1><a class="inverted" href="/news/2019-bmw-z4-roadster-30i-m40i">The 2019 BMW Z4 Is a Real Roadster Again</a></h1>
+						<h2>The new softtop will offer six-cylinder M40i and four-cylinder 30i versions.</h2>
+						<h3 class="byline"><span>By </span><a href="/search/Joseph%20Capparella">Joseph Capparella</a></h3>
+					</div>
+				</div>
+			</article>
+			
+		</div>
+		<div id="main-content">
+			<div id="main-grid">
+				<aside id="main-sidebar">
+					<section id="recent-news">
+						<h1>Recent News</h1>
+						
+						<article>
+							<h2><a href="/news/vw-beetle-final-edition-2019-coupe-convertible" class="inverted">VW Sends Off the Beetle with Final Edition Coupes and Convertibles</a></h2>
+							<div class="metadata">
+								<svg class="icon-tiny"><use xlink:href="#icon-clock" /></svg><span class="posted-ago">44 minutes ago</span><a href="/news/vw-beetle-final-edition-2019-coupe-convertible" class="comment-count"><svg class="icon-tiny"><use xlink:href="#icon-comments" /></svg><span>3</span></a>
+							</div>
+						</article>
+						
+						<article>
+							<h2><a href="/1968-chevrolet-astro-ii-mid-engined-corvette-concept" class="inverted">The Idea of the Mid-Engined Corvette Began with This 1960s Concept</a></h2>
+							<div class="metadata">
+								<svg class="icon-tiny"><use xlink:href="#icon-clock" /></svg><span class="posted-ago">an hour ago</span><a href="/1968-chevrolet-astro-ii-mid-engined-corvette-concept" class="comment-count"><svg class="icon-tiny"><use xlink:href="#icon-comments" /></svg><span>1</span></a>
+							</div>
+						</article>
+						
+						<article>
+							<h2><a href="/news/gm-recall-trucks-suvs-steering" class="inverted">GM Recalls More Than One Million Trucks to Fix Electric-Assisted Steering</a></h2>
+							<div class="metadata">
+								<svg class="icon-tiny"><use xlink:href="#icon-clock" /></svg><span class="posted-ago">3 hours ago</span><a href="/news/gm-recall-trucks-suvs-steering" class="comment-count"><svg class="icon-tiny"><use xlink:href="#icon-comments" /></svg><span>6</span></a>
+							</div>
+						</article>
+						
+						<article>
+							<h2><a href="/features/mild-hybrid-cars-how-it-works" class="inverted">In the Near Future, Most Cars Will Have a Hybrid Setup. Here&#39;s How the Simplest Versions Work</a></h2>
+							<div class="metadata">
+								<svg class="icon-tiny"><use xlink:href="#icon-clock" /></svg><span class="posted-ago">4 hours ago</span><a href="/features/mild-hybrid-cars-how-it-works" class="comment-count"><svg class="icon-tiny"><use xlink:href="#icon-comments" /></svg><span>3</span></a>
+							</div>
+						</article>
+						
+						<article>
+							<h2><a href="/news/2021-bmw-x5-plug-in-hybrid-photos-info" class="inverted">The New BMW X5 Plug-In Hybrid Is More Promising Than The Old One</a></h2>
+							<div class="metadata">
+								<svg class="icon-tiny"><use xlink:href="#icon-clock" /></svg><span class="posted-ago">5 hours ago</span><a href="/news/2021-bmw-x5-plug-in-hybrid-photos-info" class="comment-count"><svg class="icon-tiny"><use xlink:href="#icon-comments" /></svg><span>0</span></a>
+							</div>
+						</article>
+						
+						<article>
+							<h2><a href="/news/kia-proceed-wagon-ceed-gt-hot-hatchback" class="inverted">Kia Has a Cool New Wagon and Hot Hatch in Europe - And Possibly for America</a></h2>
+							<div class="metadata">
+								<svg class="icon-tiny"><use xlink:href="#icon-clock" /></svg><span class="posted-ago">6 hours ago</span><a href="/news/kia-proceed-wagon-ceed-gt-hot-hatchback" class="comment-count"><svg class="icon-tiny"><use xlink:href="#icon-comments" /></svg><span>4</span></a>
+							</div>
+						</article>
+						
+						<article>
+							<h2><a href="/news/aston-martin-rapide-e-electric-details" class="inverted">The Aston Martin Rapide E Will Be a Track-Ready Electric Car</a></h2>
+							<div class="metadata">
+								<svg class="icon-tiny"><use xlink:href="#icon-clock" /></svg><span class="posted-ago">6 hours ago</span><a href="/news/aston-martin-rapide-e-electric-details" class="comment-count"><svg class="icon-tiny"><use xlink:href="#icon-comments" /></svg><span>5</span></a>
+							</div>
+						</article>
+						
+						<article>
+							<h2><a href="/flipbook/bitchin-indeed-a-visual-history-of-the-chevrolet-camaro" class="inverted">A Visual History of the Chevrolet Camaro, from 1967 to Today</a></h2>
+							<div class="metadata">
+								<svg class="icon-tiny"><use xlink:href="#icon-clock" /></svg><span class="posted-ago">7 hours ago</span><a href="/flipbook/bitchin-indeed-a-visual-history-of-the-chevrolet-camaro" class="comment-count"><svg class="icon-tiny"><use xlink:href="#icon-comments" /></svg><span>0</span></a>
+							</div>
+						</article>
+						
+						<article>
+							<h2><a href="https://www.caranddriver.com/news/gm-recall-faulty-brakes" class="inverted">GM Recalls 210,000 Brand-New Cars for Faulty Brakes</a></h2>
+							<div class="metadata">
+								<svg class="icon-tiny"><use xlink:href="#icon-clock" /></svg><span class="posted-ago">9 hours ago</span><a href="https://www.caranddriver.com/news/gm-recall-faulty-brakes" class="comment-count"><svg class="icon-tiny"><use xlink:href="#icon-comments" /></svg><span>4</span></a>
+							</div>
+						</article>
+						
+						<article>
+							<h2><a href="/features/disney-epcot-center-test-track-review" class="inverted">Epcot Center&#39;s Test Track Reviewed by a Nine-Year-Old</a></h2>
+							<div class="metadata">
+								<svg class="icon-tiny"><use xlink:href="#icon-clock" /></svg><span class="posted-ago">a day ago</span><a href="/features/disney-epcot-center-test-track-review" class="comment-count"><svg class="icon-tiny"><use xlink:href="#icon-comments" /></svg><span>11</span></a>
+							</div>
+						</article>
+						
+						<article>
+							<h2><a href="/flipbook/concepts-prototypes-inspired-mid-engine-c8-corvette" class="inverted">10 Cars That Paved the Way for the Mid-Engined C8 Corvette</a></h2>
+							<div class="metadata">
+								<svg class="icon-tiny"><use xlink:href="#icon-clock" /></svg><span class="posted-ago">a day ago</span><a href="/flipbook/concepts-prototypes-inspired-mid-engine-c8-corvette" class="comment-count"><svg class="icon-tiny"><use xlink:href="#icon-comments" /></svg><span>0</span></a>
+							</div>
+						</article>
+						
+						<article>
+							<h2><a href="/reviews/citroen-ds3-hatchback-drive" class="inverted">Citroen&#39;s DS 3 Is a Mini Cooper Done French and Modern</a></h2>
+							<div class="metadata">
+								<svg class="icon-tiny"><use xlink:href="#icon-clock" /></svg><span class="posted-ago">a day ago</span><a href="/reviews/citroen-ds3-hatchback-drive" class="comment-count"><svg class="icon-tiny"><use xlink:href="#icon-comments" /></svg><span>21</span></a>
+							</div>
+						</article>
+						
+						<article>
+							<h2><a href="/news/goodwood-revival-best-automotive-event" class="inverted">Here&#39;s What Makes the Goodwood Revival the Best Automotive Event in the World</a></h2>
+							<div class="metadata">
+								<svg class="icon-tiny"><use xlink:href="#icon-clock" /></svg><span class="posted-ago">a day ago</span><a href="/news/goodwood-revival-best-automotive-event" class="comment-count"><svg class="icon-tiny"><use xlink:href="#icon-comments" /></svg><span>3</span></a>
+							</div>
+						</article>
+						
+						<article>
+							<h2><a href="/features/best-lease-deals-offers" class="inverted">You Can Lease Three Cars for $199 per Month</a></h2>
+							<div class="metadata">
+								<svg class="icon-tiny"><use xlink:href="#icon-clock" /></svg><span class="posted-ago">a day ago</span><a href="/features/best-lease-deals-offers" class="comment-count"><svg class="icon-tiny"><use xlink:href="#icon-comments" /></svg><span>6</span></a>
+							</div>
+						</article>
+						
+						<article>
+							<h2><a href="/features/porsche-short-term-rental-host-drive" class="inverted">Porsche Wants You to Rent Its Cars</a></h2>
+							<div class="metadata">
+								<svg class="icon-tiny"><use xlink:href="#icon-clock" /></svg><span class="posted-ago">a day ago</span><a href="/features/porsche-short-term-rental-host-drive" class="comment-count"><svg class="icon-tiny"><use xlink:href="#icon-comments" /></svg><span>3</span></a>
+							</div>
+						</article>
+						
+						<article>
+							<h2><a href="/news/acura-nsx-recall-fuel-tank-brake-light-problems" class="inverted">Acura NSX Recalled for Fuel-Tank and Brake-Light Problems</a></h2>
+							<div class="metadata">
+								<svg class="icon-tiny"><use xlink:href="#icon-clock" /></svg><span class="posted-ago">2 days ago</span><a href="/news/acura-nsx-recall-fuel-tank-brake-light-problems" class="comment-count"><svg class="icon-tiny"><use xlink:href="#icon-comments" /></svg><span>26</span></a>
+							</div>
+						</article>
+						
+						<article>
+							<h2><a href="/news/2020-mercedes-benz-gle-photos-info" class="inverted">The Redesigned 2020 Mercedes-Benz GLE Gets a Trick New Suspension and a Third-Row Seat</a></h2>
+							<div class="metadata">
+								<svg class="icon-tiny"><use xlink:href="#icon-clock" /></svg><span class="posted-ago">2 days ago</span><a href="/news/2020-mercedes-benz-gle-photos-info" class="comment-count"><svg class="icon-tiny"><use xlink:href="#icon-comments" /></svg><span>99</span></a>
+							</div>
+						</article>
+						
+						<article>
+							<h2><a href="/reviews/1983-toyota-supra-reliability-performance" class="inverted">The 1983 Toyota Supra Is One of the All-Time Great Japanese Cars</a></h2>
+							<div class="metadata">
+								<svg class="icon-tiny"><use xlink:href="#icon-clock" /></svg><span class="posted-ago">2 days ago</span><a href="/reviews/1983-toyota-supra-reliability-performance" class="comment-count"><svg class="icon-tiny"><use xlink:href="#icon-comments" /></svg><span>73</span></a>
+							</div>
+						</article>
+						
+					</section>
+				</aside>
+				<div id="main-articles">
+					<section id="research-ui">
+						<h1>Research and Shop</h1>
+
+					</section>
+					<section id="featured-reviews">
+						<h1>Featured</h1>
+
+					</section>
+					<section id="annual-reviews">
+						<h1>2018-2019 Car Reviews</h1>
+
+					</section>
+					<section id="recent-galleries">
+						<h1>Recent Galleries</h1>
+
+					</section>
+					<section id="comparison-tests">
+						<h1>Comparison Tests</h1>
+					</section>
+					<section id="most-researched">
+						<h1>Most Researched Manufacturers</h1>
+
+					</section>
+				</div>
+			</div>
+		</div>
+		<div id="social-content">
+			<div id="social-grid">
+				<a class="icon-facebook" href="https://www.facebook.com/caranddriver"><svg class="icon-small"><use xlink:href="#icon-facebook" /></svg><span>Facebook</span></a>
+				<a class="icon-twitter" href="https://twitter.com/caranddriver"><svg class="icon-small"><use xlink:href="#icon-twitter" /></svg><span>Twitter</span></a>
+				<a class="icon-instagram" href="https://instagram.com/caranddriver"><svg class="icon-small"><use xlink:href="#icon-instagram" /></svg><span>Instagram</span></a>
+				<a class="icon-youtube" href="https://www.youtube.com/user/caranddriver"><svg class="icon-small"><use xlink:href="#icon-youtube" /><span>YouTube</span></a>
+			</div>
+		</div>
+		<footer id="footer-content">
+			<div id="footer-grid">
+				<div id="review-links" class="link-column">
+					<h1>Reviews</h1>
+					<ul>
+						<li><a href="/list-reviews-first-drives">First Drives</a></li>
+						<li><a href="">Instrumented Tests</a></li>
+						<li><a href="">Comparison Tests</a></li>
+						<li><a href="">Long-Term Road Tests</a></li>
+						<li><a href="">From the Review Vault</a></li>
+					</ul>
+				</div>
+				<div id="news-links" class="link-column">
+					<h1>News</h1>
+					<ul>
+						<li><a href="/list-reviews-first-drives">First Drives</a></li>
+						<li><a href="">Instrumented Tests</a></li>
+						<li><a href="">Comparison Tests</a></li>
+						<li><a href="">Long-Term Road Tests</a></li>
+						<li><a href="">From the Review Vault</a></li>
+					</ul>
+				</div>
+				<div id="features-links" class="link-column">
+					<h1>Features</h1>
+					<ul>
+						<li><a href="/list-reviews-first-drives">First Drives</a></li>
+						<li><a href="">Instrumented Tests</a></li>
+						<li><a href="">Comparison Tests</a></li>
+						<li><a href="">Long-Term Road Tests</a></li>
+						<li><a href="">From the Review Vault</a></li>
+					</ul>
+				</div>
+				<div id="buyers-guide-links" class="link-column">
+					<h1>Buyer's Guide</h1>
+					<ul>
+						<li><a href="/list-reviews-first-drives">First Drives</a></li>
+						<li><a href="">Instrumented Tests</a></li>
+						<li><a href="">Comparison Tests</a></li>
+						<li><a href="">Long-Term Road Tests</a></li>
+						<li><a href="">From the Review Vault</a></li>
+					</ul>
+				</div>
+				<div id="about-links" class="link-column">
+					<h1>About Car and Driver</h1>
+					<ul>
+						<li><a href="/list-reviews-first-drives">First Drives</a></li>
+						<li><a href="">Instrumented Tests</a></li>
+						<li><a href="">Comparison Tests</a></li>
+						<li><a href="">Long-Term Road Tests</a></li>
+						<li><a href="">From the Review Vault</a></li>
+					</ul>
+				</div>
+				<div id="follow-us-links" class="link-column">
+					<h1>Follow Us</h1>
+					<ul>
+						<li><a href="/list-reviews-first-drives">First Drives</a></li>
+						<li><a href="">Instrumented Tests</a></li>
+						<li><a href="">Comparison Tests</a></li>
+						<li><a href="">Long-Term Road Tests</a></li>
+						<li><a href="">From the Review Vault</a></li>
+					</ul>
+				</div>
+				<div id="copyright">
+					<p>&copy; 2018 Hearst Communications, Inc. All Rights Reserved., <a href="https://www.hearst.com/newsroom/us-magazines-privacy-notice">Privacy Notice</a> | <a href="https://www.hearst.com/newsroom/us-magazines-privacy-notice#_ADDITIONAL_INFO">Your California Privacy Rights</a> | <a href="https://www.hearst.com/newsroom/us-magazines-privacy-notice#_INTEREST_BASED">Interest-Based Ads</a> | <a href="https://www.hearst.com/newsroom/us-magazines-terms-of-use">Terms of Use</a></p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
+
