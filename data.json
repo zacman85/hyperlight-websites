@@ -160,5 +160,49 @@
 			"posted_at": "2 days ago",
 			"comment_count": 73
 		}
+	],
+	"featured_articles": [
+		{
+			"article_href": "/news/the-dollar58-million-bugatti-divo-is-a-lighter-wilder-better-handling-chiron",
+			"image_url": "/hmg-prod/images/bugatti-divo-placement-1535034871.jpg",
+			"title": "The $5.8 Million Bugatti Divo Is a Lighter, Wilder, Better-Handling Chiron",
+			"section": "Official Photos and Info",
+			"section_href": "/list",
+			"date": "Aug 2018",
+			"summary": "It's also more exclusive and already sold out.",
+			"author": "Joseph Capparella",
+			"author_href": "/search/Joseph%20Capparella",
+			"shop_href": "/vehicles/New/Bugatti/Divo",
+			"gallery_href": "/photo-gallery/the-dollar58-million-bugatti-divo-is-a-lighter-wilder-better-handling-chiron-gallery",
+			"gallery_count": 17
+		},
+		{
+			"article_href": "/reviews/2019-ram-1500-etorque-hybrid-pickup-drive",
+			"image_url": "/hmg-prod/images/2019ram1500placement-1535060851.jpg",
+			"title": "Ram Pushes Some Hybrid Tech to Pickups, with eTorque",
+			"section": "First Drive Review",
+			"section_href": "/list-reviews-first-drives",
+			"date": "Aug 2018",
+			"summary": "In the 2019 Ram 1500, electric assist is undetectable in operation and invisible to onlookers.",
+			"author": "K.C. Colwell",
+			"author_href": "/search/K.C.%20Colwell",
+			"shop_href": null,
+			"gallery_href": "/photo-gallery/2019-ram-1500-etorque-hybrid-pickup-drive-gallery",
+			"gallery_count": 72
+		},
+		{
+			"article_href": "/news/2019-acura-nsx-supercar",
+			"image_url": "/hmg-prod/images/2019-acura-nsx-placement-1535040483.jpg",
+			"title": "2019 Acura NSX Gets a Nose Job, a Better Chassis, and More Orange",
+			"section": "Official Photos and Info",
+			"section_href": "/list",
+			"date": "Aug 2018",
+			"summary": "Two years into the hybrid supercar's run, it looks to improve.",
+			"author": "Alexander Stoklosa",
+			"author_href": "/search/Alexander%20Stoklosa",
+			"shop_href": "/vehicles/New/Acura/NSX",
+			"gallery_href": "/photo-gallery/2019-acura-nsx-supercar-gallery",
+			"gallery_count": 38
+		}
 	]
 }

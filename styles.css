@@ -48,10 +48,15 @@ a.inverted:hover {
 #header-logo {
 	grid-area: logo;
 	align-self: center;
+	display: block;
+	height: 30px;
 }
 #header-logo > svg {
 	height: 30px;
 	width: 180px;
+	border: 0;
+	margin: 0;
+	padding: 0;
 }
 #header-nav {
 	grid-area: nav;
