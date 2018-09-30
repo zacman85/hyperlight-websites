@@ -56,6 +56,7 @@ a.button,
 a.button-half {
 	color: white;
 	background-color: #3a82af;
+	border: 2px solid #3a82af;
 }
 a.button:hover,
 a.button-half:hover {
@@ -400,7 +401,7 @@ a.button-inverted-half:hover {
 }
 #body-style-menu > a > b {
 	display: block;
-	background-image: url(https://cnd.imgix.net/images/car-sprite.png?h=1320&fm=pjpg);
+	background-image: url(https://cnd.imgix.net/images/car-sprite.png?h=1320&fm=pjpg&auto=format,compress);
 	background-repeat: no-repeat;
 	background-size: 100%;
 	margin: 0 auto 0.25rem auto;
@@ -575,7 +576,7 @@ a.button-inverted-half:hover {
 	display: block;
 	width: 230px;
 	height: 138px;
-	background-image: url(https://cnd.imgix.net/images/manu-sprite.png?fm=pjpg&w=460);
+	background-image: url(https://cnd.imgix.net/images/manu-sprite.png?fm=pjpg&w=460&auto=format,compress);
 	background-size: 100%;
 	margin: 1rem auto;
 }
