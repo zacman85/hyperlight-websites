@@ -336,6 +336,44 @@ a.inverted:hover {
 	vertical-align: middle;
 }
 
+#research-ui h2 {
+	font-size: 0.875rem;
+	font-weight: normal;
+	color: #666;
+	margin-bottom: 1.25rem;
+}
+#research-ui > div {
+	margin-bottom: 1.25rem;
+}
+
+#body-style-menu {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 1rem;
+}
+#body-style-menu > a {
+	display: block;
+	padding: 0.75rem 0;
+}
+#body-style-menu > a > b {
+	display: block;
+	background-image: url(https://cnd.imgix.net/images/car-sprite.png?h=1320&fm=pjpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin: 0 auto 0.25rem auto;
+	width: 113px;
+	height: 44px;
+	filter: none;
+}
+#body-style-menu > a:hover > b {
+	filter: brightness(1.1);
+}
+#body-style-menu > a > span {
+	display: block;
+	text-align: center;
+	font-size: 0.6875rem;
+}
+
 #social-content {
 	background-color: black;
 	font-size: 1.25rem;

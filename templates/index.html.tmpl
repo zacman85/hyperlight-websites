@@ -197,7 +197,88 @@
 				<div id="main-articles">
 					<section id="research-ui">
 						<h1>Research and Shop</h1>
-
+						<div>
+							<h2>By Make and Model</h2>
+							<form>
+								<select id="body-style-make" onChange="return changeBodyStyleModel(this);">
+									<option value="" disabled selected>Select a Make</option>
+									<option value="acura">Acura</option>
+									<option value="alfa-romeo">Alfa Romeo</option>
+									<option value="aston-martin">Aston Martin</option>
+									<option value="audi">Audi</option>
+									<option value="bentley">Bentley</option>
+									<option value="bmw">BMW</option>
+									<option value="bugatti">Bugatti</option>
+									<option value="buick">Buick</option>
+									<option value="cadillac">Cadillac</option>
+									<option value="chevrolet">Chevrolet</option>
+									<option value="chrysler">Chrysler</option>
+									<option value="dodge">Dodge</option>
+									<option value="ferrari">Ferrari</option>
+									<option value="fiat">Fiat</option>
+									<option value="ford">Ford</option>
+									<option value="genesis">Genesis</option>
+									<option value="gmc">GMC</option>
+									<option value="honda">Honda</option>
+									<option value="hyundai">Hyundai</option>
+									<option value="infiniti">Infiniti</option>
+									<option value="jaguar">Jaguar</option>
+									<option value="jeep">Jeep</option>
+									<option value="kia">Kia</option>
+									<option value="koenigsegg">Koenigsegg</option>
+									<option value="lamborghini">Lamborghini</option>
+									<option value="land-rover">Land Rover</option>
+									<option value="lexus">Lexus</option>
+									<option value="lincoln">Lincoln</option>
+									<option value="lotus">Lotus</option>
+									<option value="maserati">Maserati</option>
+									<option value="mazda">Mazda</option>
+									<option value="mclaren">McLaren</option>
+									<option value="mercedes-amg">Mercedes-AMG</option>
+									<option value="mercedes-benz">Mercedes-Benz</option>
+									<option value="mercedes-maybach">Mercedes-Maybach</option>
+									<option value="mini">Mini</option>
+									<option value="mitsubishi">Mitsubishi</option>
+									<option value="nissan">Nissan</option>
+									<option value="pagani">Pagani</option>
+									<option value="polestar">Polestar</option>
+									<option value="porsche">Porsche</option>
+									<option value="ram">Ram</option>
+									<option value="rolls-royce">Rolls-Royce</option>
+									<option value="scion">Scion</option>
+									<option value="smart">Smart</option>
+									<option value="spyker">Spyker</option>
+									<option value="subaru">Subaru</option>
+									<option value="tesla">Tesla</option>
+									<option value="toyota">Toyota</option>
+									<option value="volkswagen">Volkswagen</option>
+									<option value="volvo">Volvo</option>
+								</select>
+								<select id="body-style-model">
+									<option value="" disabled selected>Select a Model (optional)</option>
+								</select>
+							</form>
+						</div>
+						<div>
+							<h2>By Body Style</h2>
+							<div id="body-style-menu">
+								<a href="/best-sedans" class="inverted"><b style="background-position: 0 0;"></b><span>Sedans</span></a>
+								<a href="/best-suvs-crossovers" class="inverted"><b style="background-position: 0 -44px;"></b><span>SUVs</span></a>
+								<a href="/best-suvs-crossovers" class="inverted"><b style="background-position: 0 -88px;"></b><span>Crossovers</span></a>
+								<a href="/best-hybrid-electric-cars" class="inverted"><b style="background-position: 0 -132px;"></b><span>Hybrid and Electric Cars</span></a>
+								<a href="/best-sports-cars" class="inverted"><b style="background-position: 0 -176px;"></b><span>Sports Cars</span></a>
+								<a href="/best-luxury-cars" class="inverted"><b style="background-position: 0 -220px;"></b><span>Luxury Cars</span></a>
+								<a href="/best-pickup-trucks" class="inverted"><b style="background-position: 0 -264px;"></b><span>Pickup Trucks</span></a>
+								<a href="/best-minivans-vans" class="inverted"><b style="background-position: 0 -306px;"></b><span>Vans and Minivans</span></a>
+								<a href="/best-small-cars" class="inverted"><b style="background-position: 0 -350px;"></b><span>Small Cars</span></a>
+								<a href="/best-hatchbacks" class="inverted"><b style="background-position: 0 -394px;"></b><span>Hatchbacks</span></a>
+								<a href="/best-station-wagons" class="inverted"><b style="background-position: 0 -438px;"></b><span>Station Wagons</span></a>
+								<a href="/best-coupes" class="inverted"><b style="background-position: 0 -482px;"></b><span>Coupes</span></a>
+								<a href="/best-convertibles" class="inverted"><b style="background-position: 0 -526px;"></b><span>Convertibles</span></a>
+								<a href="/vehicles/Used" class="inverted"><b style="background-position: 0 -570px;"></b><span>Used Cars</span></a>
+								<a href="/features/a-guide-to-certified-pre-owned-cpo-programs-by-car-brand-feature" class="inverted"><b style="background-position: 0 -614px;"></b><span>Certified Pre-Owned</span></a>
+							</div>
+						</div>
 					</section>
 					<section id="featured-reviews">
 						<h1>Featured</h1>
@@ -205,21 +286,15 @@
 					</section>
 					<section id="annual-reviews">
 						<h1>2018-2019 Car Reviews</h1>
-						{% for article in annual_articles %}
-
-						{% end %}
+						{% for article in annual_articles %}{% include "article.tmpl" %}{% end %}
 					</section>
 					<section id="recent-galleries">
 						<h1>Recent Galleries</h1>
-						{% for article in gallery_articles %}
-
-						{% end %}
+						{% for article in gallery_articles %}{% include "article.tmpl" %}{% end %}
 					</section>
 					<section id="comparison-tests">
 						<h1>Comparison Tests</h1>
-						{% for article in comparison_articles %}
-
-						{% end %}
+						{% for article in comparison_articles %}{% include "article.tmpl" %}{% end %}
 					</section>
 					<section id="most-researched">
 						<h1>Most Researched Manufacturers</h1>

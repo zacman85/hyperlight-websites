@@ -10,6 +10,11 @@ function changeSplashPage(button) {
 	return false;
 }
 
+function changeBodyStyleModel(select) {
+	console.log(select.value);
+	return false;
+}
+
 window.onLoad = function() {
 
 }
