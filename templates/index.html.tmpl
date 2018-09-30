@@ -192,6 +192,7 @@
 							</div>
 						</article>
 						{% end %}
+						<a class="button-inverted-half" href="https://blog.caranddriver.com">View All</a>
 					</section>
 				</aside>
 				<div id="main-articles">
@@ -257,6 +258,8 @@
 								<select id="body-style-model">
 									<option value="" disabled selected>Select a Model (optional)</option>
 								</select>
+								<a class="button-half" href="#">Research</a>
+								<a class="button-inverted-half" href="#">Shop Cars</a>
 							</form>
 						</div>
 						<div>
@@ -287,18 +290,105 @@
 					<section id="annual-reviews">
 						<h1>2018-2019 Car Reviews</h1>
 						{% for article in annual_articles %}{% include "article.tmpl" %}{% end %}
+						<a class="button" href="/list-reviews">View More Reviews</a>
 					</section>
 					<section id="recent-galleries">
 						<h1>Recent Galleries</h1>
 						{% for article in gallery_articles %}{% include "article.tmpl" %}{% end %}
+						<a class="button" href="/list-photo-galleries">View All Galleries</a>
 					</section>
 					<section id="comparison-tests">
 						<h1>Comparison Tests</h1>
 						{% for article in comparison_articles %}{% include "article.tmpl" %}{% end %}
+						<a class="button" href="/list-reviews-comparison-tests">View All</a>
 					</section>
 					<section id="most-researched">
 						<h1>Most Researched Manufacturers</h1>
-
+						<div class="manufacturer-grid">
+							<div class="manufacturer">
+								<h2>Honda</h2>
+								<div class="image"></div>
+								<a class="inverted" href="/vehicles/New/Honda" class="button">Shop for Honda</a>
+								<ul>
+									<li><a class="inverted" href="/features/2018-10best-trucks-and-suvs-our-top-picks-in-every-segment-feature-honda-ridgeline-best-mid-size-pickup-truck-page-9">Honda Ridgeline: Best Mid-Size Pickup Truck</a></li>
+									<li><a class="inverted" href="/features/2018-10best-trucks-and-suvs-our-top-picks-in-every-segment-feature">2018 10Best Trucks and SUVs: The Best Models in Every Segment</a></li>
+									<li><a class="inverted" href="/reviews/2018-honda-accord-sport-15t-manual-review">2018 Honda Accord Sport 1.5T Manual</a></li>
+									<li><a class="inverted" href="/reviews/2018-honda-odyssey-tested-with-nine-speed-automatic-review">2018 Honda Odyssey Nine-Speed Automatic</a></li>
+									<li><a class="inverted" href="/honda/accord">The Latest on the Honda Accord</a></li>
+									<li><a class="inverted" href="/honda/civic">Honda Civic Reviews, Pricing, and Photos</a></li>
+									<li><a class="inverted" href="/honda/cr-v">Honda CR-V Pricing, Options, and Overview</a></li>
+									<li><a class="inverted" href="/honda/pilot">Everything You Need to Know About the Honda Pilot</a></li>
+								</ul>
+							</div>
+							<div class="manufacturer">
+								<h2>Mazda</h2>
+								<div class="image"></div>
+								<a class="inverted" href="/vehicles/New/Mazda" class="button">Shop for Mazda</a>
+								<ul>
+									<li><a class="inverted" href="/features/2018-10best-trucks-and-suvs-our-top-picks-in-every-segment-feature-mazda-cx-5-best-compact-suv-page-4">Mazda CX-5: Best Compact SUV</a></li>
+									<li><a class="inverted" href="/features/2018-10best-trucks-and-suvs-our-top-picks-in-every-segment-feature-mazda-cx-9-best-mid-size-suv-page-6">Mazda CX-9: Best Mid-Size SUV</a></li>
+									<li><a class="inverted" href="/mazda/cx-5">Mazda CX-5 Reviews, Pricing, and Photos</a></li>
+									<li><a class="inverted" href="/mazda/cx-3">Mazda CX-5 Leasing, Options, and Overview</a></li>
+									<li><a class="inverted" href="/mazda/mazda-3">The Latest on the Mazda 3</a></li>
+									<li><a class="inverted" href="/mazda/mazda-6">Mazda 6 Pricing, Options, and Overview</a></li>
+								</ul>
+							</div>
+							<div class="manufacturer">
+								<h2>Chevrolet</h2>
+								<div class="image"></div>
+								<a class="inverted" href="/vehicles/New/Chevrolet" class="button">Shop for Chevrolet</a>
+								<ul>
+									<li><a class="inverted" href="/reviews/2018-chevrolet-cruze-diesel-hatchback-manual-test-review">2018 Chevrolet Cruze Diesel Hatchback Manual</a></li>
+									<li><a class="inverted" href="/reviews/2018-chevrolet-equinox-diesel-awd-test-review">2018 Chevrolet Equinox Diesel AWD</a></li>
+									<li><a class="inverted" href="/features/2018-10best-cars-the-best-cars-for-sale-in-america-today-feature-chevrolet-camaro-v-6-ss-zl1-coupes-page-4">Chevrolet Camaro V-6 / SS / ZL1 Coupes</a></li>
+									<li><a class="inverted" href="/chevrolet/silverado-1500">Chevrolet Silverado Reviews, Pricing, and Photos</a></li>
+									<li><a class="inverted" href="/chevrolet/malibu">Chevrolet Malibu Leasing Options and Overview</a></li>
+									<li><a class="inverted" href="/chevrolet/equinox">The Latest on the Chevrolet Equinox</a></li>
+									<li><a class="inverted" href="/chevrolet/camaro">Everything You Need to Know About the Chevrolet Camaro</a></li>
+								</ul>
+							</div>
+							<div class="manufacturer">
+								<h2>Ford</h2>
+								<div class="image"></div>
+								<a class="inverted" href="/vehicles/New/Ford" class="button">Shop for Ford</a>
+								<ul>
+									<li><a class="inverted" href="/reviews/2018-ford-f-150-50l-v-8-4x4-supercrew-review">2018 Ford F-150 5.0L V-8 4x4 SuperCrew</a></li>
+									<li><a class="inverted" href="/features/lightning-lap-115-we-lap-the-ford-gt-at-vir-feature">Lightning Lap 11.5: We Lap the Ford GT at VIR!</a></li>
+									<li><a class="inverted" href="/ford/f-150">Ford F-150 Leasing Options and Overview</a></li>
+									<li><a class="inverted" href="/ford/escape">The Latest on the Ford Escape</a></li>
+									<li><a class="inverted" href="/ford/explorer">Ford Explorer Pricing, Options, and Overview</a></li>
+									<li><a class="inverted" href="/ford/focus">Ford Focus Reviews, Pricing, and Photos</a></li>
+								</ul>
+							</div>
+							<div class="manufacturer">
+								<h2>Jeep</h2>
+								<div class="image"></div>
+								<a class="inverted" href="/vehicles/New/Jeep" class="button">Shop for Jeep</a>
+								<ul>
+									<li><a class="inverted" href="/reviews/2018-jeep-renegade-review">2018 Jeep Renegade</a></li>
+									<li><a class="inverted" href="/reviews/2017-jeep-renegade-in-depth-model-review">2017 Jeep Renegade</a></li>
+									<li><a class="inverted" href="/features/a-history-of-jeeps-corporate-parents-they-all-die-feature">It's a Black-Widow Thing: Why Does Every Company that Owns Jeep Die?</a></li>
+									<li><a class="inverted" href="/reviews/2018-jeep-grand-cherokee-trackhawk-full-test-review">2018 Jeep Grand Cherokee Trackhawk</a></li>
+									<li><a class="inverted" href="/jeep/grand-cherokee">Jeep Grand Cherokee Reviews, Pricing, and Photos</a></li>
+									<li><a class="inverted" href="/jeep/renegade">Everything You Need to Know About the Jeep Renegade</a></li>
+									<li><a class="inverted" href="/jeep/cherokee">Jeep Cherokee Pricing, Options, and Overview</a></li>
+									<li><a class="inverted" href="/jeep/wrangler">The Latest on the Jeep Wrangler</a></li>
+								</ul>
+							</div>
+							<div class="manufacturer">
+								<h2>Toyota</h2>
+								<div class="image"></div>
+								<a class="inverted" href="/vehicles/New/Toyota" class="button">Shop for Toyota</a>
+								<ul>
+									<li><a class="inverted" href="/reviews/2017-toyota-highlander-in-depth-model-review-2017-toyota-highlander-engine-and-transmission-review-car-and-driver-page-2">Engine and Transmission</a></li>
+									<li><a class="inverted" href="/reviews/2017-toyota-highlander-in-depth-model-review-2017-toyota-highlander-warranty-review-car-and-driver-page-10">Warranty</a></li>
+									<li><a class="inverted" href="/toyota/camry">Toyota Camry Reviews, Pricing, and Photos</a></li>
+									<li><a class="inverted" href="/toyota/corolla">Toyota Corolla Leasing Options and Overview</a></li>
+									<li><a class="inverted" href="/toyota/prius">Everything You Need to Know About the Toyota Prius</a></li>
+									<li><a class="inverted" href="/toyota/rav4">Toyota RAV4 Pricing, Options, and Overview</a></li>
+								</ul>
+							</div>
+						</div>
 					</section>
 				</div>
 			</div>
@@ -317,62 +407,59 @@
 					<h1>Reviews</h1>
 					<ul>
 						<li><a href="/list-reviews-first-drives">First Drives</a></li>
-						<li><a href="">Instrumented Tests</a></li>
-						<li><a href="">Comparison Tests</a></li>
-						<li><a href="">Long-Term Road Tests</a></li>
-						<li><a href="">From the Review Vault</a></li>
+						<li><a href="https://www.caranddriver.com/list-reviews-instrumented-tests">Instrumented Tests</a></li>
+						<li><a href="https://www.caranddriver.com/list-reviews-comparison-tests">Comparison Tests</a></li>
+						<li><a href="https://www.caranddriver.com/list-reviews-long-term-tests">Long-Term Road Tests</a></li>
+						<li><a href="https://www.caranddriver.com/list-reviews-archives">From the Review Vault</a></li>
 					</ul>
 				</div>
 				<div id="news-links" class="link-column">
 					<h1>News</h1>
 					<ul>
-						<li><a href="/list-reviews-first-drives">First Drives</a></li>
-						<li><a href="">Instrumented Tests</a></li>
-						<li><a href="">Comparison Tests</a></li>
-						<li><a href="">Long-Term Road Tests</a></li>
-						<li><a href="">From the Review Vault</a></li>
+						<li><a href="https://www.caranddriver.com/list-news-future-cars">Spy Photos</a></li>
+						<li><a href="https://www.caranddriver.com/list-news-auto-shows">Auto Shows</a></li>
+						<li><a href="https://blog.caranddriver.com/">Blog</a></li>
 					</ul>
 				</div>
 				<div id="features-links" class="link-column">
 					<h1>Features</h1>
 					<ul>
-						<li><a href="/list-reviews-first-drives">First Drives</a></li>
-						<li><a href="">Instrumented Tests</a></li>
-						<li><a href="">Comparison Tests</a></li>
-						<li><a href="">Long-Term Road Tests</a></li>
-						<li><a href="">From the Review Vault</a></li>
+						<li><a href="https://www.caranddriver.com/features/lightning-lap-2017-19-hot-performance-cars-attack-vir-feature">Lightning Lap</a></li>
+						<li><a href="https://www.caranddriver.com/features/2018-10best-cars-the-best-cars-for-sale-in-america-today-feature">10Best</a></li>
 					</ul>
 				</div>
 				<div id="buyers-guide-links" class="link-column">
 					<h1>Buyer's Guide</h1>
 					<ul>
-						<li><a href="/list-reviews-first-drives">First Drives</a></li>
-						<li><a href="">Instrumented Tests</a></li>
-						<li><a href="">Comparison Tests</a></li>
-						<li><a href="">Long-Term Road Tests</a></li>
-						<li><a href="">From the Review Vault</a></li>
+						<li><a href="https://www.caranddriver.com/vehicles">View Cars for Sale</a></li>
+						<li><a href="https://www.caranddriver.com/features/2018-editors-choice-for-best-cars-trucks-crossovers-and-suvs">2018 Editors' Choice</a></li>
+						<li><a href="https://www.caranddriver.com/ford/f-150">Ford F-150</a></li>
+						<li><a href="https://www.caranddriver.com/jeep/wrangler">Jeep Wrangler</a></li>
+						<li><a href="https://www.caranddriver.com/ford/escape">Ford Escape</a></li>
+						<li><a href="https://www.caranddriver.com/honda/accord">Honda Accord</a></li>
+						<li><a href="https://www.caranddriver.com/jeep/grand-cherokee">Jeep Grand Cherokee</a></li>
 					</ul>
 				</div>
 				<div id="about-links" class="link-column">
 					<h1>About Car and Driver</h1>
 					<ul>
-						<li><a href="/list-reviews-first-drives">First Drives</a></li>
-						<li><a href="">Instrumented Tests</a></li>
-						<li><a href="">Comparison Tests</a></li>
-						<li><a href="">Long-Term Road Tests</a></li>
-						<li><a href="">From the Review Vault</a></li>
+						<li><a href="https://subscribe.hearstmags.com/subscribe/splits/caranddriver-lic/cdb_bottom_nav_subscribe">Subscribe</a></li>
+						<li><a href="https://www.caranddriver.com/user-sitemap">User Sitemap</a></li>
+						<li><a href="https://www.caranddriver.com/reviews/contact-us-about-us">Contact Us</a></li>
+						<li><a href="http://service.caranddriver.com/">Subscriptions/Customer Service</a></li>
+						<li><a href="mailto:feedback@caranddriver.com">Website Feedback</a></li>
 					</ul>
 				</div>
 				<div id="follow-us-links" class="link-column">
 					<h1>Follow Us</h1>
 					<ul>
-						<li><a href="/list-reviews-first-drives">First Drives</a></li>
-						<li><a href="">Instrumented Tests</a></li>
-						<li><a href="">Comparison Tests</a></li>
-						<li><a href="">Long-Term Road Tests</a></li>
-						<li><a href="">From the Review Vault</a></li>
+						<li><a href="https://backfires.caranddriver.com/">Backfires</a></li>
+						<li><a href="https://www.facebook.com/caranddriver">Facebook</a></li>
+						<li><a href="https://twitter.com/caranddriver">Twitter</a></li>
+						<li><a href="https://www.youtube.com/user/CARandDRIVER">YouTube</a></li>
 					</ul>
 				</div>
+				<div id="logo-hearst"><svg><use xlink:href="#logo-hearstautos" /></div>
 				<div id="copyright">
 					<p>&copy; 2018 Hearst Communications, Inc. All Rights Reserved., <a href="https://www.hearst.com/newsroom/us-magazines-privacy-notice">Privacy Notice</a> | <a href="https://www.hearst.com/newsroom/us-magazines-privacy-notice#_ADDITIONAL_INFO">Your California Privacy Rights</a> | <a href="https://www.hearst.com/newsroom/us-magazines-privacy-notice#_INTEREST_BASED">Interest-Based Ads</a> | <a href="https://www.hearst.com/newsroom/us-magazines-terms-of-use">Terms of Use</a></p>
 				</div>

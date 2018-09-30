@@ -32,6 +32,47 @@ a.inverted {
 a.inverted:hover {
 	color: #3a82af;
 }
+a.button,
+a.button-half,
+a.button-inverted,
+a.button-inverted-half {
+	display: inline-block;
+	font-size: 0.875rem;
+	padding: 0.75rem;
+	border-radius: 0.125rem;
+	text-align: center;
+}
+a.button,
+a.button-inverted {
+	max-width: 15rem;
+	width: 100%;
+}
+a.button-half,
+a.button-inverted-half {
+	max-width: 7.5rem;
+	width: 100%;
+}
+a.button,
+a.button-half {
+	color: white;
+	background-color: #3a82af;
+}
+a.button:hover,
+a.button-half:hover {
+	background-color: #224f6b;
+}
+a.button-inverted,
+a.button-inverted-half {
+	color: #3a82af;
+	background-color: white;
+	border: 2px solid #3a82af;
+}
+a.button-inverted:hover,
+a.button-inverted-half:hover {
+	color: white;
+	background-color: #3a82af;
+}
+
 #header-content {
 	background-color: black;
 	color: white;
@@ -279,6 +320,7 @@ a.inverted:hover {
 
 #main-content section {
 	border-top: 3px solid #efefef;
+	padding-bottom: 2rem;
 }
 
 #main-content section:first-child {
@@ -312,6 +354,7 @@ a.inverted:hover {
 	border-bottom: 1px solid #efefef;
 	padding-bottom: 1.25rem;
 	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
 }
 
 #recent-news > article > h2 {
@@ -442,8 +485,73 @@ a.inverted:hover {
 #footer-content a:hover {
 	color: #f1f1f1;
 }
+#logo-hearst {
+	grid-column: span 6;
+	text-align: center;
+	margin-top: 2rem;
+}
+#logo-hearst > svg {
+	height: 2.25rem;
+	width: 8.5625rem;
+}
 #copyright {
 	color: #909090;
 	text-align: center;
 	grid-column: span 6;
+	margin-bottom: 6rem;
+}
+
+#main-articles article {
+	border-top: 1px solid #efefef;
+	padding: 1.5rem 0;
+	display: grid;
+	grid-template-columns: 18.75rem 1fr;
+	grid-gap: 2rem;
+}
+#main-articles article .image {
+	min-width: 300px;
+	min-height: 184px;
+}
+#main-article article .image > img {
+	background-color: #eee;
+}
+#main-articles article nav > p {
+	color: #999;
+	padding: 0;
+	font-weight: bold;
+	font-size: 0.8125rem;
+}
+#main-articles article .summary h1 {
+	font-size: 1.625rem;
+	line-height: 1.25;
+	font-weight: bold;
+	margin: 1rem 0;
+}
+#main-articles article .summary h2 {
+	font-size: 1.25rem;
+	font-family: Georgia, serif;
+	font-weight: 200;
+	line-height: 1.125;
+	margin: 1rem 0;
+}
+#main-articles article .summary h3 {
+	text-transform: uppercase;
+	margin: 1rem 0;
+	font-size: 0.75rem;
+	font-weight: bold;
+}
+#main-articles article .summary .links a {
+	display: inline-block;
+	font-size: 0.75rem;
+	line-height: 1;
+	font-weight: bold;
+	text-decoration: underline;
+	margin-right: 1rem;
+}
+#main-articles article .summary .links a > span {
+	line-height: 1.25;
+}
+#main-articles article .summary .links a > svg,
+#main-articles article .summary .links a > span {
+	vertical-align: top;
 }
