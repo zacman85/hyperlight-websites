@@ -555,3 +555,61 @@ a.button-inverted-half:hover {
 #main-articles article .summary .links a > span {
 	vertical-align: top;
 }
+#manufacturer-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 3rem 2rem;
+	padding: 2rem 0;
+	border-top: 1px solid #efefef;
+}
+#manufacturer-grid > .manufacturer > h2 {
+	margin: 0 0 1rem 0;
+}
+#manufacturer-grid > .manufacturer > h2 > a {
+	color: #222;
+	font-size: 1.25rem;
+	line-height: 1.25;
+	font-weight: bold;
+}
+#manufacturer-grid > .manufacturer > .image {
+	display: block;
+	width: 230px;
+	height: 138px;
+	background-image: url(https://cnd.imgix.net/images/manu-sprite.png?fm=pjpg&w=460);
+	background-size: 100%;
+	margin: 1rem auto;
+}
+#manufacturer-grid > .manufacturer > ul {
+	margin-top: 1.25rem;
+}
+#manufacturer-grid > .manufacturer > ul > li {
+	margin-bottom: 1rem;
+
+}
+#manufacturer-grid > .manufacturer > ul > li > a {
+	font-size: 0.8125rem;
+}
+
+#tradein-content {
+	grid-column: 1 / span 2;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 1.25rem;
+	margin-bottom: 1rem;
+}
+#tradein-content > img {
+	justify-self: right;
+	align-self: center;
+}
+#tradein-content > div {
+	align-self: center;
+}
+#tradein-content > div > h1 {
+	color: #222;
+	font-size: 1.125rem;
+	line-height: 1.25;
+	font-weight: bold;
+}
+#tradein-content > div > p {
+	margin-bottom: 1rem;
+}

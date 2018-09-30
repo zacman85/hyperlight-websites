@@ -610,6 +610,64 @@ a.button-inverted-half:hover {
 #main-articles article .summary .links a > span {
 	vertical-align: top;
 }
+#manufacturer-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 3rem 2rem;
+	padding: 2rem 0;
+	border-top: 1px solid #efefef;
+}
+#manufacturer-grid > .manufacturer > h2 {
+	margin: 0 0 1rem 0;
+}
+#manufacturer-grid > .manufacturer > h2 > a {
+	color: #222;
+	font-size: 1.25rem;
+	line-height: 1.25;
+	font-weight: bold;
+}
+#manufacturer-grid > .manufacturer > .image {
+	display: block;
+	width: 230px;
+	height: 138px;
+	background-image: url(https://cnd.imgix.net/images/manu-sprite.png?fm=pjpg&w=460);
+	background-size: 100%;
+	margin: 1rem auto;
+}
+#manufacturer-grid > .manufacturer > ul {
+	margin-top: 1.25rem;
+}
+#manufacturer-grid > .manufacturer > ul > li {
+	margin-bottom: 1rem;
+
+}
+#manufacturer-grid > .manufacturer > ul > li > a {
+	font-size: 0.8125rem;
+}
+
+#tradein-content {
+	grid-column: 1 / span 2;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 1.25rem;
+	margin-bottom: 1rem;
+}
+#tradein-content > img {
+	justify-self: right;
+	align-self: center;
+}
+#tradein-content > div {
+	align-self: center;
+}
+#tradein-content > div > h1 {
+	color: #222;
+	font-size: 1.125rem;
+	line-height: 1.25;
+	font-weight: bold;
+}
+#tradein-content > div > p {
+	margin-bottom: 1rem;
+}
 
 		</style>
 		<script>
@@ -1547,11 +1605,11 @@ window.onLoad = function() {
 					</section>
 					<section id="most-researched">
 						<h1>Most Researched Manufacturers</h1>
-						<div class="manufacturer-grid">
+						<div id="manufacturer-grid">
 							<div class="manufacturer">
-								<h2>Honda</h2>
-								<div class="image"></div>
-								<a class="inverted" href="/vehicles/New/Honda" class="button">Shop for Honda</a>
+								<h2><a href="/honda">Honda</a></h2>
+								<div class="image" style="background-position: 0 0;"></div>
+								<a href="/vehicles/New/Honda" class="button">Shop for Honda</a>
 								<ul>
 									<li><a class="inverted" href="/features/2018-10best-trucks-and-suvs-our-top-picks-in-every-segment-feature-honda-ridgeline-best-mid-size-pickup-truck-page-9">Honda Ridgeline: Best Mid-Size Pickup Truck</a></li>
 									<li><a class="inverted" href="/features/2018-10best-trucks-and-suvs-our-top-picks-in-every-segment-feature">2018 10Best Trucks and SUVs: The Best Models in Every Segment</a></li>
@@ -1564,9 +1622,9 @@ window.onLoad = function() {
 								</ul>
 							</div>
 							<div class="manufacturer">
-								<h2>Mazda</h2>
-								<div class="image"></div>
-								<a class="inverted" href="/vehicles/New/Mazda" class="button">Shop for Mazda</a>
+								<h2><a href="/mazda">Mazda</a></h2>
+								<div class="image" style="background-position: 0 -138px;"></div>
+								<a href="/vehicles/New/Mazda" class="button">Shop for Mazda</a>
 								<ul>
 									<li><a class="inverted" href="/features/2018-10best-trucks-and-suvs-our-top-picks-in-every-segment-feature-mazda-cx-5-best-compact-suv-page-4">Mazda CX-5: Best Compact SUV</a></li>
 									<li><a class="inverted" href="/features/2018-10best-trucks-and-suvs-our-top-picks-in-every-segment-feature-mazda-cx-9-best-mid-size-suv-page-6">Mazda CX-9: Best Mid-Size SUV</a></li>
@@ -1577,9 +1635,9 @@ window.onLoad = function() {
 								</ul>
 							</div>
 							<div class="manufacturer">
-								<h2>Chevrolet</h2>
-								<div class="image"></div>
-								<a class="inverted" href="/vehicles/New/Chevrolet" class="button">Shop for Chevrolet</a>
+								<h2><a href="/chevrolet">Chevrolet</a></h2>
+								<div class="image" style="background-position: 0 -276px;"></div>
+								<a href="/vehicles/New/Chevrolet" class="button">Shop for Chevrolet</a>
 								<ul>
 									<li><a class="inverted" href="/reviews/2018-chevrolet-cruze-diesel-hatchback-manual-test-review">2018 Chevrolet Cruze Diesel Hatchback Manual</a></li>
 									<li><a class="inverted" href="/reviews/2018-chevrolet-equinox-diesel-awd-test-review">2018 Chevrolet Equinox Diesel AWD</a></li>
@@ -1591,9 +1649,9 @@ window.onLoad = function() {
 								</ul>
 							</div>
 							<div class="manufacturer">
-								<h2>Ford</h2>
-								<div class="image"></div>
-								<a class="inverted" href="/vehicles/New/Ford" class="button">Shop for Ford</a>
+								<h2><a href="/ford">Ford</a></h2>
+								<div class="image" style="background-position: 0 -414px;"></div>
+								<a href="/vehicles/New/Ford" class="button">Shop for Ford</a>
 								<ul>
 									<li><a class="inverted" href="/reviews/2018-ford-f-150-50l-v-8-4x4-supercrew-review">2018 Ford F-150 5.0L V-8 4x4 SuperCrew</a></li>
 									<li><a class="inverted" href="/features/lightning-lap-115-we-lap-the-ford-gt-at-vir-feature">Lightning Lap 11.5: We Lap the Ford GT at VIR!</a></li>
@@ -1604,9 +1662,9 @@ window.onLoad = function() {
 								</ul>
 							</div>
 							<div class="manufacturer">
-								<h2>Jeep</h2>
-								<div class="image"></div>
-								<a class="inverted" href="/vehicles/New/Jeep" class="button">Shop for Jeep</a>
+								<h2><a href="/jeep">Jeep</a></h2>
+								<div class="image" style="background-position: 0 -552px;"></div>
+								<a href="/vehicles/New/Jeep" class="button">Shop for Jeep</a>
 								<ul>
 									<li><a class="inverted" href="/reviews/2018-jeep-renegade-review">2018 Jeep Renegade</a></li>
 									<li><a class="inverted" href="/reviews/2017-jeep-renegade-in-depth-model-review">2017 Jeep Renegade</a></li>
@@ -1619,9 +1677,9 @@ window.onLoad = function() {
 								</ul>
 							</div>
 							<div class="manufacturer">
-								<h2>Toyota</h2>
-								<div class="image"></div>
-								<a class="inverted" href="/vehicles/New/Toyota" class="button">Shop for Toyota</a>
+								<h2><a href="/toyota">Toyota</a></h2>
+								<div class="image" style="background-position: 0 -690px;"></div>
+								<a href="/vehicles/New/Toyota" class="button">Shop for Toyota</a>
 								<ul>
 									<li><a class="inverted" href="/reviews/2017-toyota-highlander-in-depth-model-review-2017-toyota-highlander-engine-and-transmission-review-car-and-driver-page-2">Engine and Transmission</a></li>
 									<li><a class="inverted" href="/reviews/2017-toyota-highlander-in-depth-model-review-2017-toyota-highlander-warranty-review-car-and-driver-page-10">Warranty</a></li>
@@ -1633,6 +1691,14 @@ window.onLoad = function() {
 							</div>
 						</div>
 					</section>
+				</div>
+				<div id="tradein-content">
+					<img src="https://cnd.imgix.net/images/Vehicle-Mobile-IMG.png?fm=pjpg" height="115" width="300" alt="Cars for Trade-In">
+					<div>
+						<h1>What's Your Car Worth?</h1>
+						<p>We'll help you get your car's trade-in value in under a minute.</p>
+						<a class="button" href="/get-your-car-value?BID=GlobalFooter">Get Your Trade-in Value</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -1650,45 +1716,45 @@ window.onLoad = function() {
 					<h1>Reviews</h1>
 					<ul>
 						<li><a href="/list-reviews-first-drives">First Drives</a></li>
-						<li><a href="https://www.caranddriver.com/list-reviews-instrumented-tests">Instrumented Tests</a></li>
-						<li><a href="https://www.caranddriver.com/list-reviews-comparison-tests">Comparison Tests</a></li>
-						<li><a href="https://www.caranddriver.com/list-reviews-long-term-tests">Long-Term Road Tests</a></li>
-						<li><a href="https://www.caranddriver.com/list-reviews-archives">From the Review Vault</a></li>
+						<li><a href="/list-reviews-instrumented-tests">Instrumented Tests</a></li>
+						<li><a href="/list-reviews-comparison-tests">Comparison Tests</a></li>
+						<li><a href="/list-reviews-long-term-tests">Long-Term Road Tests</a></li>
+						<li><a href="/list-reviews-archives">From the Review Vault</a></li>
 					</ul>
 				</div>
 				<div id="news-links" class="link-column">
 					<h1>News</h1>
 					<ul>
-						<li><a href="https://www.caranddriver.com/list-news-future-cars">Spy Photos</a></li>
-						<li><a href="https://www.caranddriver.com/list-news-auto-shows">Auto Shows</a></li>
+						<li><a href="/list-news-future-cars">Spy Photos</a></li>
+						<li><a href="/list-news-auto-shows">Auto Shows</a></li>
 						<li><a href="https://blog.caranddriver.com/">Blog</a></li>
 					</ul>
 				</div>
 				<div id="features-links" class="link-column">
 					<h1>Features</h1>
 					<ul>
-						<li><a href="https://www.caranddriver.com/features/lightning-lap-2017-19-hot-performance-cars-attack-vir-feature">Lightning Lap</a></li>
-						<li><a href="https://www.caranddriver.com/features/2018-10best-cars-the-best-cars-for-sale-in-america-today-feature">10Best</a></li>
+						<li><a href="/features/lightning-lap-2017-19-hot-performance-cars-attack-vir-feature">Lightning Lap</a></li>
+						<li><a href="/features/2018-10best-cars-the-best-cars-for-sale-in-america-today-feature">10Best</a></li>
 					</ul>
 				</div>
 				<div id="buyers-guide-links" class="link-column">
 					<h1>Buyer's Guide</h1>
 					<ul>
-						<li><a href="https://www.caranddriver.com/vehicles">View Cars for Sale</a></li>
-						<li><a href="https://www.caranddriver.com/features/2018-editors-choice-for-best-cars-trucks-crossovers-and-suvs">2018 Editors' Choice</a></li>
-						<li><a href="https://www.caranddriver.com/ford/f-150">Ford F-150</a></li>
-						<li><a href="https://www.caranddriver.com/jeep/wrangler">Jeep Wrangler</a></li>
-						<li><a href="https://www.caranddriver.com/ford/escape">Ford Escape</a></li>
-						<li><a href="https://www.caranddriver.com/honda/accord">Honda Accord</a></li>
-						<li><a href="https://www.caranddriver.com/jeep/grand-cherokee">Jeep Grand Cherokee</a></li>
+						<li><a href="/vehicles">View Cars for Sale</a></li>
+						<li><a href="/features/2018-editors-choice-for-best-cars-trucks-crossovers-and-suvs">2018 Editors' Choice</a></li>
+						<li><a href="/ford/f-150">Ford F-150</a></li>
+						<li><a href="/jeep/wrangler">Jeep Wrangler</a></li>
+						<li><a href="/ford/escape">Ford Escape</a></li>
+						<li><a href="/honda/accord">Honda Accord</a></li>
+						<li><a href="/jeep/grand-cherokee">Jeep Grand Cherokee</a></li>
 					</ul>
 				</div>
 				<div id="about-links" class="link-column">
 					<h1>About Car and Driver</h1>
 					<ul>
 						<li><a href="https://subscribe.hearstmags.com/subscribe/splits/caranddriver-lic/cdb_bottom_nav_subscribe">Subscribe</a></li>
-						<li><a href="https://www.caranddriver.com/user-sitemap">User Sitemap</a></li>
-						<li><a href="https://www.caranddriver.com/reviews/contact-us-about-us">Contact Us</a></li>
+						<li><a href="/user-sitemap">User Sitemap</a></li>
+						<li><a href="/reviews/contact-us-about-us">Contact Us</a></li>
 						<li><a href="http://service.caranddriver.com/">Subscriptions/Customer Service</a></li>
 						<li><a href="mailto:feedback@caranddriver.com">Website Feedback</a></li>
 					</ul>
