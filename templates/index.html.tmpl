@@ -3,15 +3,15 @@
 	<head>
 		<link href="/favicon.ico" rel="icon" type="image/x-icon">
 		<style type="text/css">
-		{% include "reset.css" %}
-		{% include "styles.css" %}
+		{% include "../reset.css" %}
+		{% include "../styles.css" %}
 		</style>
 		<script>
-		{% include "main.js" %}
+		{% include "../main.js" %}
 		</script>
 	</head>
 	<body>
-		{% include "svg/sprite.svg" %}
+		{% include "../svg/sprite.svg" %}
 		<header id="header-content">
 			<div id="header-grid">
 				<a href="/" id="header-logo"><svg><use xlink:href="#logo-caranddriver" /></svg></a>
@@ -201,18 +201,25 @@
 					</section>
 					<section id="featured-reviews">
 						<h1>Featured</h1>
-
+						{% for article in featured_articles %}{% include "article.tmpl" %}{% end %}
 					</section>
 					<section id="annual-reviews">
 						<h1>2018-2019 Car Reviews</h1>
+						{% for article in annual_articles %}
 
+						{% end %}
 					</section>
 					<section id="recent-galleries">
 						<h1>Recent Galleries</h1>
+						{% for article in gallery_articles %}
 
+						{% end %}
 					</section>
 					<section id="comparison-tests">
 						<h1>Comparison Tests</h1>
+						{% for article in comparison_articles %}
+
+						{% end %}
 					</section>
 					<section id="most-researched">
 						<h1>Most Researched Manufacturers</h1>

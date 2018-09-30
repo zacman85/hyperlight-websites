@@ -172,6 +172,7 @@
 			"summary": "It's also more exclusive and already sold out.",
 			"author": "Joseph Capparella",
 			"author_href": "/search/Joseph%20Capparella",
+			"story_href": "/news/the-dollar58-million-bugatti-divo-is-a-lighter-wilder-better-handling-chiron",
 			"shop_href": "/vehicles/New/Bugatti/Divo",
 			"gallery_href": "/photo-gallery/the-dollar58-million-bugatti-divo-is-a-lighter-wilder-better-handling-chiron-gallery",
 			"gallery_count": 17
@@ -186,6 +187,7 @@
 			"summary": "In the 2019 Ram 1500, electric assist is undetectable in operation and invisible to onlookers.",
 			"author": "K.C. Colwell",
 			"author_href": "/search/K.C.%20Colwell",
+			"story_href": "/reviews/2019-ram-1500-etorque-hybrid-pickup-drive",
 			"shop_href": null,
 			"gallery_href": "/photo-gallery/2019-ram-1500-etorque-hybrid-pickup-drive-gallery",
 			"gallery_count": 72
@@ -200,6 +202,7 @@
 			"summary": "Two years into the hybrid supercar's run, it looks to improve.",
 			"author": "Alexander Stoklosa",
 			"author_href": "/search/Alexander%20Stoklosa",
+			"story_href": "/news/2019-acura-nsx-supercar",
 			"shop_href": "/vehicles/New/Acura/NSX",
 			"gallery_href": "/photo-gallery/2019-acura-nsx-supercar-gallery",
 			"gallery_count": 38
@@ -214,6 +217,7 @@
 			"summary": "Jaguar Classic's battery-powered E-type Zero proves less of an apostasy than one might fear.",
 			"author": "Mike Duff",
 			"author_href": "/search/Mike%20Duff",
+			"story_href": "/reviews/jaguar-e-type-zero-electric-ev-vintage",
 			"shop_href": null,
 			"gallery_href": "/photo-gallery/jaguar-e-type-zero-electric-ev-vintage-gallery",
 			"gallery_count": 13
@@ -231,6 +235,7 @@
 			"author": "David Beard",
 			"author_href": "/search/David%20Beard",
 			"shop_href": "/vehicles/New/Acura/RDX",
+			"story_href": "/reviews/2019-acura-rdx-a-spec-value-not-performance",
 			"gallery_href": "/photo-gallery/2019-acura-rdx-a-spec-value-not-performance-gallery",
 			"gallery_count": 40
 		},
@@ -245,6 +250,7 @@
 			"author": "Josh Jacquot",
 			"author_href": "/search/Josh%20Jacquot",
 			"shop_href": "/vehicles/New/Mercedes-Benz/CLS-class",
+			"story_href": "/reviews/2019-mercedes-benz-cls-new-engine",
 			"gallery_href": "/photo-gallery/2019-mercedes-benz-cls-new-engine-gallery",
 			"gallery_count": 16
 		},
@@ -259,6 +265,7 @@
 			"author": "Tony Quiroga",
 			"author_href": "/search/Tony%20Quiroga",
 			"shop_href": "/vehicles/New/Genesis/G70",
+			"story_href": "/reviews/2019-genesis-g70-los-angeles-california",
 			"gallery_href": "/photo-gallery/2019-genesis-g70-los-angeles-california-gallery",
 			"gallery_count": 25
 		},
@@ -273,6 +280,7 @@
 			"author": "Drew Dorian",
 			"author_href": "/search/Drew%20Dorian",
 			"shop_href": "/vehicles/New/Mercedes-AMG/C43",
+			"story_href": "/reviews/2018-mercedes-amg-c43-review",
 			"gallery_href": "/photo-gallery/2018-mercedes-amg-c43-in-depth-review-gallery",
 			"gallery_count": 140
 		},
@@ -287,6 +295,7 @@
 			"author": "Steve Siler",
 			"author_href": "/search/Steve%20Siler",
 			"shop_href": "/vehicles/New/Audi/RS5.Sportback",
+			"story_href": "/reviews/2019-audi-rs5-sportback-high-performance-hatchback-first-drive",
 			"gallery_href": "/photo-gallery/2019-audi-rs5-sportback-first-drive-gallery",
 			"gallery_count": 25
 		},
@@ -301,6 +310,7 @@
 			"author": "Annie White",
 			"author_href": "/search/Annie%20White",
 			"shop_href": "/vehicles/New/Chevrolet/Silverado.1500",
+			"story_href": "/reviews/2019-chevrolet-silverado-pickup-truck-lighter-larger-first-drive",
 			"gallery_href": "/photo-gallery/2019-chevrolet-silverado-pickup-truck-lighter-larger-first-drive-gallery",
 			"gallery_count": 47
 		},
@@ -315,8 +325,102 @@
 			"author": "Josh Jacquot",
 			"author_href": "/search/Josh%20Jacquot",
 			"shop_href": "/vehicles/New/Ford/Mustang",
+			"story_href": "/reviews/2019-ford-mustang-bullitt-first-drive-review",
 			"gallery_href": "/photo-gallery/2019-ford-mustang-bullitt-first-drive-review-gallery",
 			"gallery_count": 16
+		}
+	],
+	"gallery_articles": [
+		{
+			"article_href": "/photo-gallery/admirals-ferrari-500-mondial-gallery",
+			"image_url": "/hmg-prod/images/1955-ferrari-500-mondial-101-1528474752.jpg",
+			"title": "Navy Blue: The Admiral's Ferrari 500 Mondial Goes Up for Sale - Photos",
+			"section": "Gallery",
+			"section_href": "/list-photo-galleries",
+			"date": "Aug 2018",
+			"summary": "A Ferrari with a most interesting history.",
+			"author": "Car and Driver",
+			"author_href": "/search/Car%20and%20Driver",
+			"story_href": "/news/the-admirals-ferrari-500-mondial-series-ii-goes-up-for-sale",
+			"shop_href": null,
+			"gallery_href": "/photo-gallery/admirals-ferrari-500-mondial-gallery",
+			"gallery_count": 13
+		},
+		{
+			"article_href": "/photo-gallery/2019-gmc-sierra-1500-denali-at4-driven-gallery",
+			"image_url": "/hmg-prod/images/2019-gmc-sierra-denali-99leadgallery-1535045468.jpg",
+			"title": "The 2019 GMC Sierra 1500 Is No Longer Just a Pricier Chevy Silverado - Photos",
+			"section": "Gallery",
+			"section_href": "/list-photo-galleries",
+			"date": "Aug 2018",
+			"summary": "Exclusive content separates this all-new pickup from its corporate sibling.",
+			"author": "Car and Driver",
+			"author_href": "/search/Car%20and%20Driver",
+			"shop_href": "/vehicles/New/GMC/Sierra.1500",
+			"story_href": null,
+			"gallery_href": "/photo-gallery/2019-gmc-sierra-1500-denali-at4-driven-gallery",
+			"gallery_count": 64
+		},
+		{
+			"article_href": "/photo-gallery/2019-hyundai-santa-fe-drive-gallery",
+			"image_url": "/hmg-prod/images/2019-hyundai-santa-fe-first-drive-placement-1535062627.jpg",
+			"title": "2019 Hyundai Santa Fe Loses the Sport, Keeps the Practicality - Photos",
+			"section": "Gallery",
+			"section_href": "/list-photo-galleries",
+			"date": "Aug 2018",
+			"summary": "The former Santa Fe Sport is redesigned.",
+			"author": "Car and Driver",
+			"author_href": "/search/Car%20and%20Driver",
+			"shop_href": "/vehicles/New/Hyundai/Santa.Fe",
+			"gallery_href": "/photo-gallery/2019-hyundai-santa-fe-drive-gallery",
+			"gallery_count": 57
+		}
+	],
+	"comparison_articles": [
+		{
+			"article_href": "/reviews/bmw-x2-xdrive28i-vs-jaguar-e-pace-p250-awd-volvo-xc40-t5-awd-comparison-test",
+			"image_url": "/hmg-prod/images/2018-bmw-x2-xdrive28i-vs-2018-jaguar-e-pace-p250-awd-2019-volvo-xc40-t5-awd-r-design-comparison-placement-1533266323.jpg",
+			"title": "BMW X2 xDrive28i vs. Jaguar E-Pace P250 AWD, Volvo XC40 T5 AWD",
+			"section": "Comparison Test",
+			"section_href": "/list-reviews-comparison-tests",
+			"date": "Aug 2018",
+			"summary": "We endure hipster tacos and backwoods creeps to determine the best new entry-level luxury vehicle on the market, which also happens to be an SUV.",
+			"author": "Daniel Pund",
+			"author_href": "/search/Daniel%20Pund",
+			"shop_href": null,
+			"story_href": "/reviews/bmw-x2-xdrive28i-vs-jaguar-e-pace-p250-awd-volvo-xc40-t5-awd-comparison-test",
+			"gallery_href": "/photo-gallery/bmw-x2-xdrive28i-vs-jaguar-e-pace-p250-awd-volvo-xc40-t5-awd-comparison-test-gallery",
+			"gallery_count": 21
+		},
+		{
+			"article_href": "/reviews/2019-chevrolet-corvette-zr1-vs-2018-porsche-911-gt2-rs-comparison-test",
+			"image_url": "/hmg-prod/images/2019-chevrolet-corvette-zr1-and-2018-porsche-911-gt2-rs-comparison-placement-1532358592.jpg",
+			"title": "2019 Chevrolet Corvette ZR1 vs. 2018 Porsche 911 GT2 RS",
+			"section": "Comparison Test",
+			"section_href": "/list-reviews-comparison-tests",
+			"date": "Jul 2018",
+			"summary": "The most powerful production versions of the Corvette and 911 probe the boundaries of road-car capabilities.",
+			"author": "Eric Tingwall",
+			"author_href": "/search/Eric%20Tingwall",
+			"shop_href": null,
+			"story_href": "/reviews/2019-chevrolet-corvette-zr1-vs-2018-porsche-911-gt2-rs-comparison-test",
+			"gallery_href": "/photo-gallery/2019-chevrolet-corvette-zr1-vs-2018-porsche-911-gt2-rs-comparison-test-gallery",
+			"gallery_count": 35
+		},
+		{
+			"article_href": "/reviews/alfa-romeo-stelvio-quadrifoglio-vs-mercedes-amg-glc63-s-coupe-4matic-porsche-macan-turbo-with-performance-package-comparison-test",
+			"image_url": "/hmg-prod/images/alfa-romeo-stelvio-quadrifoglio-vs-mercedes-amg-glc63-s-coupe-porsche-macan-turbo-with-performance-package-placement-1530026718.jpg",
+			"title": "Alfa Romeo Stelvio Quadrifoglio vs. Mercedes-AMG GLC63 S Coupe, Porsche Macan Turbo w/ Performance Package: Alfa Stomps Porsche and AMG!",
+			"section": "Comparison Test",
+			"section_href": "/list-reviews-comparison-tests",
+			"date": "Jul 2018",
+			"summary": "Thanks to these three Europeans, SUVs are finally having their sports-sedan moment, in which we forget about their compromises and just enjoy the drive.",
+			"author": "Tony Quiroga",
+			"author_href": "/search/Tony%20Quiroga",
+			"shop_href": null,
+			"story_href": "/reviews/alfa-romeo-stelvio-quadrifoglio-vs-mercedes-amg-glc63-s-coupe-4matic-porsche-macan-turbo-with-performance-package-comparison-test",
+			"gallery_href": "/photo-gallery/alfa-romeo-stelvio-quadrifoglio-vs-mercedes-amg-glc63-s-coupe-4matic-porsche-macan-turbo-with-performance-package-comparison-test-gallery",
+			"gallery_count": 22
 		}
 	]
 }
