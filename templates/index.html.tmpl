@@ -16,8 +16,7 @@
 			<div id="header-grid">
 				<a href="/" id="header-logo"><svg><use xlink:href="#logo-caranddriver" /></svg></a>
 				<nav id="header-nav">
-					<!-- TODO: Internalize this logo or capture locally. -->
-					<ul id="header-menu"><li>
+					<ul id="header-menu" class="menu"><li>
 							<a href="/newcars">New Cars</a>
 							<div class="sub-menu-hitbox">
 								<div class="sub-menu sub-menu-4">
@@ -150,11 +149,22 @@
 								</div>
 							</div>
 						</li></ul>
-					<div id="header-icons">
-						<form id="search-form" action="/search"><a id="search-close" href="#">X</a><input type="text" id="search-box" placeholder="What are you looking for?" /></form>
-						<a href="#search-form">Search</a>
-					</div>
 				</nav>
+				<div id="show-search">
+					<ul id="search-buttons" class="menu"><li>
+							<a href="https://backfires.caranddriver.com"><svg style="height: 1.875rem; width: 1.875rem;"><use xlink:href="#icon-backfires"></a>
+							<div class="sub-menu-hitbox">
+								<div class="sub-menu sub-menu-1">
+									<a href="https://backfires.caranddriver.com">Sign In</a>
+									<a href="https://backfires.caranddriver.com">Register</a>
+									<a href="https://backfires.caranddriver.com">Backfires</a>
+								</div>
+							</div>
+						</li><li>
+							<a href="#show-search"><svg style="height: 1.875rem; width: 1.875rem;"><use xlink:href="#icon-search" /></svg></a>
+						</li></ul>
+					<form id="search-form" action="/search" onSubmit="return handleSearchForm(this);"><input type="text" id="search-box" placeholder="What are you looking for?" /><a id="search-close" href="#"><svg style="height: 1.875rem; width: 1.875rem;"><use xlink:href="#icon-search" /></svg></a></form>
+				</div>
 			</div>
 		</header>
 		<div id="splash-content">

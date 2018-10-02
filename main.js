@@ -15,6 +15,12 @@ function changeBodyStyleModel(select) {
 	return false;
 }
 
+function handleSearchForm(form) {
+	var searchQuery = document.getElementById("search-box").value;
+	document.location.href = "https://www.caranddriver.com/search/" + window.encodeURIComponent(searchQuery);
+	return false;
+}
+
 window.onLoad = function() {
 
 }

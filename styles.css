@@ -81,8 +81,8 @@ a.button-inverted-half:hover {
 }
 #header-grid {
 	display: grid;
-	grid-template-columns: 14rem 61rem;
-	grid-template-areas: "logo nav";
+	grid-template-columns: 1fr 45rem 1fr;
+	grid-template-areas: "logo nav search";
 	grid-gap: 0;
 	max-width: 75rem;
 	margin: 0 auto;
@@ -91,7 +91,7 @@ a.button-inverted-half:hover {
 	grid-area: logo;
 	align-self: center;
 	display: block;
-	height: 30px;
+	padding-left: 1.25rem;
 }
 #header-logo > svg {
 	height: 30px;
@@ -102,60 +102,58 @@ a.button-inverted-half:hover {
 }
 #header-nav {
 	grid-area: nav;
-	clear: both;
-	height: 48px;
+	justify-self: center;
+	height: 3rem;
 	margin: 0;
 }
-#header-menu {
-	float: left;
-}
-#header-menu li {
+.menu li {
 	background-color: black;
 	display: inline-block;
+	height: 3rem;
 }
-#header-menu li.highlighted {
+.menu li.highlighted {
 	background-color: #224f6b;
 }
-#header-menu li > a {
+.menu li > a {
 	color: white;
 	display: block;
 	font-size: 0.8125rem;
-	height: 48px;
-	line-height: 48px;
+	line-height: 3rem;
+	letter-spacing: 0.5px;
 	text-transform: uppercase;
 	text-decoration: none;
-	padding: 0 16px 0 16px;
+	padding: 0 1rem 0 1rem;
 	vertical-align: middle;
 	width: auto;
 }
-#header-menu li:hover > a {
+.menu li:hover > a {
 	color: black;
 	background-color: white;
 }
-#header-menu .sub-menu-hitbox {
+.menu .sub-menu-hitbox {
 	display: none;
 	position: absolute;
 	z-index: 10;
 }
-#header-menu li:hover .sub-menu-hitbox {
+.menu li:hover .sub-menu-hitbox {
 	display: block;
 	padding: 0 40px 40px 40px;
 	margin-left: -40px;
 }
-#header-menu .sub-menu-1 {
+.menu .sub-menu-1 {
 	grid-template-columns: repeat(1, 12em);
 }
-#header-menu .sub-menu-4 {
+.menu .sub-menu-4 {
 	grid-template-columns: repeat(4, 12em);
 }
-#header-menu .sub-menu {
+.menu .sub-menu {
 	background-color: #dadada;
 	display: grid;
 	grid-gap: 1px;
 	padding: 1px;
 }
-#header-menu .sub-menu span,
-#header-menu .sub-menu a {
+.menu .sub-menu span,
+.menu .sub-menu a {
 	background-color: white;
 	color: #222222;
 	display: block;
@@ -164,24 +162,20 @@ a.button-inverted-half:hover {
 	padding: 12px;
 	text-decoration: none;
 }
-#header-menu .sub-menu a:hover {
+.menu .sub-menu a:hover {
 	background-color: #dadada;
 }
-#header-menu .sub-menu a.menu-footer {
+.menu .sub-menu a.menu-footer {
 	grid-column: span 4;
 }
-#header-menu .sub-menu a > em {
+.menu .sub-menu a > em {
 	font-weight: bold;
 }
-
-#header-icons {
-	float: right;
-	height: 48px;
-	line-height: 48px;
-	width: 215px;
-}
-#header-icons.show-search #search-form {
-	display: block;
+#show-search {
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: right;
+	align-items: center;
 }
 #search-form {
 	display: none;
@@ -190,21 +184,37 @@ a.button-inverted-half:hover {
 	padding: 0;
 	border: 0;
 	margin: 0;
-	position: absolute;
 	text-align: right;
 	vertical-align: top;
 }
-#search-form:target {
+#search-buttons {
+	height: 3rem;
+}
+#search-buttons svg {
+	padding: 0.5rem 0 0 0.5rem;
+}
+#search-buttons.menu > li > a {
+	padding: 0 0.5rem;
+	border-right: 1px solid #444;
+	height: 3rem;
+}
+#search-buttons.menu > li:first-child > a {
+	border-left: 1px solid #444;
+}
+#show-search:target #search-buttons {
+	display: none;
+}
+#show-search:target #search-form {
 	display: block;
 }
 #search-box {
 	display: inline-block;
 	box-sizing: border-box;
-	height: 32px;
+	height: 2rem;
 	color: #222222;
 	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 	font-size: 14px;
-	width: 100%;
+	width: auto;
 	margin: 8px 0 0 0;
 	padding: 0 40px 0 8px;
 	border: none;
@@ -213,7 +223,7 @@ a.button-inverted-half:hover {
 }
 #search-close {
 	position: absolute;
-	float: right;
+	margin: 0.6875rem 0 0 -1.75rem;
 }
 
 #splash-content {
