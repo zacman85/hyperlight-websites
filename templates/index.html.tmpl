@@ -11,8 +11,11 @@
 		</script>
 		{% for key in sorted(models.keys()) %}
 		<template id="models-template-{{ key }}">
-			{% for model in sorted(models[key]) %}<option value="{{ model }}">{{ model }}</option>
-			{% end %}
+			<select>
+				<option value="" disabled selected>Select a Model (optional)</option>
+				{% for model in sorted(models[key]) %}<option value="{{ model }}">{{ model }}</option>
+				{% end %}
+			</select>
 		</template>
 		{% end %}
 	</head>
@@ -216,18 +219,20 @@
 						<h1>Research and Shop</h1>
 						<div>
 							<h2>By Make and Model</h2>
-							<form id="research-form">
+							<form id="research-form" onSubmit="return handleResearchForm(this);">
 								<select id="body-style-make" onChange="return changeBodyStyleModel(this);">
 									<option value="" disabled selected>Select a Make</option>
 									{% for key in sorted(makes.keys()) %}<option value="{{ key }}">{{ makes[key] }}</option>
 									{% end %}
 								</select>
-								<select id="body-style-model">
-									<option value="" disabled selected>Select a Model (optional)</option>
-								</select>
+								<div id="body-style-model">
+									<select>
+										<option value="" disabled selected>Select a Model (optional)</option>
+									</select>
+								</div>
 								<div>
-									<a class="button-half" href="#">Research</a>
-									<a class="button-inverted-half" href="#">Shop Cars</a>
+									<input type="submit" class="button-half" value="Research">
+									<input type="submit" class="button-inverted-half" value="Shop Cars">
 								</div>
 							</form>
 						</div>

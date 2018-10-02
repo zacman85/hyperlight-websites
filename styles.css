@@ -32,44 +32,47 @@ a.inverted {
 a.inverted:hover {
 	color: #3a82af;
 }
-a.button,
-a.button-half,
-a.button-inverted,
-a.button-inverted-half {
+.button,
+.button-half,
+.button-inverted,
+.button-inverted-half {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	cursor: hand;
 	display: inline-block;
 	font-size: 0.875rem;
 	padding: 0.75rem;
 	border-radius: 0.125rem;
 	text-align: center;
 }
-a.button,
-a.button-inverted {
+.button,
+.button-inverted {
 	max-width: 15rem;
 	width: 100%;
 }
-a.button-half,
-a.button-inverted-half {
+.button-half,
+.button-inverted-half {
 	max-width: 7.5rem;
 	width: 100%;
 }
-a.button,
-a.button-half {
+.button,
+.button-half {
 	color: white;
 	background-color: #3a82af;
 	border: 2px solid #3a82af;
 }
-a.button:hover,
-a.button-half:hover {
+.button:hover,
+.button-half:hover {
 	background-color: #224f6b;
 }
-a.button-inverted,
-a.button-inverted-half {
+.button-inverted,
+.button-inverted-half {
 	color: #3a82af;
 	background-color: white;
 	border: 2px solid #3a82af;
 }
-a.button-inverted:hover,
-a.button-inverted-half:hover {
+.button-inverted:hover,
+.button-inverted-half:hover {
 	color: white;
 	background-color: #3a82af;
 }
