@@ -624,3 +624,17 @@ a.button-inverted-half:hover {
 #tradein-content > div > p {
 	margin-bottom: 1rem;
 }
+#research-form {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 1rem;
+}
+#research-form select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	color: #666;
+	padding: 0.75rem 2rem 0.75rem 0.75rem;
+	font-size: 0.875rem;
+	display: inline-block;
+	width: 100%;
+}

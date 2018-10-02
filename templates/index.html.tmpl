@@ -9,6 +9,12 @@
 		<script>
 		{% include "../main.js" %}
 		</script>
+		{% for key in sorted(models.keys()) %}
+		<template id="models-template-{{ key }}">
+			{% for model in sorted(models[key]) %}<option value="{{ model }}">{{ model }}</option>
+			{% end %}
+		</template>
+		{% end %}
 	</head>
 	<body>
 		{% include "../svg/sprite.svg" %}
@@ -170,7 +176,7 @@
 		<div id="splash-content">
 			{% for index, article in enumerate(splash_articles) %}
 			<article id="splash-article-{{ index + 1 }}"{% if index == 0 %} class="show"{% end %}>
-				<a class="splash-article-image" href="{{ article["article_href"] }}" style="background-image:url(https://cnd.imgix.net{{ article["image_url"] }})"></a>
+				<a class="splash-article-image" href="{{ article["article_href"] }}" style="background-image:url(https://cnd.imgix.net{{ article["image_url"] }}?fm=pjpg&auto=format,compress)"></a>
 				<div class="splash-article-content">
 					<nav>
 						<p><a href="{{ article["article_href"] }}">{{ article["section"] }}</a><span> &bullet; {{ article["date"] }}</span></p>
@@ -210,66 +216,19 @@
 						<h1>Research and Shop</h1>
 						<div>
 							<h2>By Make and Model</h2>
-							<form>
+							<form id="research-form">
 								<select id="body-style-make" onChange="return changeBodyStyleModel(this);">
 									<option value="" disabled selected>Select a Make</option>
-									<option value="acura">Acura</option>
-									<option value="alfa-romeo">Alfa Romeo</option>
-									<option value="aston-martin">Aston Martin</option>
-									<option value="audi">Audi</option>
-									<option value="bentley">Bentley</option>
-									<option value="bmw">BMW</option>
-									<option value="bugatti">Bugatti</option>
-									<option value="buick">Buick</option>
-									<option value="cadillac">Cadillac</option>
-									<option value="chevrolet">Chevrolet</option>
-									<option value="chrysler">Chrysler</option>
-									<option value="dodge">Dodge</option>
-									<option value="ferrari">Ferrari</option>
-									<option value="fiat">Fiat</option>
-									<option value="ford">Ford</option>
-									<option value="genesis">Genesis</option>
-									<option value="gmc">GMC</option>
-									<option value="honda">Honda</option>
-									<option value="hyundai">Hyundai</option>
-									<option value="infiniti">Infiniti</option>
-									<option value="jaguar">Jaguar</option>
-									<option value="jeep">Jeep</option>
-									<option value="kia">Kia</option>
-									<option value="koenigsegg">Koenigsegg</option>
-									<option value="lamborghini">Lamborghini</option>
-									<option value="land-rover">Land Rover</option>
-									<option value="lexus">Lexus</option>
-									<option value="lincoln">Lincoln</option>
-									<option value="lotus">Lotus</option>
-									<option value="maserati">Maserati</option>
-									<option value="mazda">Mazda</option>
-									<option value="mclaren">McLaren</option>
-									<option value="mercedes-amg">Mercedes-AMG</option>
-									<option value="mercedes-benz">Mercedes-Benz</option>
-									<option value="mercedes-maybach">Mercedes-Maybach</option>
-									<option value="mini">Mini</option>
-									<option value="mitsubishi">Mitsubishi</option>
-									<option value="nissan">Nissan</option>
-									<option value="pagani">Pagani</option>
-									<option value="polestar">Polestar</option>
-									<option value="porsche">Porsche</option>
-									<option value="ram">Ram</option>
-									<option value="rolls-royce">Rolls-Royce</option>
-									<option value="scion">Scion</option>
-									<option value="smart">Smart</option>
-									<option value="spyker">Spyker</option>
-									<option value="subaru">Subaru</option>
-									<option value="tesla">Tesla</option>
-									<option value="toyota">Toyota</option>
-									<option value="volkswagen">Volkswagen</option>
-									<option value="volvo">Volvo</option>
+									{% for key in sorted(makes.keys()) %}<option value="{{ key }}">{{ makes[key] }}</option>
+									{% end %}
 								</select>
 								<select id="body-style-model">
 									<option value="" disabled selected>Select a Model (optional)</option>
 								</select>
-								<a class="button-half" href="#">Research</a>
-								<a class="button-inverted-half" href="#">Shop Cars</a>
+								<div>
+									<a class="button-half" href="#">Research</a>
+									<a class="button-inverted-half" href="#">Shop Cars</a>
+								</div>
 							</form>
 						</div>
 						<div>
@@ -317,7 +276,7 @@
 						<div id="manufacturer-grid">
 							<div class="manufacturer">
 								<h2><a href="/honda">Honda</a></h2>
-								<div class="image" style="background-position: 0 0;"></div>
+								<img src="https://cnd.imgix.net/images/honda.jpg?fm=pjpg&auto=format,compress&w=230" srcset="https://cnd.imgix.net/images/honda.jpg?fm=pjpg&auto=format,compress&w=230 1x, https://cnd.imgix.net/images/honda.jpg?fm=pjpg&auto=format,compress&w=230&dpr=2 2x" width="230" height="138" alt="Honda">
 								<a href="/vehicles/New/Honda" class="button">Shop for Honda</a>
 								<ul>
 									<li><a class="inverted" href="/features/2018-10best-trucks-and-suvs-our-top-picks-in-every-segment-feature-honda-ridgeline-best-mid-size-pickup-truck-page-9">Honda Ridgeline: Best Mid-Size Pickup Truck</a></li>
@@ -332,7 +291,7 @@
 							</div>
 							<div class="manufacturer">
 								<h2><a href="/mazda">Mazda</a></h2>
-								<div class="image" style="background-position: 0 -138px;"></div>
+								<img src="https://cnd.imgix.net/images/mazda.jpg?fm=pjpg&auto=format,compress&w=230" srcset="https://cnd.imgix.net/images/mazda.jpg?fm=pjpg&auto=format,compress&w=230 1x, https://cnd.imgix.net/images/mazda.jpg?fm=pjpg&auto=format,compress&w=230&dpr=2 2x" width="230" height="138" alt="Mazda">
 								<a href="/vehicles/New/Mazda" class="button">Shop for Mazda</a>
 								<ul>
 									<li><a class="inverted" href="/features/2018-10best-trucks-and-suvs-our-top-picks-in-every-segment-feature-mazda-cx-5-best-compact-suv-page-4">Mazda CX-5: Best Compact SUV</a></li>
@@ -345,7 +304,7 @@
 							</div>
 							<div class="manufacturer">
 								<h2><a href="/chevrolet">Chevrolet</a></h2>
-								<div class="image" style="background-position: 0 -276px;"></div>
+								<img src="https://cnd.imgix.net/images/chevrolet.jpg?fm=pjpg&auto=format,compress&w=230" srcset="https://cnd.imgix.net/images/chevrolet.jpg?fm=pjpg&auto=format,compress&w=230 1x, https://cnd.imgix.net/images/chevrolet.jpg?fm=pjpg&auto=format,compress&w=230&dpr=2 2x" width="230" height="138" alt="Chevrolet">
 								<a href="/vehicles/New/Chevrolet" class="button">Shop for Chevrolet</a>
 								<ul>
 									<li><a class="inverted" href="/reviews/2018-chevrolet-cruze-diesel-hatchback-manual-test-review">2018 Chevrolet Cruze Diesel Hatchback Manual</a></li>
@@ -359,7 +318,7 @@
 							</div>
 							<div class="manufacturer">
 								<h2><a href="/ford">Ford</a></h2>
-								<div class="image" style="background-position: 0 -414px;"></div>
+								<img src="https://cnd.imgix.net/images/ford.jpg?fm=pjpg&auto=format,compress&w=230" srcset="https://cnd.imgix.net/images/ford.jpg?fm=pjpg&auto=format,compress&w=230 1x, https://cnd.imgix.net/images/ford.jpg?fm=pjpg&auto=format,compress&w=230&dpr=2 2x" width="230" height="138" alt="Ford">
 								<a href="/vehicles/New/Ford" class="button">Shop for Ford</a>
 								<ul>
 									<li><a class="inverted" href="/reviews/2018-ford-f-150-50l-v-8-4x4-supercrew-review">2018 Ford F-150 5.0L V-8 4x4 SuperCrew</a></li>
@@ -372,7 +331,7 @@
 							</div>
 							<div class="manufacturer">
 								<h2><a href="/jeep">Jeep</a></h2>
-								<div class="image" style="background-position: 0 -552px;"></div>
+								<img src="https://cnd.imgix.net/images/jeep.jpg?fm=pjpg&auto=format,compress&w=230" srcset="https://cnd.imgix.net/images/jeep.jpg?fm=pjpg&auto=format,compress&w=230 1x, https://cnd.imgix.net/images/jeep.jpg?fm=pjpg&auto=format,compress&w=230&dpr=2 2x" width="230" height="138" alt="Jeep">
 								<a href="/vehicles/New/Jeep" class="button">Shop for Jeep</a>
 								<ul>
 									<li><a class="inverted" href="/reviews/2018-jeep-renegade-review">2018 Jeep Renegade</a></li>
@@ -387,7 +346,7 @@
 							</div>
 							<div class="manufacturer">
 								<h2><a href="/toyota">Toyota</a></h2>
-								<div class="image" style="background-position: 0 -690px;"></div>
+								<img src="https://cnd.imgix.net/images/toyota.jpg?fm=pjpg&auto=format,compress&w=230" srcset="https://cnd.imgix.net/images/toyota.jpg?fm=pjpg&auto=format,compress&w=230 1x, https://cnd.imgix.net/images/toyota.jpg?fm=pjpg&auto=format,compress&w=230&dpr=2 2x" width="230" height="138" alt="Toyota">
 								<a href="/vehicles/New/Toyota" class="button">Shop for Toyota</a>
 								<ul>
 									<li><a class="inverted" href="/reviews/2017-toyota-highlander-in-depth-model-review-2017-toyota-highlander-engine-and-transmission-review-car-and-driver-page-2">Engine and Transmission</a></li>

@@ -679,6 +679,20 @@ a.button-inverted-half:hover {
 #tradein-content > div > p {
 	margin-bottom: 1rem;
 }
+#research-form {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 1rem;
+}
+#research-form select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	color: #666;
+	padding: 0.75rem 2rem 0.75rem 0.75rem;
+	font-size: 0.875rem;
+	display: inline-block;
+	width: 100%;
+}
 
 		</style>
 		<script>
@@ -706,6 +720,680 @@ window.onLoad = function() {
 }
 
 		</script>
+		
+		<template id="models-template-acura">
+			<option value="ILX">ILX</option>
+			<option value="MDX">MDX</option>
+			<option value="NSX">NSX</option>
+			<option value="RDX">RDX</option>
+			<option value="RLX">RLX</option>
+			<option value="TLX">TLX</option>
+			
+		</template>
+		
+		<template id="models-template-alfa-romeo">
+			<option value="4C">4C</option>
+			<option value="Giulia">Giulia</option>
+			<option value="Giulia Quadrifoglio">Giulia Quadrifoglio</option>
+			<option value="Stelvio">Stelvio</option>
+			<option value="Stelvio Quadrifoglio">Stelvio Quadrifoglio</option>
+			
+		</template>
+		
+		<template id="models-template-aston-martin">
+			<option value="DB11">DB11</option>
+			<option value="DBS Superleggera">DBS Superleggera</option>
+			<option value="Rapide S">Rapide S</option>
+			<option value="Vanquish">Vanquish</option>
+			<option value="Vantage">Vantage</option>
+			
+		</template>
+		
+		<template id="models-template-audi">
+			<option value="A3">A3</option>
+			<option value="A3 Sportback e-tron">A3 Sportback e-tron</option>
+			<option value="A4">A4</option>
+			<option value="A4 Allroad Quattro">A4 Allroad Quattro</option>
+			<option value="A5">A5</option>
+			<option value="A5 Sportback">A5 Sportback</option>
+			<option value="A6">A6</option>
+			<option value="A7">A7</option>
+			<option value="A8">A8</option>
+			<option value="Q3">Q3</option>
+			<option value="Q5">Q5</option>
+			<option value="Q7">Q7</option>
+			<option value="Q8">Q8</option>
+			<option value="R8">R8</option>
+			<option value="RS3">RS3</option>
+			<option value="RS5">RS5</option>
+			<option value="RS5 Sportback">RS5 Sportback</option>
+			<option value="RS7">RS7</option>
+			<option value="S3">S3</option>
+			<option value="S4">S4</option>
+			<option value="S5">S5</option>
+			<option value="S5 Sportback">S5 Sportback</option>
+			<option value="S6">S6</option>
+			<option value="S7">S7</option>
+			<option value="S8">S8</option>
+			<option value="SQ5">SQ5</option>
+			<option value="TT / TTS">TT / TTS</option>
+			<option value="TT RS">TT RS</option>
+			
+		</template>
+		
+		<template id="models-template-bentley">
+			<option value="Bentayga">Bentayga</option>
+			<option value="Continental GT">Continental GT</option>
+			<option value="Continental GT Speed">Continental GT Speed</option>
+			<option value="Continental Supersports">Continental Supersports</option>
+			<option value="Flying Spur">Flying Spur</option>
+			<option value="Mulsanne">Mulsanne</option>
+			<option value="Mulsanne Speed">Mulsanne Speed</option>
+			
+		</template>
+		
+		<template id="models-template-bmw">
+			<option value="2-series">2-series</option>
+			<option value="3-series">3-series</option>
+			<option value="3-series Wagon">3-series Wagon</option>
+			<option value="4-series">4-series</option>
+			<option value="4-series Gran Coupe">4-series Gran Coupe</option>
+			<option value="5-series">5-series</option>
+			<option value="6-series">6-series</option>
+			<option value="6-series Gran Coupe">6-series Gran Coupe</option>
+			<option value="6-series Gran Turismo">6-series Gran Turismo</option>
+			<option value="7-series">7-series</option>
+			<option value="8-series">8-series</option>
+			<option value="M2">M2</option>
+			<option value="M3">M3</option>
+			<option value="M4">M4</option>
+			<option value="M5">M5</option>
+			<option value="M6">M6</option>
+			<option value="M6 Gran Coupe">M6 Gran Coupe</option>
+			<option value="M8 Gran Coupe">M8 Gran Coupe</option>
+			<option value="X1">X1</option>
+			<option value="X2">X2</option>
+			<option value="X3">X3</option>
+			<option value="X4">X4</option>
+			<option value="X5">X5</option>
+			<option value="X5 M">X5 M</option>
+			<option value="X6">X6</option>
+			<option value="X6 M">X6 M</option>
+			<option value="X7">X7</option>
+			<option value="Z4">Z4</option>
+			<option value="i3">i3</option>
+			<option value="i8">i8</option>
+			
+		</template>
+		
+		<template id="models-template-bugatti">
+			<option value="Chiron">Chiron</option>
+			<option value="Divo">Divo</option>
+			
+		</template>
+		
+		<template id="models-template-buick">
+			<option value="Cascada">Cascada</option>
+			<option value="Enclave">Enclave</option>
+			<option value="Encore">Encore</option>
+			<option value="Envision">Envision</option>
+			<option value="LaCrosse">LaCrosse</option>
+			<option value="Regal GS">Regal GS</option>
+			<option value="Regal Sportback">Regal Sportback</option>
+			<option value="Regal TourX">Regal TourX</option>
+			
+		</template>
+		
+		<template id="models-template-cadillac">
+			<option value="ATS">ATS</option>
+			<option value="ATS-V">ATS-V</option>
+			<option value="CT5">CT5</option>
+			<option value="CT6">CT6</option>
+			<option value="CTS">CTS</option>
+			<option value="CTS-V">CTS-V</option>
+			<option value="Escalade / Escalade ESV">Escalade / Escalade ESV</option>
+			<option value="XT4">XT4</option>
+			<option value="XT5">XT5</option>
+			<option value="XTS">XTS</option>
+			
+		</template>
+		
+		<template id="models-template-chevrolet">
+			<option value="Blazer">Blazer</option>
+			<option value="Bolt EV">Bolt EV</option>
+			<option value="Camaro">Camaro</option>
+			<option value="Camaro ZL1">Camaro ZL1</option>
+			<option value="Colorado">Colorado</option>
+			<option value="Corvette">Corvette</option>
+			<option value="Corvette Z06">Corvette Z06</option>
+			<option value="Corvette ZR1">Corvette ZR1</option>
+			<option value="Cruze">Cruze</option>
+			<option value="Equinox">Equinox</option>
+			<option value="Express">Express</option>
+			<option value="Impala">Impala</option>
+			<option value="Malibu">Malibu</option>
+			<option value="Silverado 1500">Silverado 1500</option>
+			<option value="Silverado 2500HD">Silverado 2500HD</option>
+			<option value="Silverado 3500HD">Silverado 3500HD</option>
+			<option value="Sonic">Sonic</option>
+			<option value="Spark">Spark</option>
+			<option value="Suburban">Suburban</option>
+			<option value="Tahoe">Tahoe</option>
+			<option value="Traverse">Traverse</option>
+			<option value="Trax">Trax</option>
+			<option value="Volt">Volt</option>
+			
+		</template>
+		
+		<template id="models-template-chrysler">
+			<option value="300">300</option>
+			<option value="Pacifica">Pacifica</option>
+			
+		</template>
+		
+		<template id="models-template-dodge">
+			<option value="Challenger">Challenger</option>
+			<option value="Challenger SRT / SRT Hellcat">Challenger SRT / SRT Hellcat</option>
+			<option value="Challenger SRT Demon">Challenger SRT Demon</option>
+			<option value="Charger">Charger</option>
+			<option value="Charger SRT / SRT Hellcat">Charger SRT / SRT Hellcat</option>
+			<option value="Durango">Durango</option>
+			<option value="Durango SRT">Durango SRT</option>
+			<option value="Grand Caravan">Grand Caravan</option>
+			<option value="Journey">Journey</option>
+			<option value="Viper">Viper</option>
+			
+		</template>
+		
+		<template id="models-template-ferrari">
+			<option value="488GTB">488GTB</option>
+			<option value="812 Superfast">812 Superfast</option>
+			<option value="GTC4Lusso">GTC4Lusso</option>
+			<option value="Portofino">Portofino</option>
+			
+		</template>
+		
+		<template id="models-template-fiat">
+			<option value="124 Spider">124 Spider</option>
+			<option value="500">500</option>
+			<option value="500 / 500C Abarth">500 / 500C Abarth</option>
+			<option value="500L">500L</option>
+			<option value="500X">500X</option>
+			<option value="500e">500e</option>
+			
+		</template>
+		
+		<template id="models-template-ford">
+			<option value="Bronco">Bronco</option>
+			<option value="C-Max">C-Max</option>
+			<option value="EcoSport">EcoSport</option>
+			<option value="Edge">Edge</option>
+			<option value="Escape">Escape</option>
+			<option value="Expedition / Expedition Max">Expedition / Expedition Max</option>
+			<option value="Explorer">Explorer</option>
+			<option value="F-150">F-150</option>
+			<option value="F-150 Raptor">F-150 Raptor</option>
+			<option value="F-250 Super Duty">F-250 Super Duty</option>
+			<option value="F-350 Super Duty">F-350 Super Duty</option>
+			<option value="F-450 Super Duty">F-450 Super Duty</option>
+			<option value="Fiesta">Fiesta</option>
+			<option value="Fiesta ST">Fiesta ST</option>
+			<option value="Flex">Flex</option>
+			<option value="Focus">Focus</option>
+			<option value="Focus Active">Focus Active</option>
+			<option value="Focus Electric">Focus Electric</option>
+			<option value="Focus RS">Focus RS</option>
+			<option value="Focus ST">Focus ST</option>
+			<option value="Fusion">Fusion</option>
+			<option value="GT">GT</option>
+			<option value="Mustang">Mustang</option>
+			<option value="Mustang Shelby GT350 / GT350R">Mustang Shelby GT350 / GT350R</option>
+			<option value="Mustang Shelby GT500">Mustang Shelby GT500</option>
+			<option value="Ranger">Ranger</option>
+			<option value="Ranger Raptor">Ranger Raptor</option>
+			<option value="Taurus">Taurus</option>
+			<option value="Transit">Transit</option>
+			<option value="Transit Connect">Transit Connect</option>
+			
+		</template>
+		
+		<template id="models-template-genesis">
+			<option value="G70">G70</option>
+			<option value="G80">G80</option>
+			<option value="G90">G90</option>
+			
+		</template>
+		
+		<template id="models-template-gmc">
+			<option value="Acadia">Acadia</option>
+			<option value="Canyon">Canyon</option>
+			<option value="Savana">Savana</option>
+			<option value="Sierra 1500">Sierra 1500</option>
+			<option value="Sierra 2500HD">Sierra 2500HD</option>
+			<option value="Sierra 3500HD">Sierra 3500HD</option>
+			<option value="Terrain">Terrain</option>
+			<option value="Yukon / Yukon XL">Yukon / Yukon XL</option>
+			
+		</template>
+		
+		<template id="models-template-honda">
+			<option value="Accord">Accord</option>
+			<option value="CR-V">CR-V</option>
+			<option value="Civic">Civic</option>
+			<option value="Civic Si">Civic Si</option>
+			<option value="Civic Type R">Civic Type R</option>
+			<option value="Clarity">Clarity</option>
+			<option value="Fit">Fit</option>
+			<option value="HR-V">HR-V</option>
+			<option value="Insight">Insight</option>
+			<option value="Odyssey">Odyssey</option>
+			<option value="Pilot">Pilot</option>
+			<option value="Ridgeline">Ridgeline</option>
+			
+		</template>
+		
+		<template id="models-template-hyundai">
+			<option value="Accent">Accent</option>
+			<option value="Elantra">Elantra</option>
+			<option value="Elantra GT">Elantra GT</option>
+			<option value="Elantra GT Sport">Elantra GT Sport</option>
+			<option value="Elantra Sport">Elantra Sport</option>
+			<option value="Ioniq">Ioniq</option>
+			<option value="Kona">Kona</option>
+			<option value="Kona Electric">Kona Electric</option>
+			<option value="Nexo">Nexo</option>
+			<option value="Santa Fe">Santa Fe</option>
+			<option value="Santa Fe Sport">Santa Fe Sport</option>
+			<option value="Sonata">Sonata</option>
+			<option value="Tucson">Tucson</option>
+			<option value="Veloster">Veloster</option>
+			<option value="Veloster N">Veloster N</option>
+			
+		</template>
+		
+		<template id="models-template-infiniti">
+			<option value="Q50">Q50</option>
+			<option value="Q50 Red Sport 400">Q50 Red Sport 400</option>
+			<option value="Q60">Q60</option>
+			<option value="Q60 Red Sport 400">Q60 Red Sport 400</option>
+			<option value="Q70">Q70</option>
+			<option value="QX30">QX30</option>
+			<option value="QX50">QX50</option>
+			<option value="QX60">QX60</option>
+			<option value="QX70">QX70</option>
+			<option value="QX80">QX80</option>
+			
+		</template>
+		
+		<template id="models-template-jaguar">
+			<option value="E-Pace">E-Pace</option>
+			<option value="F-Pace">F-Pace</option>
+			<option value="F-Pace SVR">F-Pace SVR</option>
+			<option value="F-type">F-type</option>
+			<option value="F-type R">F-type R</option>
+			<option value="I-Pace">I-Pace</option>
+			<option value="XE">XE</option>
+			<option value="XF">XF</option>
+			<option value="XF Sportbrake">XF Sportbrake</option>
+			<option value="XJ">XJ</option>
+			<option value="XJR575">XJR575</option>
+			
+		</template>
+		
+		<template id="models-template-jeep">
+			<option value="Cherokee">Cherokee</option>
+			<option value="Compass">Compass</option>
+			<option value="Grand Cherokee">Grand Cherokee</option>
+			<option value="Grand Cherokee SRT">Grand Cherokee SRT</option>
+			<option value="Grand Cherokee Trackhawk">Grand Cherokee Trackhawk</option>
+			<option value="Renegade">Renegade</option>
+			<option value="Wrangler">Wrangler</option>
+			<option value="Wrangler Pickup">Wrangler Pickup</option>
+			
+		</template>
+		
+		<template id="models-template-kia">
+			<option value="Cadenza">Cadenza</option>
+			<option value="Forte / Forte5">Forte / Forte5</option>
+			<option value="K900">K900</option>
+			<option value="Niro">Niro</option>
+			<option value="Optima">Optima</option>
+			<option value="Rio">Rio</option>
+			<option value="Sedona">Sedona</option>
+			<option value="Sorento">Sorento</option>
+			<option value="Soul">Soul</option>
+			<option value="Soul EV">Soul EV</option>
+			<option value="Sportage">Sportage</option>
+			<option value="Stinger">Stinger</option>
+			
+		</template>
+		
+		<template id="models-template-koenigsegg">
+			<option value="Regera">Regera</option>
+			
+		</template>
+		
+		<template id="models-template-lamborghini">
+			<option value="Aventador">Aventador</option>
+			<option value="Huracán">Huracán</option>
+			<option value="Urus">Urus</option>
+			
+		</template>
+		
+		<template id="models-template-land-rover">
+			<option value="Defender">Defender</option>
+			<option value="Discovery">Discovery</option>
+			<option value="Discovery SVX">Discovery SVX</option>
+			<option value="Discovery Sport">Discovery Sport</option>
+			<option value="Range Rover">Range Rover</option>
+			<option value="Range Rover Evoque">Range Rover Evoque</option>
+			<option value="Range Rover Sport">Range Rover Sport</option>
+			<option value="Range Rover Sport Supercharged / SVR">Range Rover Sport Supercharged / SVR</option>
+			<option value="Range Rover Supercharged">Range Rover Supercharged</option>
+			<option value="Range Rover Velar">Range Rover Velar</option>
+			
+		</template>
+		
+		<template id="models-template-lexus">
+			<option value="ES">ES</option>
+			<option value="GS">GS</option>
+			<option value="GS F">GS F</option>
+			<option value="GX">GX</option>
+			<option value="IS">IS</option>
+			<option value="LC">LC</option>
+			<option value="LS">LS</option>
+			<option value="LX">LX</option>
+			<option value="NX">NX</option>
+			<option value="RC">RC</option>
+			<option value="RC F">RC F</option>
+			<option value="RX">RX</option>
+			<option value="UX">UX</option>
+			
+		</template>
+		
+		<template id="models-template-lincoln">
+			<option value="Aviator">Aviator</option>
+			<option value="Continental">Continental</option>
+			<option value="MKC">MKC</option>
+			<option value="MKT">MKT</option>
+			<option value="MKX">MKX</option>
+			<option value="MKZ">MKZ</option>
+			<option value="Nautilus">Nautilus</option>
+			<option value="Navigator / Navigator L">Navigator / Navigator L</option>
+			
+		</template>
+		
+		<template id="models-template-lotus">
+			<option value="Evora 400">Evora 400</option>
+			
+		</template>
+		
+		<template id="models-template-maserati">
+			<option value="Ghibli">Ghibli</option>
+			<option value="GranTurismo">GranTurismo</option>
+			<option value="Levante">Levante</option>
+			<option value="Quattroporte">Quattroporte</option>
+			
+		</template>
+		
+		<template id="models-template-mazda">
+			<option value="CX-3">CX-3</option>
+			<option value="CX-5">CX-5</option>
+			<option value="CX-9">CX-9</option>
+			<option value="MX-5 Miata">MX-5 Miata</option>
+			<option value="Mazda 3">Mazda 3</option>
+			<option value="Mazda 6">Mazda 6</option>
+			
+		</template>
+		
+		<template id="models-template-mclaren">
+			<option value="570S / 570GT">570S / 570GT</option>
+			<option value="600LT">600LT</option>
+			<option value="720S">720S</option>
+			<option value="Senna">Senna</option>
+			
+		</template>
+		
+		<template id="models-template-mercedes-amg">
+			<option value="C43">C43</option>
+			<option value="C63">C63</option>
+			<option value="CLA45 4Matic">CLA45 4Matic</option>
+			<option value="CLS63 S 4Matic">CLS63 S 4Matic</option>
+			<option value="E43">E43</option>
+			<option value="E63 S 4Matic">E63 S 4Matic</option>
+			<option value="E63 S Wagon">E63 S Wagon</option>
+			<option value="G63 / G65 4Matic">G63 / G65 4Matic</option>
+			<option value="GLA45 4Matic">GLA45 4Matic</option>
+			<option value="GLC43 4Matic / GLC63 4Matic">GLC43 4Matic / GLC63 4Matic</option>
+			<option value="GLC43 Coupe / GLC63 Coupe">GLC43 Coupe / GLC63 Coupe</option>
+			<option value="GLE43 4Matic / GLE63 4Matic">GLE43 4Matic / GLE63 4Matic</option>
+			<option value="GLE43 Coupe 4Matic / GLE63 S Coupe 4Matic">GLE43 Coupe 4Matic / GLE63 S Coupe 4Matic</option>
+			<option value="GLS63 4Matic">GLS63 4Matic</option>
+			<option value="GT / GT Roadster / GT S">GT / GT Roadster / GT S</option>
+			<option value="GT C / GT C Roadster / GT R">GT C / GT C Roadster / GT R</option>
+			<option value="GT53">GT53</option>
+			<option value="GT63 / GT63 S">GT63 / GT63 S</option>
+			<option value="S63 / S65">S63 / S65</option>
+			<option value="SL63 / SL65">SL63 / SL65</option>
+			<option value="SLC43">SLC43</option>
+			
+		</template>
+		
+		<template id="models-template-mercedes-benz">
+			<option value="A-class">A-class</option>
+			<option value="C-class">C-class</option>
+			<option value="CLA-class">CLA-class</option>
+			<option value="CLS-class">CLS-class</option>
+			<option value="E-class">E-class</option>
+			<option value="E-class Wagon">E-class Wagon</option>
+			<option value="EQC">EQC</option>
+			<option value="G-class">G-class</option>
+			<option value="GLA-class">GLA-class</option>
+			<option value="GLC Coupe">GLC Coupe</option>
+			<option value="GLC-class">GLC-class</option>
+			<option value="GLE-class">GLE-class</option>
+			<option value="GLS-class">GLS-class</option>
+			<option value="Metris">Metris</option>
+			<option value="S-class">S-class</option>
+			<option value="SL-class">SL-class</option>
+			<option value="SLC-class">SLC-class</option>
+			<option value="Sprinter">Sprinter</option>
+			
+		</template>
+		
+		<template id="models-template-mercedes-maybach">
+			<option value="S560 / S650">S560 / S650</option>
+			
+		</template>
+		
+		<template id="models-template-mini">
+			<option value="Cooper Clubman / S">Cooper Clubman / S</option>
+			<option value="Cooper Clubman JCW">Cooper Clubman JCW</option>
+			<option value="Cooper Convertible / S">Cooper Convertible / S</option>
+			<option value="Cooper Convertible JCW">Cooper Convertible JCW</option>
+			<option value="Cooper Countryman / S">Cooper Countryman / S</option>
+			<option value="Cooper Countryman JCW">Cooper Countryman JCW</option>
+			<option value="Cooper Hardtop / S">Cooper Hardtop / S</option>
+			<option value="Cooper Hardtop JCW">Cooper Hardtop JCW</option>
+			
+		</template>
+		
+		<template id="models-template-mitsubishi">
+			<option value="Eclipse Cross">Eclipse Cross</option>
+			<option value="Lancer">Lancer</option>
+			<option value="Mirage">Mirage</option>
+			<option value="Mirage G4">Mirage G4</option>
+			<option value="Outlander">Outlander</option>
+			<option value="Outlander Sport">Outlander Sport</option>
+			
+		</template>
+		
+		<template id="models-template-nissan">
+			<option value="Altima">Altima</option>
+			<option value="Armada">Armada</option>
+			<option value="Frontier">Frontier</option>
+			<option value="GT-R">GT-R</option>
+			<option value="Kicks">Kicks</option>
+			<option value="Leaf">Leaf</option>
+			<option value="Maxima">Maxima</option>
+			<option value="Murano">Murano</option>
+			<option value="NV1500 / 2500 / 3500">NV1500 / 2500 / 3500</option>
+			<option value="NV200">NV200</option>
+			<option value="Pathfinder">Pathfinder</option>
+			<option value="Rogue">Rogue</option>
+			<option value="Rogue Sport">Rogue Sport</option>
+			<option value="Sentra">Sentra</option>
+			<option value="Sentra NISMO">Sentra NISMO</option>
+			<option value="Titan">Titan</option>
+			<option value="Titan XD">Titan XD</option>
+			<option value="Versa">Versa</option>
+			<option value="Versa Note">Versa Note</option>
+			<option value="Z">Z</option>
+			
+		</template>
+		
+		<template id="models-template-pagani">
+			<option value="Huayra">Huayra</option>
+			
+		</template>
+		
+		<template id="models-template-polestar">
+			<option value="Polestar 1">Polestar 1</option>
+			
+		</template>
+		
+		<template id="models-template-porsche">
+			<option value="718 Boxster">718 Boxster</option>
+			<option value="718 Cayman">718 Cayman</option>
+			<option value="911">911</option>
+			<option value="911 GT2 RS">911 GT2 RS</option>
+			<option value="911 GT3 / GT3 RS">911 GT3 / GT3 RS</option>
+			<option value="911 Turbo / Turbo S">911 Turbo / Turbo S</option>
+			<option value="Cayenne">Cayenne</option>
+			<option value="Cayenne Turbo / Turbo S">Cayenne Turbo / Turbo S</option>
+			<option value="Macan">Macan</option>
+			<option value="Macan Turbo">Macan Turbo</option>
+			<option value="Panamera">Panamera</option>
+			<option value="Panamera Sport Turismo">Panamera Sport Turismo</option>
+			<option value="Panamera Turbo / Turbo S">Panamera Turbo / Turbo S</option>
+			<option value="Taycan">Taycan</option>
+			
+		</template>
+		
+		<template id="models-template-ram">
+			<option value="1500">1500</option>
+			<option value="2500">2500</option>
+			<option value="3500">3500</option>
+			<option value="Power Wagon">Power Wagon</option>
+			<option value="ProMaster">ProMaster</option>
+			<option value="ProMaster City">ProMaster City</option>
+			
+		</template>
+		
+		<template id="models-template-rolls-royce">
+			<option value="Cullinan">Cullinan</option>
+			<option value="Dawn">Dawn</option>
+			<option value="Ghost Series II">Ghost Series II</option>
+			<option value="Phantom">Phantom</option>
+			<option value="Wraith">Wraith</option>
+			
+		</template>
+		
+		<template id="models-template-scion">
+			<option value="FR-S">FR-S</option>
+			<option value="iA">iA</option>
+			<option value="iM">iM</option>
+			<option value="tC">tC</option>
+			
+		</template>
+		
+		<template id="models-template-smart">
+			<option value="Fortwo Electric Drive">Fortwo Electric Drive</option>
+			
+		</template>
+		
+		<template id="models-template-spyker">
+			<option value="C8">C8</option>
+			
+		</template>
+		
+		<template id="models-template-subaru">
+			<option value="Ascent">Ascent</option>
+			<option value="BRZ">BRZ</option>
+			<option value="Crosstrek">Crosstrek</option>
+			<option value="Forester">Forester</option>
+			<option value="Impreza">Impreza</option>
+			<option value="Legacy">Legacy</option>
+			<option value="Outback">Outback</option>
+			<option value="WRX">WRX</option>
+			<option value="WRX STI">WRX STI</option>
+			
+		</template>
+		
+		<template id="models-template-tesla">
+			<option value="Model 3">Model 3</option>
+			<option value="Model S">Model S</option>
+			<option value="Model X">Model X</option>
+			<option value="Roadster">Roadster</option>
+			
+		</template>
+		
+		<template id="models-template-toyota">
+			<option value="4Runner">4Runner</option>
+			<option value="86">86</option>
+			<option value="Avalon">Avalon</option>
+			<option value="C-HR">C-HR</option>
+			<option value="Camry">Camry</option>
+			<option value="Corolla">Corolla</option>
+			<option value="Corolla iM">Corolla iM</option>
+			<option value="FT-4X">FT-4X</option>
+			<option value="Highlander">Highlander</option>
+			<option value="Land Cruiser">Land Cruiser</option>
+			<option value="Mirai">Mirai</option>
+			<option value="Prius">Prius</option>
+			<option value="Prius C">Prius C</option>
+			<option value="Prius Prime">Prius Prime</option>
+			<option value="RAV4">RAV4</option>
+			<option value="Sequoia">Sequoia</option>
+			<option value="Sienna">Sienna</option>
+			<option value="Supra">Supra</option>
+			<option value="Tacoma">Tacoma</option>
+			<option value="Tundra">Tundra</option>
+			<option value="Yaris">Yaris</option>
+			<option value="Yaris iA">Yaris iA</option>
+			
+		</template>
+		
+		<template id="models-template-volkswagen">
+			<option value="Arteon">Arteon</option>
+			<option value="Atlas">Atlas</option>
+			<option value="Atlas Cross Sport">Atlas Cross Sport</option>
+			<option value="Beetle">Beetle</option>
+			<option value="Golf">Golf</option>
+			<option value="Golf Alltrack">Golf Alltrack</option>
+			<option value="Golf GTI">Golf GTI</option>
+			<option value="Golf R">Golf R</option>
+			<option value="Golf SportWagen">Golf SportWagen</option>
+			<option value="Jetta">Jetta</option>
+			<option value="Microbus">Microbus</option>
+			<option value="Passat">Passat</option>
+			<option value="Tiguan">Tiguan</option>
+			<option value="e-Golf">e-Golf</option>
+			
+		</template>
+		
+		<template id="models-template-volvo">
+			<option value="S60">S60</option>
+			<option value="S90">S90</option>
+			<option value="V60">V60</option>
+			<option value="V90">V90</option>
+			<option value="V90 Cross Country">V90 Cross Country</option>
+			<option value="XC40">XC40</option>
+			<option value="XC60">XC60</option>
+			<option value="XC90">XC90</option>
+			
+		</template>
+		
 	</head>
 	<body>
 		<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
@@ -952,7 +1640,7 @@ window.onLoad = function() {
 		<div id="splash-content">
 			
 			<article id="splash-article-1" class="show">
-				<a class="splash-article-image" href="/reviews/2019-gmc-sierra-1500-denali-at4-driven" style="background-image:url(https://cnd.imgix.net/hmg-prod/images/2019-gmc-sierra-denali-placement-1535045383.jpg)"></a>
+				<a class="splash-article-image" href="/reviews/2019-gmc-sierra-1500-denali-at4-driven" style="background-image:url(https://cnd.imgix.net/hmg-prod/images/2019-gmc-sierra-denali-placement-1535045383.jpg?fm=pjpg&auto=format,compress)"></a>
 				<div class="splash-article-content">
 					<nav>
 						<p><a href="/reviews/2019-gmc-sierra-1500-denali-at4-driven">First Drive Review</a><span> &bullet; Aug 2018</span></p>
@@ -971,7 +1659,7 @@ window.onLoad = function() {
 			</article>
 			
 			<article id="splash-article-2">
-				<a class="splash-article-image" href="/flipbook/2018-monterey-car-week-pebble-beach-auction-preview" style="background-image:url(https://cnd.imgix.net/hmg-prod/images/1998-mercedes-benz-amg-clk-gtr-15-1535410446.jpg)"></a>
+				<a class="splash-article-image" href="/flipbook/2018-monterey-car-week-pebble-beach-auction-preview" style="background-image:url(https://cnd.imgix.net/hmg-prod/images/1998-mercedes-benz-amg-clk-gtr-15-1535410446.jpg?fm=pjpg&auto=format,compress)"></a>
 				<div class="splash-article-content">
 					<nav>
 						<p><a href="/flipbook/2018-monterey-car-week-pebble-beach-auction-preview">Flipbook</a><span> &bullet; Aug 2018</span></p>
@@ -990,7 +1678,7 @@ window.onLoad = function() {
 			</article>
 			
 			<article id="splash-article-3">
-				<a class="splash-article-image" href="/reviews/2019-chevrolet-malibu-rs-cvt-driven" style="background-image:url(https://cnd.imgix.net/hmg-prod/images/2018-chevrolet-malibu-rs-first-drive-placement-1535341871.jpg)"></a>
+				<a class="splash-article-image" href="/reviews/2019-chevrolet-malibu-rs-cvt-driven" style="background-image:url(https://cnd.imgix.net/hmg-prod/images/2018-chevrolet-malibu-rs-first-drive-placement-1535341871.jpg?fm=pjpg&auto=format,compress)"></a>
 				<div class="splash-article-content">
 					<nav>
 						<p><a href="/reviews/2019-chevrolet-malibu-rs-cvt-driven">First Drive Review</a><span> &bullet; Aug 2018</span></p>
@@ -1009,7 +1697,7 @@ window.onLoad = function() {
 			</article>
 			
 			<article id="splash-article-4">
-				<a class="splash-article-image" href="/reviews/2019-hyundai-santa-fe-drive" style="background-image:url(https://cnd.imgix.net/hmg-prod/images/2019-hyundai-santa-fe-first-drive-placement-1535062627.jpg)"></a>
+				<a class="splash-article-image" href="/reviews/2019-hyundai-santa-fe-drive" style="background-image:url(https://cnd.imgix.net/hmg-prod/images/2019-hyundai-santa-fe-first-drive-placement-1535062627.jpg?fm=pjpg&auto=format,compress)"></a>
 				<div class="splash-article-content">
 					<nav>
 						<p><a href="/reviews/2019-hyundai-santa-fe-drive">First Drive Review</a><span> &bullet; Aug 2018</span></p>
@@ -1028,7 +1716,7 @@ window.onLoad = function() {
 			</article>
 			
 			<article id="splash-article-5">
-				<a class="splash-article-image" href="/news/2019-bmw-z4-roadster-30i-m40i" style="background-image:url(https://cnd.imgix.net/hmg-prod/images/2019-bmw-z4-placement-1534445413.jpg)"></a>
+				<a class="splash-article-image" href="/news/2019-bmw-z4-roadster-30i-m40i" style="background-image:url(https://cnd.imgix.net/hmg-prod/images/2019-bmw-z4-placement-1534445413.jpg?fm=pjpg&auto=format,compress)"></a>
 				<div class="splash-article-content">
 					<nav>
 						<p><a href="/news/2019-bmw-z4-roadster-30i-m40i">Official Photos and Info</a><span> &bullet; Aug 2018</span></p>
@@ -1187,14 +1875,14 @@ window.onLoad = function() {
 						<h1>Research and Shop</h1>
 						<div>
 							<h2>By Make and Model</h2>
-							<form>
+							<form id="research-form">
 								<select id="body-style-make" onChange="return changeBodyStyleModel(this);">
 									<option value="" disabled selected>Select a Make</option>
 									<option value="acura">Acura</option>
 									<option value="alfa-romeo">Alfa Romeo</option>
 									<option value="aston-martin">Aston Martin</option>
 									<option value="audi">Audi</option>
-									<option value="bentley">Bentley</option>
+									<option value="bently">Bentley</option>
 									<option value="bmw">BMW</option>
 									<option value="bugatti">Bugatti</option>
 									<option value="buick">Buick</option>
@@ -1213,7 +1901,7 @@ window.onLoad = function() {
 									<option value="jaguar">Jaguar</option>
 									<option value="jeep">Jeep</option>
 									<option value="kia">Kia</option>
-									<option value="koenigsegg">Koenigsegg</option>
+									<option value="koenigsigg">Koenigsigg</option>
 									<option value="lamborghini">Lamborghini</option>
 									<option value="land-rover">Land Rover</option>
 									<option value="lexus">Lexus</option>
@@ -1222,9 +1910,9 @@ window.onLoad = function() {
 									<option value="maserati">Maserati</option>
 									<option value="mazda">Mazda</option>
 									<option value="mclaren">McLaren</option>
-									<option value="mercedes-amg">Mercedes-AMG</option>
-									<option value="mercedes-benz">Mercedes-Benz</option>
-									<option value="mercedes-maybach">Mercedes-Maybach</option>
+									<option value="mercedes-amg">Mercedes AMG</option>
+									<option value="mercedes-benz">Mercedes Benz</option>
+									<option value="mercedes-maybach">Mercedes Maybach</option>
 									<option value="mini">Mini</option>
 									<option value="mitsubishi">Mitsubishi</option>
 									<option value="nissan">Nissan</option>
@@ -1232,7 +1920,7 @@ window.onLoad = function() {
 									<option value="polestar">Polestar</option>
 									<option value="porsche">Porsche</option>
 									<option value="ram">Ram</option>
-									<option value="rolls-royce">Rolls-Royce</option>
+									<option value="rolls-royce">Rolls Royce</option>
 									<option value="scion">Scion</option>
 									<option value="smart">Smart</option>
 									<option value="spyker">Spyker</option>
@@ -1241,12 +1929,15 @@ window.onLoad = function() {
 									<option value="toyota">Toyota</option>
 									<option value="volkswagen">Volkswagen</option>
 									<option value="volvo">Volvo</option>
+									
 								</select>
 								<select id="body-style-model">
 									<option value="" disabled selected>Select a Model (optional)</option>
 								</select>
-								<a class="button-half" href="#">Research</a>
-								<a class="button-inverted-half" href="#">Shop Cars</a>
+								<div>
+									<a class="button-half" href="#">Research</a>
+									<a class="button-inverted-half" href="#">Shop Cars</a>
+								</div>
 							</form>
 						</div>
 						<div>
@@ -1274,7 +1965,7 @@ window.onLoad = function() {
 						<h1>Featured</h1>
 						<article>
 	<div class="image">
-		<img src="https://cnd.imgix.net/hmg-prod/images/bugatti-divo-placement-1535034871.jpg?w=300&fm=pjpg&auto=format,compress" height="184" width="300" />
+		<img src="https://cnd.imgix.net/hmg-prod/images/bugatti-divo-placement-1535034871.jpg?w=300&fm=pjpg&auto=format,compress" srcset="https://cnd.imgix.net/hmg-prod/images/bugatti-divo-placement-1535034871.jpg?w=300&fm=pjpg&auto=format,compress 1x, https://cnd.imgix.net/hmg-prod/images/bugatti-divo-placement-1535034871.jpg?w=300&fm=pjpg&auto=format,compress&dpr=2 2x," height="184" width="300" />
 	</div>
 	<div class="content">
 		<nav>
@@ -1294,7 +1985,7 @@ window.onLoad = function() {
 </article>
 <article>
 	<div class="image">
-		<img src="https://cnd.imgix.net/hmg-prod/images/2019ram1500placement-1535060851.jpg?w=300&fm=pjpg&auto=format,compress" height="184" width="300" />
+		<img src="https://cnd.imgix.net/hmg-prod/images/2019ram1500placement-1535060851.jpg?w=300&fm=pjpg&auto=format,compress" srcset="https://cnd.imgix.net/hmg-prod/images/2019ram1500placement-1535060851.jpg?w=300&fm=pjpg&auto=format,compress 1x, https://cnd.imgix.net/hmg-prod/images/2019ram1500placement-1535060851.jpg?w=300&fm=pjpg&auto=format,compress&dpr=2 2x," height="184" width="300" />
 	</div>
 	<div class="content">
 		<nav>
@@ -1314,7 +2005,7 @@ window.onLoad = function() {
 </article>
 <article>
 	<div class="image">
-		<img src="https://cnd.imgix.net/hmg-prod/images/2019-acura-nsx-placement-1535040483.jpg?w=300&fm=pjpg&auto=format,compress" height="184" width="300" />
+		<img src="https://cnd.imgix.net/hmg-prod/images/2019-acura-nsx-placement-1535040483.jpg?w=300&fm=pjpg&auto=format,compress" srcset="https://cnd.imgix.net/hmg-prod/images/2019-acura-nsx-placement-1535040483.jpg?w=300&fm=pjpg&auto=format,compress 1x, https://cnd.imgix.net/hmg-prod/images/2019-acura-nsx-placement-1535040483.jpg?w=300&fm=pjpg&auto=format,compress&dpr=2 2x," height="184" width="300" />
 	</div>
 	<div class="content">
 		<nav>
@@ -1334,7 +2025,7 @@ window.onLoad = function() {
 </article>
 <article>
 	<div class="image">
-		<img src="https://cnd.imgix.net/hmg-prod/images/jaguar-e-type-zero-placement2-1535147319.jpg?w=300&fm=pjpg&auto=format,compress" height="184" width="300" />
+		<img src="https://cnd.imgix.net/hmg-prod/images/jaguar-e-type-zero-placement2-1535147319.jpg?w=300&fm=pjpg&auto=format,compress" srcset="https://cnd.imgix.net/hmg-prod/images/jaguar-e-type-zero-placement2-1535147319.jpg?w=300&fm=pjpg&auto=format,compress 1x, https://cnd.imgix.net/hmg-prod/images/jaguar-e-type-zero-placement2-1535147319.jpg?w=300&fm=pjpg&auto=format,compress&dpr=2 2x," height="184" width="300" />
 	</div>
 	<div class="content">
 		<nav>
@@ -1358,7 +2049,7 @@ window.onLoad = function() {
 						<h1>2018-2019 Car Reviews</h1>
 						<article>
 	<div class="image">
-		<img src="https://cnd.imgix.net/hmg-prod/images/2019-acura-rdx-a-spec-sh-awd-test-placement-1534988925.jpg?w=300&fm=pjpg&auto=format,compress" height="184" width="300" />
+		<img src="https://cnd.imgix.net/hmg-prod/images/2019-acura-rdx-a-spec-sh-awd-test-placement-1534988925.jpg?w=300&fm=pjpg&auto=format,compress" srcset="https://cnd.imgix.net/hmg-prod/images/2019-acura-rdx-a-spec-sh-awd-test-placement-1534988925.jpg?w=300&fm=pjpg&auto=format,compress 1x, https://cnd.imgix.net/hmg-prod/images/2019-acura-rdx-a-spec-sh-awd-test-placement-1534988925.jpg?w=300&fm=pjpg&auto=format,compress&dpr=2 2x," height="184" width="300" />
 	</div>
 	<div class="content">
 		<nav>
@@ -1378,7 +2069,7 @@ window.onLoad = function() {
 </article>
 <article>
 	<div class="image">
-		<img src="https://cnd.imgix.net/hmg-prod/images/2019-mercedes-benz-cls450-4matic-test-placement-1534899078.jpg?w=300&fm=pjpg&auto=format,compress" height="184" width="300" />
+		<img src="https://cnd.imgix.net/hmg-prod/images/2019-mercedes-benz-cls450-4matic-test-placement-1534899078.jpg?w=300&fm=pjpg&auto=format,compress" srcset="https://cnd.imgix.net/hmg-prod/images/2019-mercedes-benz-cls450-4matic-test-placement-1534899078.jpg?w=300&fm=pjpg&auto=format,compress 1x, https://cnd.imgix.net/hmg-prod/images/2019-mercedes-benz-cls450-4matic-test-placement-1534899078.jpg?w=300&fm=pjpg&auto=format,compress&dpr=2 2x," height="184" width="300" />
 	</div>
 	<div class="content">
 		<nav>
@@ -1398,7 +2089,7 @@ window.onLoad = function() {
 </article>
 <article>
 	<div class="image">
-		<img src="https://cnd.imgix.net/hmg-prod/images/2019-genesis-g70-dynamic-special-edition-test-placement-1534826237.jpg?w=300&fm=pjpg&auto=format,compress" height="184" width="300" />
+		<img src="https://cnd.imgix.net/hmg-prod/images/2019-genesis-g70-dynamic-special-edition-test-placement-1534826237.jpg?w=300&fm=pjpg&auto=format,compress" srcset="https://cnd.imgix.net/hmg-prod/images/2019-genesis-g70-dynamic-special-edition-test-placement-1534826237.jpg?w=300&fm=pjpg&auto=format,compress 1x, https://cnd.imgix.net/hmg-prod/images/2019-genesis-g70-dynamic-special-edition-test-placement-1534826237.jpg?w=300&fm=pjpg&auto=format,compress&dpr=2 2x," height="184" width="300" />
 	</div>
 	<div class="content">
 		<nav>
@@ -1418,7 +2109,7 @@ window.onLoad = function() {
 </article>
 <article>
 	<div class="image">
-		<img src="https://cnd.imgix.net/hmg-prod/images/2018-mercedes-amg-c43-01-placement-1534884539.jpg?w=300&fm=pjpg&auto=format,compress" height="184" width="300" />
+		<img src="https://cnd.imgix.net/hmg-prod/images/2018-mercedes-amg-c43-01-placement-1534884539.jpg?w=300&fm=pjpg&auto=format,compress" srcset="https://cnd.imgix.net/hmg-prod/images/2018-mercedes-amg-c43-01-placement-1534884539.jpg?w=300&fm=pjpg&auto=format,compress 1x, https://cnd.imgix.net/hmg-prod/images/2018-mercedes-amg-c43-01-placement-1534884539.jpg?w=300&fm=pjpg&auto=format,compress&dpr=2 2x," height="184" width="300" />
 	</div>
 	<div class="content">
 		<nav>
@@ -1438,7 +2129,7 @@ window.onLoad = function() {
 </article>
 <article>
 	<div class="image">
-		<img src="https://cnd.imgix.net/hmg-prod/images/2019-audi-rs5-sportback-placement-1534278928.jpg?w=300&fm=pjpg&auto=format,compress" height="184" width="300" />
+		<img src="https://cnd.imgix.net/hmg-prod/images/2019-audi-rs5-sportback-placement-1534278928.jpg?w=300&fm=pjpg&auto=format,compress" srcset="https://cnd.imgix.net/hmg-prod/images/2019-audi-rs5-sportback-placement-1534278928.jpg?w=300&fm=pjpg&auto=format,compress 1x, https://cnd.imgix.net/hmg-prod/images/2019-audi-rs5-sportback-placement-1534278928.jpg?w=300&fm=pjpg&auto=format,compress&dpr=2 2x," height="184" width="300" />
 	</div>
 	<div class="content">
 		<nav>
@@ -1458,7 +2149,7 @@ window.onLoad = function() {
 </article>
 <article>
 	<div class="image">
-		<img src="https://cnd.imgix.net/hmg-prod/images/2019-chevrolet-silverado-high-country-first-drive-placement-1533935126.jpg?w=300&fm=pjpg&auto=format,compress" height="184" width="300" />
+		<img src="https://cnd.imgix.net/hmg-prod/images/2019-chevrolet-silverado-high-country-first-drive-placement-1533935126.jpg?w=300&fm=pjpg&auto=format,compress" srcset="https://cnd.imgix.net/hmg-prod/images/2019-chevrolet-silverado-high-country-first-drive-placement-1533935126.jpg?w=300&fm=pjpg&auto=format,compress 1x, https://cnd.imgix.net/hmg-prod/images/2019-chevrolet-silverado-high-country-first-drive-placement-1533935126.jpg?w=300&fm=pjpg&auto=format,compress&dpr=2 2x," height="184" width="300" />
 	</div>
 	<div class="content">
 		<nav>
@@ -1478,7 +2169,7 @@ window.onLoad = function() {
 </article>
 <article>
 	<div class="image">
-		<img src="https://cnd.imgix.net/hmg-prod/images/2019-ford-mustang-bullitt-placement-1532709717.jpg?w=300&fm=pjpg&auto=format,compress" height="184" width="300" />
+		<img src="https://cnd.imgix.net/hmg-prod/images/2019-ford-mustang-bullitt-placement-1532709717.jpg?w=300&fm=pjpg&auto=format,compress" srcset="https://cnd.imgix.net/hmg-prod/images/2019-ford-mustang-bullitt-placement-1532709717.jpg?w=300&fm=pjpg&auto=format,compress 1x, https://cnd.imgix.net/hmg-prod/images/2019-ford-mustang-bullitt-placement-1532709717.jpg?w=300&fm=pjpg&auto=format,compress&dpr=2 2x," height="184" width="300" />
 	</div>
 	<div class="content">
 		<nav>
@@ -1503,7 +2194,7 @@ window.onLoad = function() {
 						<h1>Recent Galleries</h1>
 						<article>
 	<div class="image">
-		<img src="https://cnd.imgix.net/hmg-prod/images/1955-ferrari-500-mondial-101-1528474752.jpg?w=300&fm=pjpg&auto=format,compress" height="184" width="300" />
+		<img src="https://cnd.imgix.net/hmg-prod/images/1955-ferrari-500-mondial-101-1528474752.jpg?w=300&fm=pjpg&auto=format,compress" srcset="https://cnd.imgix.net/hmg-prod/images/1955-ferrari-500-mondial-101-1528474752.jpg?w=300&fm=pjpg&auto=format,compress 1x, https://cnd.imgix.net/hmg-prod/images/1955-ferrari-500-mondial-101-1528474752.jpg?w=300&fm=pjpg&auto=format,compress&dpr=2 2x," height="184" width="300" />
 	</div>
 	<div class="content">
 		<nav>
@@ -1523,7 +2214,7 @@ window.onLoad = function() {
 </article>
 <article>
 	<div class="image">
-		<img src="https://cnd.imgix.net/hmg-prod/images/2019-gmc-sierra-denali-99leadgallery-1535045468.jpg?w=300&fm=pjpg&auto=format,compress" height="184" width="300" />
+		<img src="https://cnd.imgix.net/hmg-prod/images/2019-gmc-sierra-denali-99leadgallery-1535045468.jpg?w=300&fm=pjpg&auto=format,compress" srcset="https://cnd.imgix.net/hmg-prod/images/2019-gmc-sierra-denali-99leadgallery-1535045468.jpg?w=300&fm=pjpg&auto=format,compress 1x, https://cnd.imgix.net/hmg-prod/images/2019-gmc-sierra-denali-99leadgallery-1535045468.jpg?w=300&fm=pjpg&auto=format,compress&dpr=2 2x," height="184" width="300" />
 	</div>
 	<div class="content">
 		<nav>
@@ -1543,7 +2234,7 @@ window.onLoad = function() {
 </article>
 <article>
 	<div class="image">
-		<img src="https://cnd.imgix.net/hmg-prod/images/2019-hyundai-santa-fe-first-drive-placement-1535062627.jpg?w=300&fm=pjpg&auto=format,compress" height="184" width="300" />
+		<img src="https://cnd.imgix.net/hmg-prod/images/2019-hyundai-santa-fe-first-drive-placement-1535062627.jpg?w=300&fm=pjpg&auto=format,compress" srcset="https://cnd.imgix.net/hmg-prod/images/2019-hyundai-santa-fe-first-drive-placement-1535062627.jpg?w=300&fm=pjpg&auto=format,compress 1x, https://cnd.imgix.net/hmg-prod/images/2019-hyundai-santa-fe-first-drive-placement-1535062627.jpg?w=300&fm=pjpg&auto=format,compress&dpr=2 2x," height="184" width="300" />
 	</div>
 	<div class="content">
 		<nav>
@@ -1568,7 +2259,7 @@ window.onLoad = function() {
 						<h1>Comparison Tests</h1>
 						<article>
 	<div class="image">
-		<img src="https://cnd.imgix.net/hmg-prod/images/2018-bmw-x2-xdrive28i-vs-2018-jaguar-e-pace-p250-awd-2019-volvo-xc40-t5-awd-r-design-comparison-placement-1533266323.jpg?w=300&fm=pjpg&auto=format,compress" height="184" width="300" />
+		<img src="https://cnd.imgix.net/hmg-prod/images/2018-bmw-x2-xdrive28i-vs-2018-jaguar-e-pace-p250-awd-2019-volvo-xc40-t5-awd-r-design-comparison-placement-1533266323.jpg?w=300&fm=pjpg&auto=format,compress" srcset="https://cnd.imgix.net/hmg-prod/images/2018-bmw-x2-xdrive28i-vs-2018-jaguar-e-pace-p250-awd-2019-volvo-xc40-t5-awd-r-design-comparison-placement-1533266323.jpg?w=300&fm=pjpg&auto=format,compress 1x, https://cnd.imgix.net/hmg-prod/images/2018-bmw-x2-xdrive28i-vs-2018-jaguar-e-pace-p250-awd-2019-volvo-xc40-t5-awd-r-design-comparison-placement-1533266323.jpg?w=300&fm=pjpg&auto=format,compress&dpr=2 2x," height="184" width="300" />
 	</div>
 	<div class="content">
 		<nav>
@@ -1588,7 +2279,7 @@ window.onLoad = function() {
 </article>
 <article>
 	<div class="image">
-		<img src="https://cnd.imgix.net/hmg-prod/images/2019-chevrolet-corvette-zr1-and-2018-porsche-911-gt2-rs-comparison-placement-1532358592.jpg?w=300&fm=pjpg&auto=format,compress" height="184" width="300" />
+		<img src="https://cnd.imgix.net/hmg-prod/images/2019-chevrolet-corvette-zr1-and-2018-porsche-911-gt2-rs-comparison-placement-1532358592.jpg?w=300&fm=pjpg&auto=format,compress" srcset="https://cnd.imgix.net/hmg-prod/images/2019-chevrolet-corvette-zr1-and-2018-porsche-911-gt2-rs-comparison-placement-1532358592.jpg?w=300&fm=pjpg&auto=format,compress 1x, https://cnd.imgix.net/hmg-prod/images/2019-chevrolet-corvette-zr1-and-2018-porsche-911-gt2-rs-comparison-placement-1532358592.jpg?w=300&fm=pjpg&auto=format,compress&dpr=2 2x," height="184" width="300" />
 	</div>
 	<div class="content">
 		<nav>
@@ -1608,7 +2299,7 @@ window.onLoad = function() {
 </article>
 <article>
 	<div class="image">
-		<img src="https://cnd.imgix.net/hmg-prod/images/alfa-romeo-stelvio-quadrifoglio-vs-mercedes-amg-glc63-s-coupe-porsche-macan-turbo-with-performance-package-placement-1530026718.jpg?w=300&fm=pjpg&auto=format,compress" height="184" width="300" />
+		<img src="https://cnd.imgix.net/hmg-prod/images/alfa-romeo-stelvio-quadrifoglio-vs-mercedes-amg-glc63-s-coupe-porsche-macan-turbo-with-performance-package-placement-1530026718.jpg?w=300&fm=pjpg&auto=format,compress" srcset="https://cnd.imgix.net/hmg-prod/images/alfa-romeo-stelvio-quadrifoglio-vs-mercedes-amg-glc63-s-coupe-porsche-macan-turbo-with-performance-package-placement-1530026718.jpg?w=300&fm=pjpg&auto=format,compress 1x, https://cnd.imgix.net/hmg-prod/images/alfa-romeo-stelvio-quadrifoglio-vs-mercedes-amg-glc63-s-coupe-porsche-macan-turbo-with-performance-package-placement-1530026718.jpg?w=300&fm=pjpg&auto=format,compress&dpr=2 2x," height="184" width="300" />
 	</div>
 	<div class="content">
 		<nav>
@@ -1634,7 +2325,7 @@ window.onLoad = function() {
 						<div id="manufacturer-grid">
 							<div class="manufacturer">
 								<h2><a href="/honda">Honda</a></h2>
-								<div class="image" style="background-position: 0 0;"></div>
+								<img src="https://cnd.imgix.net/images/honda.jpg?fm=pjpg&auto=format,compress&w=230" srcset="https://cnd.imgix.net/images/honda.jpg?fm=pjpg&auto=format,compress&w=230 1x, https://cnd.imgix.net/images/honda.jpg?fm=pjpg&auto=format,compress&w=230&dpr=2 2x" width="230" height="138" alt="Honda">
 								<a href="/vehicles/New/Honda" class="button">Shop for Honda</a>
 								<ul>
 									<li><a class="inverted" href="/features/2018-10best-trucks-and-suvs-our-top-picks-in-every-segment-feature-honda-ridgeline-best-mid-size-pickup-truck-page-9">Honda Ridgeline: Best Mid-Size Pickup Truck</a></li>
@@ -1649,7 +2340,7 @@ window.onLoad = function() {
 							</div>
 							<div class="manufacturer">
 								<h2><a href="/mazda">Mazda</a></h2>
-								<div class="image" style="background-position: 0 -138px;"></div>
+								<img src="https://cnd.imgix.net/images/mazda.jpg?fm=pjpg&auto=format,compress&w=230" srcset="https://cnd.imgix.net/images/mazda.jpg?fm=pjpg&auto=format,compress&w=230 1x, https://cnd.imgix.net/images/mazda.jpg?fm=pjpg&auto=format,compress&w=230&dpr=2 2x" width="230" height="138" alt="Mazda">
 								<a href="/vehicles/New/Mazda" class="button">Shop for Mazda</a>
 								<ul>
 									<li><a class="inverted" href="/features/2018-10best-trucks-and-suvs-our-top-picks-in-every-segment-feature-mazda-cx-5-best-compact-suv-page-4">Mazda CX-5: Best Compact SUV</a></li>
@@ -1662,7 +2353,7 @@ window.onLoad = function() {
 							</div>
 							<div class="manufacturer">
 								<h2><a href="/chevrolet">Chevrolet</a></h2>
-								<div class="image" style="background-position: 0 -276px;"></div>
+								<img src="https://cnd.imgix.net/images/chevrolet.jpg?fm=pjpg&auto=format,compress&w=230" srcset="https://cnd.imgix.net/images/chevrolet.jpg?fm=pjpg&auto=format,compress&w=230 1x, https://cnd.imgix.net/images/chevrolet.jpg?fm=pjpg&auto=format,compress&w=230&dpr=2 2x" width="230" height="138" alt="Chevrolet">
 								<a href="/vehicles/New/Chevrolet" class="button">Shop for Chevrolet</a>
 								<ul>
 									<li><a class="inverted" href="/reviews/2018-chevrolet-cruze-diesel-hatchback-manual-test-review">2018 Chevrolet Cruze Diesel Hatchback Manual</a></li>
@@ -1676,7 +2367,7 @@ window.onLoad = function() {
 							</div>
 							<div class="manufacturer">
 								<h2><a href="/ford">Ford</a></h2>
-								<div class="image" style="background-position: 0 -414px;"></div>
+								<img src="https://cnd.imgix.net/images/ford.jpg?fm=pjpg&auto=format,compress&w=230" srcset="https://cnd.imgix.net/images/ford.jpg?fm=pjpg&auto=format,compress&w=230 1x, https://cnd.imgix.net/images/ford.jpg?fm=pjpg&auto=format,compress&w=230&dpr=2 2x" width="230" height="138" alt="Ford">
 								<a href="/vehicles/New/Ford" class="button">Shop for Ford</a>
 								<ul>
 									<li><a class="inverted" href="/reviews/2018-ford-f-150-50l-v-8-4x4-supercrew-review">2018 Ford F-150 5.0L V-8 4x4 SuperCrew</a></li>
@@ -1689,7 +2380,7 @@ window.onLoad = function() {
 							</div>
 							<div class="manufacturer">
 								<h2><a href="/jeep">Jeep</a></h2>
-								<div class="image" style="background-position: 0 -552px;"></div>
+								<img src="https://cnd.imgix.net/images/jeep.jpg?fm=pjpg&auto=format,compress&w=230" srcset="https://cnd.imgix.net/images/jeep.jpg?fm=pjpg&auto=format,compress&w=230 1x, https://cnd.imgix.net/images/jeep.jpg?fm=pjpg&auto=format,compress&w=230&dpr=2 2x" width="230" height="138" alt="Jeep">
 								<a href="/vehicles/New/Jeep" class="button">Shop for Jeep</a>
 								<ul>
 									<li><a class="inverted" href="/reviews/2018-jeep-renegade-review">2018 Jeep Renegade</a></li>
@@ -1704,7 +2395,7 @@ window.onLoad = function() {
 							</div>
 							<div class="manufacturer">
 								<h2><a href="/toyota">Toyota</a></h2>
-								<div class="image" style="background-position: 0 -690px;"></div>
+								<img src="https://cnd.imgix.net/images/toyota.jpg?fm=pjpg&auto=format,compress&w=230" srcset="https://cnd.imgix.net/images/toyota.jpg?fm=pjpg&auto=format,compress&w=230 1x, https://cnd.imgix.net/images/toyota.jpg?fm=pjpg&auto=format,compress&w=230&dpr=2 2x" width="230" height="138" alt="Toyota">
 								<a href="/vehicles/New/Toyota" class="button">Shop for Toyota</a>
 								<ul>
 									<li><a class="inverted" href="/reviews/2017-toyota-highlander-in-depth-model-review-2017-toyota-highlander-engine-and-transmission-review-car-and-driver-page-2">Engine and Transmission</a></li>
