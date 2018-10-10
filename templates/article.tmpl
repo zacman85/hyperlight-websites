@@ -7,10 +7,10 @@
 			<p><a href="{{ article["section_href"] }}">{{ article["section"] }}</a><span> &bullet; {{ article["date"] }}</span></p>
 		</nav>
 		<div class="summary">
-			<h1><a class="inverted" href="{{ article["article_href"] }}">{{ article["title"] }}</a></h1>
+			<h1><a class="i" href="{{ article["article_href"] }}">{{ article["title"] }}</a></h1>
 			<h2>{{ article["summary" ]}}</h2>
-			<h3 class="byline"><span>By </span><a href="{{ article["author_href"] }}">{{ article["author"] }}</a></h3>
-			<p class="links">
+			<h3><span>By </span><a href="{{ article["author_href"] }}">{{ article["author"] }}</a></h3>
+			<p>
 				{% if article.get("shop_href", None) %}<a href="{{ article["shop_href"] }}"><svg class="icon-tiny"><use xlink:href="#icon-shopping" /></svg><span>Shop this Car</span></a>{% end %}
 				{% if article.get("story_href", None) %}<a href="{{ article["story_href"] }}"><svg class="icon-tiny"><use xlink:href="#icon-story" /></svg><span>Read Story</span></a>{% end %}
 				{% if article.get("gallery_href", None) %}<a href="{{ article["gallery_href"] }}"><svg class="icon-tiny"><use xlink:href="#icon-gallery" /></svg><span>{{ article["gallery_count"] }} Photos</span></a>{% end %}

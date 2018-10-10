@@ -29,7 +29,7 @@ function handleSearchForm(form) {
 function handleResearchForm(form) {
 	console.log(form);
 	var make = document.getElementById("body-style-make").value;
-	var model = document.querySelector("#body-style-model>select").value
+	var model = document.querySelector("#body-style-model>select").value;
 	console.log(make + " " + model);
 	return false;
 }

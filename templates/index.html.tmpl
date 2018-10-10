@@ -88,13 +88,13 @@
 							<a href="/reviews">Reviews</a>
 							<div class="sub-menu-hitbox">
 								<div class="sub-menu sub-menu-1">
-									<a href="/list-reviews-in-depth">In-Depth Reviews</a></td></tr>
-									<a href="/list-reviews-first-drives">First Drives</a></td></tr>
-									<a href="/list-reviews-instrumented-tests">Instrumented Tests</a></td></tr>
-									<a href="/list-reviews-comparison-tests">Comparison Tests</a></td></tr>
-									<a href="/list-reviews-long-term-tests">Long-Term Tests</a></td></tr>
-									<a href="/list-reviews-archives">Archived Reviews</a></td></tr>
-									<a href="/list-reviews">View All Reviews</a></td></tr>
+									<a href="/list-reviews-in-depth">In-Depth Reviews</a>
+									<a href="/list-reviews-first-drives">First Drives</a>
+									<a href="/list-reviews-instrumented-tests">Instrumented Tests</a>
+									<a href="/list-reviews-comparison-tests">Comparison Tests</a>
+									<a href="/list-reviews-long-term-tests">Long-Term Tests</a>
+									<a href="/list-reviews-archives">Archived Reviews</a>
+									<a href="/list-reviews">View All Reviews</a>
 								</div>
 							</div>
 						</li><li>
@@ -179,8 +179,8 @@
 		<div id="splash-content">
 			{% for index, article in enumerate(splash_articles) %}
 			<article id="splash-article-{{ index + 1 }}"{% if index == 0 %} class="show"{% end %}>
-				<a class="splash-article-image" href="{{ article["article_href"] }}" style="background-image:url(https://cnd.imgix.net{{ article["image_url"] }}?fm=pjpg&auto=format,compress)"></a>
-				<div class="splash-article-content">
+				<a href="{{ article["article_href"] }}" style="background-image:url(https://cnd.imgix.net{{ article["image_url"] }}?fm=pjpg&auto=format,compress)"></a>
+				<div>
 					<nav>
 						<p><a href="{{ article["article_href"] }}">{{ article["section"] }}</a><span> &bullet; {{ article["date"] }}</span></p>
 						<div class="pager">
@@ -190,9 +190,9 @@
 						</div>
 					</nav>
 					<div class="summary">
-						<h1><a class="inverted" href="{{ article["article_href"] }}">{{ article["title"] }}</a></h1>
+						<h1><a class="i" href="{{ article["article_href"] }}">{{ article["title"] }}</a></h1>
 						<h2>{{ article["summary" ]}}</h2>
-						<h3 class="byline"><span>By </span><a href="{{ article["author_href"] }}">{{ article["author"] }}</a></h3>
+						<h3><span>By </span><a href="{{ article["author_href"] }}">{{ article["author"] }}</a></h3>
 					</div>
 				</div>
 			</article>
@@ -205,13 +205,13 @@
 						<h1>Recent News</h1>
 						{% for news_index, news_article in enumerate(news_articles) %}
 						<article>
-							<h2><a href="{{ news_article["article_href"] }}" class="inverted">{{ news_article["title"] }}</a></h2>
-							<div class="metadata">
+							<h2><a href="{{ news_article["article_href"] }}" class="i">{{ news_article["title"] }}</a></h2>
+							<div>
 								<svg class="icon-tiny"><use xlink:href="#icon-clock" /></svg><span class="posted-ago">{{ news_article["posted_at"] }}</span><a href="{{ news_article["article_href"] }}" class="comment-count"><svg class="icon-tiny"><use xlink:href="#icon-comments" /></svg><span>{{ news_article["comment_count"] }}</span></a>
 							</div>
 						</article>
 						{% end %}
-						<a class="button-inverted-half" href="https://blog.caranddriver.com">View All</a>
+						<a class="button-i-half" href="https://blog.caranddriver.com">View All</a>
 					</section>
 				</aside>
 				<div id="main-articles">
@@ -232,28 +232,28 @@
 								</div>
 								<div>
 									<input type="submit" class="button-half" value="Research">
-									<input type="submit" class="button-inverted-half" value="Shop Cars">
+									<input type="submit" class="button-i-half" value="Shop Cars">
 								</div>
 							</form>
 						</div>
 						<div>
 							<h2>By Body Style</h2>
 							<div id="body-style-menu">
-								<a href="/best-sedans" class="inverted"><b style="background-position: 0 0;"></b><span>Sedans</span></a>
-								<a href="/best-suvs-crossovers" class="inverted"><b style="background-position: 0 -44px;"></b><span>SUVs</span></a>
-								<a href="/best-suvs-crossovers" class="inverted"><b style="background-position: 0 -88px;"></b><span>Crossovers</span></a>
-								<a href="/best-hybrid-electric-cars" class="inverted"><b style="background-position: 0 -132px;"></b><span>Hybrid and Electric Cars</span></a>
-								<a href="/best-sports-cars" class="inverted"><b style="background-position: 0 -176px;"></b><span>Sports Cars</span></a>
-								<a href="/best-luxury-cars" class="inverted"><b style="background-position: 0 -220px;"></b><span>Luxury Cars</span></a>
-								<a href="/best-pickup-trucks" class="inverted"><b style="background-position: 0 -264px;"></b><span>Pickup Trucks</span></a>
-								<a href="/best-minivans-vans" class="inverted"><b style="background-position: 0 -306px;"></b><span>Vans and Minivans</span></a>
-								<a href="/best-small-cars" class="inverted"><b style="background-position: 0 -350px;"></b><span>Small Cars</span></a>
-								<a href="/best-hatchbacks" class="inverted"><b style="background-position: 0 -394px;"></b><span>Hatchbacks</span></a>
-								<a href="/best-station-wagons" class="inverted"><b style="background-position: 0 -438px;"></b><span>Station Wagons</span></a>
-								<a href="/best-coupes" class="inverted"><b style="background-position: 0 -482px;"></b><span>Coupes</span></a>
-								<a href="/best-convertibles" class="inverted"><b style="background-position: 0 -526px;"></b><span>Convertibles</span></a>
-								<a href="/vehicles/Used" class="inverted"><b style="background-position: 0 -570px;"></b><span>Used Cars</span></a>
-								<a href="/features/a-guide-to-certified-pre-owned-cpo-programs-by-car-brand-feature" class="inverted"><b style="background-position: 0 -614px;"></b><span>Certified Pre-Owned</span></a>
+								<a href="/best-sedans"><b style="background-position: 0 0;"></b><span>Sedans</span></a>
+								<a href="/best-suvs-crossovers"><b style="background-position: 0 -44px;"></b><span>SUVs</span></a>
+								<a href="/best-suvs-crossovers"><b style="background-position: 0 -88px;"></b><span>Crossovers</span></a>
+								<a href="/best-hybrid-electric-cars"><b style="background-position: 0 -132px;"></b><span>Hybrid and Electric Cars</span></a>
+								<a href="/best-sports-cars"><b style="background-position: 0 -176px;"></b><span>Sports Cars</span></a>
+								<a href="/best-luxury-cars"><b style="background-position: 0 -220px;"></b><span>Luxury Cars</span></a>
+								<a href="/best-pickup-trucks"><b style="background-position: 0 -264px;"></b><span>Pickup Trucks</span></a>
+								<a href="/best-minivans-vans"><b style="background-position: 0 -306px;"></b><span>Vans and Minivans</span></a>
+								<a href="/best-small-cars"><b style="background-position: 0 -350px;"></b><span>Small Cars</span></a>
+								<a href="/best-hatchbacks"><b style="background-position: 0 -394px;"></b><span>Hatchbacks</span></a>
+								<a href="/best-station-wagons"><b style="background-position: 0 -438px;"></b><span>Station Wagons</span></a>
+								<a href="/best-coupes"><b style="background-position: 0 -482px;"></b><span>Coupes</span></a>
+								<a href="/best-convertibles"><b style="background-position: 0 -526px;"></b><span>Convertibles</span></a>
+								<a href="/vehicles/Used"><b style="background-position: 0 -570px;"></b><span>Used Cars</span></a>
+								<a href="/features/a-guide-to-certified-pre-owned-cpo-programs-by-car-brand-feature"><b style="background-position: 0 -614px;"></b><span>Certified Pre-Owned</span></a>
 							</div>
 						</div>
 					</section>
@@ -279,88 +279,88 @@
 					<section id="most-researched">
 						<h1>Most Researched Manufacturers</h1>
 						<div id="manufacturer-grid">
-							<div class="manufacturer">
+							<div>
 								<h2><a href="/honda">Honda</a></h2>
 								<img src="https://cnd.imgix.net/images/honda.jpg?fm=pjpg&auto=format,compress&w=230" srcset="https://cnd.imgix.net/images/honda.jpg?fm=pjpg&auto=format,compress&w=230 1x, https://cnd.imgix.net/images/honda.jpg?fm=pjpg&auto=format,compress&w=230&dpr=2 2x" width="230" height="138" alt="Honda">
 								<a href="/vehicles/New/Honda" class="button">Shop for Honda</a>
-								<ul>
-									<li><a class="inverted" href="/features/2018-10best-trucks-and-suvs-our-top-picks-in-every-segment-feature-honda-ridgeline-best-mid-size-pickup-truck-page-9">Honda Ridgeline: Best Mid-Size Pickup Truck</a></li>
-									<li><a class="inverted" href="/features/2018-10best-trucks-and-suvs-our-top-picks-in-every-segment-feature">2018 10Best Trucks and SUVs: The Best Models in Every Segment</a></li>
-									<li><a class="inverted" href="/reviews/2018-honda-accord-sport-15t-manual-review">2018 Honda Accord Sport 1.5T Manual</a></li>
-									<li><a class="inverted" href="/reviews/2018-honda-odyssey-tested-with-nine-speed-automatic-review">2018 Honda Odyssey Nine-Speed Automatic</a></li>
-									<li><a class="inverted" href="/honda/accord">The Latest on the Honda Accord</a></li>
-									<li><a class="inverted" href="/honda/civic">Honda Civic Reviews, Pricing, and Photos</a></li>
-									<li><a class="inverted" href="/honda/cr-v">Honda CR-V Pricing, Options, and Overview</a></li>
-									<li><a class="inverted" href="/honda/pilot">Everything You Need to Know About the Honda Pilot</a></li>
-								</ul>
+								<p>
+									<a href="/features/2018-10best-trucks-and-suvs-our-top-picks-in-every-segment-feature-honda-ridgeline-best-mid-size-pickup-truck-page-9">Honda Ridgeline: Best Mid-Size Pickup Truck</a>
+									<a href="/features/2018-10best-trucks-and-suvs-our-top-picks-in-every-segment-feature">2018 10Best Trucks and SUVs: The Best Models in Every Segment</a>
+									<a href="/reviews/2018-honda-accord-sport-15t-manual-review">2018 Honda Accord Sport 1.5T Manual</a>
+									<a href="/reviews/2018-honda-odyssey-tested-with-nine-speed-automatic-review">2018 Honda Odyssey Nine-Speed Automatic</a>
+									<a href="/honda/accord">The Latest on the Honda Accord</a>
+									<a href="/honda/civic">Honda Civic Reviews, Pricing, and Photos</a>
+									<a href="/honda/cr-v">Honda CR-V Pricing, Options, and Overview</a>
+									<a href="/honda/pilot">Everything You Need to Know About the Honda Pilot</a>
+								</p>
 							</div>
-							<div class="manufacturer">
+							<div>
 								<h2><a href="/mazda">Mazda</a></h2>
 								<img src="https://cnd.imgix.net/images/mazda.jpg?fm=pjpg&auto=format,compress&w=230" srcset="https://cnd.imgix.net/images/mazda.jpg?fm=pjpg&auto=format,compress&w=230 1x, https://cnd.imgix.net/images/mazda.jpg?fm=pjpg&auto=format,compress&w=230&dpr=2 2x" width="230" height="138" alt="Mazda">
 								<a href="/vehicles/New/Mazda" class="button">Shop for Mazda</a>
-								<ul>
-									<li><a class="inverted" href="/features/2018-10best-trucks-and-suvs-our-top-picks-in-every-segment-feature-mazda-cx-5-best-compact-suv-page-4">Mazda CX-5: Best Compact SUV</a></li>
-									<li><a class="inverted" href="/features/2018-10best-trucks-and-suvs-our-top-picks-in-every-segment-feature-mazda-cx-9-best-mid-size-suv-page-6">Mazda CX-9: Best Mid-Size SUV</a></li>
-									<li><a class="inverted" href="/mazda/cx-5">Mazda CX-5 Reviews, Pricing, and Photos</a></li>
-									<li><a class="inverted" href="/mazda/cx-3">Mazda CX-5 Leasing, Options, and Overview</a></li>
-									<li><a class="inverted" href="/mazda/mazda-3">The Latest on the Mazda 3</a></li>
-									<li><a class="inverted" href="/mazda/mazda-6">Mazda 6 Pricing, Options, and Overview</a></li>
-								</ul>
+								<p>
+									<a href="/features/2018-10best-trucks-and-suvs-our-top-picks-in-every-segment-feature-mazda-cx-5-best-compact-suv-page-4">Mazda CX-5: Best Compact SUV</a>
+									<a href="/features/2018-10best-trucks-and-suvs-our-top-picks-in-every-segment-feature-mazda-cx-9-best-mid-size-suv-page-6">Mazda CX-9: Best Mid-Size SUV</a>
+									<a href="/mazda/cx-5">Mazda CX-5 Reviews, Pricing, and Photos</a>
+									<a href="/mazda/cx-3">Mazda CX-5 Leasing, Options, and Overview</a>
+									<a href="/mazda/mazda-3">The Latest on the Mazda 3</a>
+									<a href="/mazda/mazda-6">Mazda 6 Pricing, Options, and Overview</a>
+								</p>
 							</div>
-							<div class="manufacturer">
+							<div>
 								<h2><a href="/chevrolet">Chevrolet</a></h2>
 								<img src="https://cnd.imgix.net/images/chevrolet.jpg?fm=pjpg&auto=format,compress&w=230" srcset="https://cnd.imgix.net/images/chevrolet.jpg?fm=pjpg&auto=format,compress&w=230 1x, https://cnd.imgix.net/images/chevrolet.jpg?fm=pjpg&auto=format,compress&w=230&dpr=2 2x" width="230" height="138" alt="Chevrolet">
 								<a href="/vehicles/New/Chevrolet" class="button">Shop for Chevrolet</a>
-								<ul>
-									<li><a class="inverted" href="/reviews/2018-chevrolet-cruze-diesel-hatchback-manual-test-review">2018 Chevrolet Cruze Diesel Hatchback Manual</a></li>
-									<li><a class="inverted" href="/reviews/2018-chevrolet-equinox-diesel-awd-test-review">2018 Chevrolet Equinox Diesel AWD</a></li>
-									<li><a class="inverted" href="/features/2018-10best-cars-the-best-cars-for-sale-in-america-today-feature-chevrolet-camaro-v-6-ss-zl1-coupes-page-4">Chevrolet Camaro V-6 / SS / ZL1 Coupes</a></li>
-									<li><a class="inverted" href="/chevrolet/silverado-1500">Chevrolet Silverado Reviews, Pricing, and Photos</a></li>
-									<li><a class="inverted" href="/chevrolet/malibu">Chevrolet Malibu Leasing Options and Overview</a></li>
-									<li><a class="inverted" href="/chevrolet/equinox">The Latest on the Chevrolet Equinox</a></li>
-									<li><a class="inverted" href="/chevrolet/camaro">Everything You Need to Know About the Chevrolet Camaro</a></li>
-								</ul>
+								<p>
+									<a href="/reviews/2018-chevrolet-cruze-diesel-hatchback-manual-test-review">2018 Chevrolet Cruze Diesel Hatchback Manual</a>
+									<a href="/reviews/2018-chevrolet-equinox-diesel-awd-test-review">2018 Chevrolet Equinox Diesel AWD</a>
+									<a href="/features/2018-10best-cars-the-best-cars-for-sale-in-america-today-feature-chevrolet-camaro-v-6-ss-zl1-coupes-page-4">Chevrolet Camaro V-6 / SS / ZL1 Coupes</a>
+									<a href="/chevrolet/silverado-1500">Chevrolet Silverado Reviews, Pricing, and Photos</a>
+									<a href="/chevrolet/malibu">Chevrolet Malibu Leasing Options and Overview</a>
+									<a href="/chevrolet/equinox">The Latest on the Chevrolet Equinox</a>
+									<a href="/chevrolet/camaro">Everything You Need to Know About the Chevrolet Camaro</a>
+								</p>
 							</div>
-							<div class="manufacturer">
+							<div>
 								<h2><a href="/ford">Ford</a></h2>
 								<img src="https://cnd.imgix.net/images/ford.jpg?fm=pjpg&auto=format,compress&w=230" srcset="https://cnd.imgix.net/images/ford.jpg?fm=pjpg&auto=format,compress&w=230 1x, https://cnd.imgix.net/images/ford.jpg?fm=pjpg&auto=format,compress&w=230&dpr=2 2x" width="230" height="138" alt="Ford">
 								<a href="/vehicles/New/Ford" class="button">Shop for Ford</a>
-								<ul>
-									<li><a class="inverted" href="/reviews/2018-ford-f-150-50l-v-8-4x4-supercrew-review">2018 Ford F-150 5.0L V-8 4x4 SuperCrew</a></li>
-									<li><a class="inverted" href="/features/lightning-lap-115-we-lap-the-ford-gt-at-vir-feature">Lightning Lap 11.5: We Lap the Ford GT at VIR!</a></li>
-									<li><a class="inverted" href="/ford/f-150">Ford F-150 Leasing Options and Overview</a></li>
-									<li><a class="inverted" href="/ford/escape">The Latest on the Ford Escape</a></li>
-									<li><a class="inverted" href="/ford/explorer">Ford Explorer Pricing, Options, and Overview</a></li>
-									<li><a class="inverted" href="/ford/focus">Ford Focus Reviews, Pricing, and Photos</a></li>
-								</ul>
+								<p>
+									<a href="/reviews/2018-ford-f-150-50l-v-8-4x4-supercrew-review">2018 Ford F-150 5.0L V-8 4x4 SuperCrew</a>
+									<a href="/features/lightning-lap-115-we-lap-the-ford-gt-at-vir-feature">Lightning Lap 11.5: We Lap the Ford GT at VIR!</a>
+									<a href="/ford/f-150">Ford F-150 Leasing Options and Overview</a>
+									<a href="/ford/escape">The Latest on the Ford Escape</a>
+									<a href="/ford/explorer">Ford Explorer Pricing, Options, and Overview</a>
+									<a href="/ford/focus">Ford Focus Reviews, Pricing, and Photos</a>
+								</p>
 							</div>
-							<div class="manufacturer">
+							<div>
 								<h2><a href="/jeep">Jeep</a></h2>
 								<img src="https://cnd.imgix.net/images/jeep.jpg?fm=pjpg&auto=format,compress&w=230" srcset="https://cnd.imgix.net/images/jeep.jpg?fm=pjpg&auto=format,compress&w=230 1x, https://cnd.imgix.net/images/jeep.jpg?fm=pjpg&auto=format,compress&w=230&dpr=2 2x" width="230" height="138" alt="Jeep">
 								<a href="/vehicles/New/Jeep" class="button">Shop for Jeep</a>
-								<ul>
-									<li><a class="inverted" href="/reviews/2018-jeep-renegade-review">2018 Jeep Renegade</a></li>
-									<li><a class="inverted" href="/reviews/2017-jeep-renegade-in-depth-model-review">2017 Jeep Renegade</a></li>
-									<li><a class="inverted" href="/features/a-history-of-jeeps-corporate-parents-they-all-die-feature">It's a Black-Widow Thing: Why Does Every Company that Owns Jeep Die?</a></li>
-									<li><a class="inverted" href="/reviews/2018-jeep-grand-cherokee-trackhawk-full-test-review">2018 Jeep Grand Cherokee Trackhawk</a></li>
-									<li><a class="inverted" href="/jeep/grand-cherokee">Jeep Grand Cherokee Reviews, Pricing, and Photos</a></li>
-									<li><a class="inverted" href="/jeep/renegade">Everything You Need to Know About the Jeep Renegade</a></li>
-									<li><a class="inverted" href="/jeep/cherokee">Jeep Cherokee Pricing, Options, and Overview</a></li>
-									<li><a class="inverted" href="/jeep/wrangler">The Latest on the Jeep Wrangler</a></li>
-								</ul>
+								<p>
+									<a href="/reviews/2018-jeep-renegade-review">2018 Jeep Renegade</a>
+									<a href="/reviews/2017-jeep-renegade-in-depth-model-review">2017 Jeep Renegade</a>
+									<a href="/features/a-history-of-jeeps-corporate-parents-they-all-die-feature">It's a Black-Widow Thing: Why Does Every Company that Owns Jeep Die?</a>
+									<a href="/reviews/2018-jeep-grand-cherokee-trackhawk-full-test-review">2018 Jeep Grand Cherokee Trackhawk</a>
+									<a href="/jeep/grand-cherokee">Jeep Grand Cherokee Reviews, Pricing, and Photos</a>
+									<a href="/jeep/renegade">Everything You Need to Know About the Jeep Renegade</a>
+									<a href="/jeep/cherokee">Jeep Cherokee Pricing, Options, and Overview</a>
+									<a href="/jeep/wrangler">The Latest on the Jeep Wrangler</a>
+								</p>
 							</div>
-							<div class="manufacturer">
+							<div>
 								<h2><a href="/toyota">Toyota</a></h2>
 								<img src="https://cnd.imgix.net/images/toyota.jpg?fm=pjpg&auto=format,compress&w=230" srcset="https://cnd.imgix.net/images/toyota.jpg?fm=pjpg&auto=format,compress&w=230 1x, https://cnd.imgix.net/images/toyota.jpg?fm=pjpg&auto=format,compress&w=230&dpr=2 2x" width="230" height="138" alt="Toyota">
 								<a href="/vehicles/New/Toyota" class="button">Shop for Toyota</a>
-								<ul>
-									<li><a class="inverted" href="/reviews/2017-toyota-highlander-in-depth-model-review-2017-toyota-highlander-engine-and-transmission-review-car-and-driver-page-2">Engine and Transmission</a></li>
-									<li><a class="inverted" href="/reviews/2017-toyota-highlander-in-depth-model-review-2017-toyota-highlander-warranty-review-car-and-driver-page-10">Warranty</a></li>
-									<li><a class="inverted" href="/toyota/camry">Toyota Camry Reviews, Pricing, and Photos</a></li>
-									<li><a class="inverted" href="/toyota/corolla">Toyota Corolla Leasing Options and Overview</a></li>
-									<li><a class="inverted" href="/toyota/prius">Everything You Need to Know About the Toyota Prius</a></li>
-									<li><a class="inverted" href="/toyota/rav4">Toyota RAV4 Pricing, Options, and Overview</a></li>
-								</ul>
+								<p>
+									<a href="/reviews/2017-toyota-highlander-in-depth-model-review-2017-toyota-highlander-engine-and-transmission-review-car-and-driver-page-2">Engine and Transmission</a>
+									<a href="/reviews/2017-toyota-highlander-in-depth-model-review-2017-toyota-highlander-warranty-review-car-and-driver-page-10">Warranty</a>
+									<a href="/toyota/camry">Toyota Camry Reviews, Pricing, and Photos</a>
+									<a href="/toyota/corolla">Toyota Corolla Leasing Options and Overview</a>
+									<a href="/toyota/prius">Everything You Need to Know About the Toyota Prius</a>
+									<a href="/toyota/rav4">Toyota RAV4 Pricing, Options, and Overview</a>
+								</p>
 							</div>
 						</div>
 					</section>
@@ -385,61 +385,49 @@
 		</div>
 		<footer id="footer-content">
 			<div id="footer-grid">
-				<div id="review-links" class="link-column">
+				<div id="review-links" class="col">
 					<h1>Reviews</h1>
-					<ul>
-						<li><a href="/list-reviews-first-drives">First Drives</a></li>
-						<li><a href="/list-reviews-instrumented-tests">Instrumented Tests</a></li>
-						<li><a href="/list-reviews-comparison-tests">Comparison Tests</a></li>
-						<li><a href="/list-reviews-long-term-tests">Long-Term Road Tests</a></li>
-						<li><a href="/list-reviews-archives">From the Review Vault</a></li>
-					</ul>
+					<a href="/list-reviews-first-drives">First Drives</a>
+					<a href="/list-reviews-instrumented-tests">Instrumented Tests</a>
+					<a href="/list-reviews-comparison-tests">Comparison Tests</a>
+					<a href="/list-reviews-long-term-tests">Long-Term Road Tests</a>
+					<a href="/list-reviews-archives">From the Review Vault</a>
 				</div>
-				<div id="news-links" class="link-column">
+				<div id="news-links" class="col">
 					<h1>News</h1>
-					<ul>
-						<li><a href="/list-news-future-cars">Spy Photos</a></li>
-						<li><a href="/list-news-auto-shows">Auto Shows</a></li>
-						<li><a href="https://blog.caranddriver.com/">Blog</a></li>
-					</ul>
+					<a href="/list-news-future-cars">Spy Photos</a>
+					<a href="/list-news-auto-shows">Auto Shows</a>
+					<a href="https://blog.caranddriver.com/">Blog</a>
 				</div>
-				<div id="features-links" class="link-column">
+				<div id="features-links" class="col">
 					<h1>Features</h1>
-					<ul>
-						<li><a href="/features/lightning-lap-2017-19-hot-performance-cars-attack-vir-feature">Lightning Lap</a></li>
-						<li><a href="/features/2018-10best-cars-the-best-cars-for-sale-in-america-today-feature">10Best</a></li>
-					</ul>
+					<a href="/features/lightning-lap-2017-19-hot-performance-cars-attack-vir-feature">Lightning Lap</a>
+					<a href="/features/2018-10best-cars-the-best-cars-for-sale-in-america-today-feature">10Best</a>
 				</div>
-				<div id="buyers-guide-links" class="link-column">
+				<div id="buyers-guide-links" class="col">
 					<h1>Buyer's Guide</h1>
-					<ul>
-						<li><a href="/vehicles">View Cars for Sale</a></li>
-						<li><a href="/features/2018-editors-choice-for-best-cars-trucks-crossovers-and-suvs">2018 Editors' Choice</a></li>
-						<li><a href="/ford/f-150">Ford F-150</a></li>
-						<li><a href="/jeep/wrangler">Jeep Wrangler</a></li>
-						<li><a href="/ford/escape">Ford Escape</a></li>
-						<li><a href="/honda/accord">Honda Accord</a></li>
-						<li><a href="/jeep/grand-cherokee">Jeep Grand Cherokee</a></li>
-					</ul>
+					<a href="/vehicles">View Cars for Sale</a>
+					<a href="/features/2018-editors-choice-for-best-cars-trucks-crossovers-and-suvs">2018 Editors' Choice</a>
+					<a href="/ford/f-150">Ford F-150</a>
+					<a href="/jeep/wrangler">Jeep Wrangler</a>
+					<a href="/ford/escape">Ford Escape</a>
+					<a href="/honda/accord">Honda Accord</a>
+					<a href="/jeep/grand-cherokee">Jeep Grand Cherokee</a>
 				</div>
-				<div id="about-links" class="link-column">
+				<div id="about-links" class="col">
 					<h1>About Car and Driver</h1>
-					<ul>
-						<li><a href="https://subscribe.hearstmags.com/subscribe/splits/caranddriver-lic/cdb_bottom_nav_subscribe">Subscribe</a></li>
-						<li><a href="/user-sitemap">User Sitemap</a></li>
-						<li><a href="/reviews/contact-us-about-us">Contact Us</a></li>
-						<li><a href="http://service.caranddriver.com/">Subscriptions/Customer Service</a></li>
-						<li><a href="mailto:feedback@caranddriver.com">Website Feedback</a></li>
-					</ul>
+					<a href="https://subscribe.hearstmags.com/subscribe/splits/caranddriver-lic/cdb_bottom_nav_subscribe">Subscribe</a>
+					<a href="/user-sitemap">User Sitemap</a>
+					<a href="/reviews/contact-us-about-us">Contact Us</a>
+					<a href="http://service.caranddriver.com/">Subscriptions/Customer Service</a>
+					<a href="mailto:feedback@caranddriver.com">Website Feedback</a>
 				</div>
-				<div id="follow-us-links" class="link-column">
+				<div id="follow-us-links" class="col">
 					<h1>Follow Us</h1>
-					<ul>
-						<li><a href="https://backfires.caranddriver.com/">Backfires</a></li>
-						<li><a href="https://www.facebook.com/caranddriver">Facebook</a></li>
-						<li><a href="https://twitter.com/caranddriver">Twitter</a></li>
-						<li><a href="https://www.youtube.com/user/CARandDRIVER">YouTube</a></li>
-					</ul>
+					<a href="https://backfires.caranddriver.com/">Backfires</a>
+					<a href="https://www.facebook.com/caranddriver">Facebook</a>
+					<a href="https://twitter.com/caranddriver">Twitter</a>
+					<a href="https://www.youtube.com/user/CARandDRIVER">YouTube</a>
 				</div>
 				<div id="logo-hearst"><svg><use xlink:href="#logo-hearstautos" /></div>
 				<div id="copyright">
