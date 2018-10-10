@@ -2,9 +2,6 @@ build:
 	python ./compile.py > ./index.html
 	docker build -t hyperlight-websites .
 
-deploy: push
-	gcloud app deploy --image-url gcr.io/cmz-personal/hyperlight-websites:latest
-
 push: build
 	docker tag hyperlight-websites:latest gcr.io/cmz-personal/hyperlight-websites:latest
 	docker push gcr.io/cmz-personal/hyperlight-websites:latest
